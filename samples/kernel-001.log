@@ -1,0 +1,133 @@
+Aug 30 10:06:11 newfish kernel: >>>>>>>>>>>>>>>>>> Dump Card State Begins <<<<<<<<<<<<<<<<<
+Aug 30 10:06:11 newfish kernel: scsi1: Dumping Card State in Message-out phase, at SEQADDR 0x16b
+Aug 30 10:06:11 newfish kernel: Card was paused
+Aug 30 10:06:11 newfish kernel: ACCUM = 0xa0, SINDEX = 0x61, DINDEX = 0xe4, ARG_2 = 0x1
+Aug 30 10:06:11 newfish kernel: HCNT = 0x0 SCBPTR = 0x1
+Aug 30 10:06:11 newfish kernel: SCSIPHASE[0x0] SCSISIGI[0xa4] ERROR[0x0] SCSIBUSL[0xd]
+Aug 30 10:06:11 newfish kernel: LASTPHASE[0xa0] SCSISEQ[0x12] SBLKCTL[0xa] SCSIRATE[0xc2]
+Aug 30 10:06:11 newfish kernel: SEQCTL[0x10] SEQ_FLAGS[0x40] SSTAT0[0x0] SSTAT1[0x0]
+Aug 30 10:06:11 newfish kernel: SSTAT2[0x0] SSTAT3[0x0] SIMODE0[0x8] SIMODE1[0xac]
+Aug 30 10:06:11 newfish kernel: SXFRCTL0[0x88] DFCNTRL[0x0] DFSTATUS[0x89]
+Aug 30 10:06:11 newfish kernel: STACK: 0xe1 0xe1 0x163 0x178
+Aug 30 10:06:11 newfish kernel: SCB count = 12
+Aug 30 10:06:11 newfish kernel: Kernel NEXTQSCB = 11
+Aug 30 10:06:11 newfish kernel: Card NEXTQSCB = 4
+Aug 30 10:06:12 newfish kernel: QINFIFO entries: 4
+Aug 30 10:06:12 newfish kernel: Waiting Queue entries:
+Aug 30 10:06:12 newfish kernel: Disconnected Queue entries: 2:7
+Aug 30 10:06:12 newfish kernel: QOUTFIFO entries:
+Aug 30 10:06:12 newfish kernel: Sequencer Free SCB List: 0 6 7 5 4 3 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31
+Aug 30 10:06:12 newfish kernel: Sequencer SCB Info:
+Aug 30 10:06:12 newfish kernel:   0 SCB_CONTROL[0x0] SCB_SCSIID[0x17] SCB_LUN[0x0] SCB_TAG[0xff]
+Aug 30 10:06:12 newfish kernel:   1 SCB_CONTROL[0x64] SCB_SCSIID[0x17] SCB_LUN[0x0] SCB_TAG[0x5]
+Aug 30 10:06:12 newfish kernel:   2 SCB_CONTROL[0x64] SCB_SCSIID[0x17] SCB_LUN[0x0] SCB_TAG[0x7]
+Aug 30 10:06:12 newfish kernel:   3 SCB_CONTROL[0xe0] SCB_SCSIID[0x7] SCB_LUN[0x0] SCB_TAG[0xff]
+Aug 30 10:06:12 newfish kernel:   4 SCB_CONTROL[0xe0] SCB_SCSIID[0x7] SCB_LUN[0x0] SCB_TAG[0xff]
+Aug 30 10:06:12 newfish kernel:   5 SCB_CONTROL[0xe0] SCB_SCSIID[0x17] SCB_LUN[0x0] SCB_TAG[0xff]
+Aug 30 10:06:12 newfish kernel:   6 SCB_CONTROL[0x0] SCB_SCSIID[0x17] SCB_LUN[0x0] SCB_TAG[0xff]
+Aug 30 10:06:12 newfish kernel:   7 SCB_CONTROL[0xe0] SCB_SCSIID[0x17] SCB_LUN[0x0] SCB_TAG[0xff]
+Aug 30 10:06:12 newfish kernel:   8 SCB_CONTROL[0x0] SCB_SCSIID[0xff] SCB_LUN[0xff] SCB_TAG[0xff]
+Aug 30 10:06:12 newfish kernel:   9 SCB_CONTROL[0x0] SCB_SCSIID[0xff] SCB_LUN[0xff] SCB_TAG[0xff]
+Aug 30 10:06:12 newfish kernel:  10 SCB_CONTROL[0x0] SCB_SCSIID[0xff] SCB_LUN[0xff] SCB_TAG[0xff]
+Aug 30 10:06:12 newfish kernel:  11 SCB_CONTROL[0x0] SCB_SCSIID[0xff] SCB_LUN[0xff] SCB_TAG[0xff]
+Aug 30 10:06:12 newfish kernel:  12 SCB_CONTROL[0x0] SCB_SCSIID[0xff] SCB_LUN[0xff] SCB_TAG[0xff]
+Aug 30 10:06:12 newfish kernel:  13 SCB_CONTROL[0x0] SCB_SCSIID[0xff] SCB_LUN[0xff] SCB_TAG[0xff]
+Aug 30 10:06:12 newfish kernel:  14 SCB_CONTROL[0x0] SCB_SCSIID[0xff] SCB_LUN[0xff] SCB_TAG[0xff]
+Aug 30 10:06:12 newfish kernel:  15 SCB_CONTROL[0x0] SCB_SCSIID[0xff] SCB_LUN[0xff] SCB_TAG[0xff]
+Aug 30 10:06:12 newfish kernel:  16 SCB_CONTROL[0x0] SCB_SCSIID[0xff] SCB_LUN[0xff] SCB_TAG[0xff]
+Aug 30 10:06:12 newfish kernel:  17 SCB_CONTROL[0x0] SCB_SCSIID[0xff] SCB_LUN[0xff] SCB_TAG[0xff]
+Aug 30 10:06:12 newfish kernel:  18 SCB_CONTROL[0x0] SCB_SCSIID[0xff] SCB_LUN[0xff] SCB_TAG[0xff]
+Aug 30 10:06:13 newfish kernel:  19 SCB_CONTROL[0x0] SCB_SCSIID[0xff] SCB_LUN[0xff] SCB_TAG[0xff]
+Aug 30 10:06:13 newfish kernel:  20 SCB_CONTROL[0x0] SCB_SCSIID[0xff] SCB_LUN[0xff] SCB_TAG[0xff]
+Aug 30 10:06:13 newfish kernel:  21 SCB_CONTROL[0x0] SCB_SCSIID[0xff] SCB_LUN[0xff] SCB_TAG[0xff]
+Aug 30 10:06:13 newfish kernel:  22 SCB_CONTROL[0x0] SCB_SCSIID[0xff] SCB_LUN[0xff] SCB_TAG[0xff]
+Aug 30 10:06:13 newfish kernel:  23 SCB_CONTROL[0x0] SCB_SCSIID[0xff] SCB_LUN[0xff] SCB_TAG[0xff]
+Aug 30 10:06:13 newfish kernel:  24 SCB_CONTROL[0x0] SCB_SCSIID[0xff] SCB_LUN[0xff] SCB_TAG[0xff]
+Aug 30 10:06:13 newfish kernel:  25 SCB_CONTROL[0x0] SCB_SCSIID[0xff] SCB_LUN[0xff] SCB_TAG[0xff]
+Aug 30 10:06:13 newfish kernel:  26 SCB_CONTROL[0x0] SCB_SCSIID[0xff] SCB_LUN[0xff] SCB_TAG[0xff]
+Aug 30 10:06:13 newfish kernel:  27 SCB_CONTROL[0x0] SCB_SCSIID[0xff] SCB_LUN[0xff] SCB_TAG[0xff]
+Aug 30 10:06:13 newfish kernel:  28 SCB_CONTROL[0x0] SCB_SCSIID[0xff] SCB_LUN[0xff] SCB_TAG[0xff]
+Aug 30 10:06:13 newfish kernel:  29 SCB_CONTROL[0x0] SCB_SCSIID[0xff] SCB_LUN[0xff] SCB_TAG[0xff]
+Aug 30 10:06:13 newfish kernel:  30 SCB_CONTROL[0x0] SCB_SCSIID[0xff] SCB_LUN[0xff] SCB_TAG[0xff]
+Aug 30 10:06:13 newfish kernel:  31 SCB_CONTROL[0x0] SCB_SCSIID[0xff] SCB_LUN[0xff] SCB_TAG[0xff]
+Aug 30 10:06:13 newfish kernel: Pending list:
+Aug 30 10:06:13 newfish kernel:   7 SCB_CONTROL[0x60] SCB_SCSIID[0x17] SCB_LUN[0x0]
+Aug 30 10:06:13 newfish kernel:   4 SCB_CONTROL[0x74] SCB_SCSIID[0x17] SCB_LUN[0x0]
+Aug 30 10:06:13 newfish kernel:   5 SCB_CONTROL[0x64] SCB_SCSIID[0x17] SCB_LUN[0x0]
+Aug 30 10:06:13 newfish kernel: Kernel Free SCB list: 1 0 2 3 6 10 9 8
+Aug 30 10:06:13 newfish kernel: DevQ(0:0:0): 0 waiting
+Aug 30 10:06:13 newfish kernel: DevQ(0:1:0): 0 waiting
+Aug 30 10:06:13 newfish kernel: DevQ(0:6:0): 0 waiting
+Aug 30 10:06:13 newfish kernel:
+Aug 30 10:06:13 newfish kernel: <<<<<<<<<<<<<<<<< Dump Card State Ends >>>>>>>>>>>>>>>>>>
+Aug 30 10:06:13 newfish kernel: Recovery SCB completes
+Aug 30 10:06:13 newfish kernel: (scsi1:A:1:0): Device is disconnected, re-queuing SCB
+Aug 30 10:06:13 newfish kernel: Recovery code sleeping
+Aug 30 10:06:13 newfish kernel: Recovery code awake
+Aug 30 10:06:13 newfish kernel: Timer Expired
+Aug 30 10:06:13 newfish kernel: aic7xxx_abort returns 0x2003
+Aug 30 10:06:13 newfish kernel: scsi1:0:1:0: Attempting to queue a TARGET RESET message
+Aug 30 10:06:13 newfish kernel: CDB: 0x28 0x0 0x4 0x7a 0x65 0xcf 0x0 0x0 0x10 0x0
+Aug 30 10:06:13 newfish kernel: aic7xxx_dev_reset returns 0x2003
+Aug 30 10:06:13 newfish kernel: Recovery SCB completes
+
+
+
+# Linux BUG and call trace example:
+BUG: unable to handle kernel NULL pointer dereference at (null)
+IP: [<ffffffff8141c423>] 0xffffffff8141c423
+PGD 0
+Oops: 0002 [#1] PREEMPT SMP
+last sysfs file: /sys/devices/pci0000:00/0000:00:1f.2/host0/target0:0:0/0:0:0:0/scsi_level
+CPU 0
+Modules linked in: zr364xx videodev v4l1_compat v4l2_compat_ioctl32 videobuf_vmalloc videobuf_core usb_storage r8187
+ieee80211_rtl ieee80211_crypt_ccmp_rtl ieee80211_crypt_tkip_rtl ieee80211_crypt_wep_rtl ieee80211_crypt_rtl coretemp
+snd_seq_dummy sdhci_pci sdhci snd_seq_oss snd_hda_codec_realtek snd_seq_midi_event snd_seq snd_seq_device
+mmc_core iTCO_wdt iTCO_vendor_support nvidia(P) snd_hda_intel snd_hda_codec snd_hwdep snd_pcm_oss snd_pcm
+snd_timer snd_page_alloc snd_mixer_oss snd soundcore r8169 mii pata_acpi [last unloaded: ieee80211_crypt_rtl]
+Pid: 226, comm: khubd Tainted: P           2.6.30.5 #1 GX700
+RIP: 0010:[<ffffffff8141c423>]  [<ffffffff8141c423>] 0xffffffff8141c423
+RSP: 0018:ffff8800bfa2fc08  EFLAGS: 00010246
+RAX: 0000000000000000 RBX: ffff8800b0953d14 RCX: 0000000000000000
+RDX: 0000000000000000 RSI: 0000000000000083 RDI: ffff8800b0953d14
+RBP: ffff8800b0953d10 R08: 0000000000000000 R09: 00000000000000ae
+R10: ffff880001744540 R11: 0000000000000008 R12: ffffffffffffffff
+R13: ffff8800b0953d18 R14: 0000000000000000 R15: ffff8800bf8671c0
+FS:  0000000000000000(0000) GS:ffff88000165f000(0000) knlGS:0000000000000000
+CS:  0010 DS: 0018 ES: 0018 CR0: 000000008005003b
+CR2: 0000000000000000 CR3: 0000000001001000 CR4: 00000000000006e0
+DR0: 0000000000000000 DR1: 0000000000000000 DR2: 0000000000000000
+DR3: 0000000000000000 DR6: 00000000ffff0ff0 DR7: 0000000000000400
+Process khubd (pid: 226, threadinfo ffff8800bfa2e000, task ffff8800bf8671c0)
+Stack:
+ ffff8800b0953d18 ffff8800a9049c30 ffff8800bfa2fc60 ffff8800bfa2fcb0
+ ffffffff8110aaaa ffff8800b0953d10 ffff8800b08a5c00 ffffffffa09ea788
+ ffff8800bb05f800 000000000000001f 0000000000000000 ffffffff8141c06a
+Call Trace:
+ [<ffffffff8110aaaa>] ? 0xffffffff8110aaaa
+ [<ffffffff8141c06a>] ? 0xffffffff8141c06a
+ [<ffffffffa09cd5e6>] ? 0xffffffffa09cd5e6
+ [<ffffffffa09e711a>] ? 0xffffffffa09e711a
+ [<ffffffff812a8878>] ? 0xffffffff812a8878
+ [<ffffffff81246932>] ? 0xffffffff81246932
+ [<ffffffff81246a55>] ? 0xffffffff81246a55
+ [<ffffffff81245bf1>] ? 0xffffffff81245bf1
+ [<ffffffff81244208>] ? 0xffffffff81244208
+ [<ffffffff812a609a>] ? 0xffffffff812a609a
+ [<ffffffff812a12b9>] ? 0xffffffff812a12b9
+ [<ffffffff812a214f>] ? 0xffffffff812a214f
+ [<ffffffff810098cc>] ? 0xffffffff810098cc
+ [<ffffffff81033551>] ? 0xffffffff81033551
+ [<ffffffff8141dc39>] ? 0xffffffff8141dc39
+ [<ffffffff81053f10>] ? 0xffffffff81053f10
+ [<ffffffff812a1cf0>] ? 0xffffffff812a1cf0
+ [<ffffffff81053b24>] ? 0xffffffff81053b24
+ [<ffffffff8100c57a>] ? 0xffffffff8100c57a
+ [<ffffffff81053ad0>] ? 0xffffffff81053ad0
+ [<ffffffff8100c570>] ? 0xffffffff8100c570
+Code: 7f b6 66 0f 1f 44 00 00 48 8d 5d 04 4c 8d 6d 08 48 89 df 49 c7 c4 ff ff ff ff e8 c9 14 00 00 48 8b 45 10 4c 89 2c 24 48 89 65 10 <48> 89 20 48 89 44 24 08 4c 89 7c 24 10 4c 89 e0 87 45 00 83 f8
+RIP  [<ffffffff8141c423>] 0xffffffff8141c423
+ RSP <ffff8800bfa2fc08>
+CR2: 0000000000000000
+---[ end trace 05e0b9e1e8d124aa ]---
+note: khubd[226] exited with preempt_count 2

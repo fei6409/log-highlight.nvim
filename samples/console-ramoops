@@ -1,0 +1,72 @@
+/sys/fs/pstore/console-ramoops-0:
+[ 3564.515024] INFO: task chrome:7260 blocked for more than 122 seconds.
+[ 3564.515052]       Not tainted 6.1.21-CL4259239-v40 #1
+[ 3564.515058] "echo 0 > /proc/sys/kernel/hung_task_timeout_secs" disables this message.
+[ 3564.515064] task:chrome          state:D stack:0     pid:7260  ppid:4105   flags:0x00000a04
+[ 3564.515077] Call trace:
+[ 3564.515083]  __switch_to+0x104/0x1c4
+[ 3564.515099]  __schedule+0x5fc/0xbb0
+[ 3564.515107]  schedule+0x6c/0xbc
+[ 3564.515114]  schedule_preempt_disabled+0x2c/0x48
+[ 3564.515122]  __down_read_common+0x258/0x564
+[ 3564.515133]  down_read+0x1c/0x28
+[ 3564.515142]  do_page_fault+0x28c/0x448
+[ 3564.515152]  do_translation_fault+0x40/0x58
+[ 3564.515161]  do_mem_abort+0x48/0xac
+[ 3564.515171]  el0_da+0x44/0x90
+[ 3564.515181]  el0t_64_sync_handler+0xc0/0xe4
+[ 3564.515190]  el0t_64_sync+0x190/0x194
+[ 3564.515325] task:cros_ec_spi_hig state:D stack:0     pid:103   ppid:2      flags:0x00000008
+[ 3564.515335] Call trace:
+[ 3564.515340]  __switch_to+0x104/0x1c4
+[ 3564.515347]  __schedule+0x5fc/0xbb0
+[ 3564.515354]  schedule+0x6c/0xbc
+[ 3564.515361]  0x0
+[ 3564.515494] task:MemoryInfra     state:D stack:0     pid:4122  ppid:1163   flags:0x00000204
+[ 3564.515504] Call trace:
+[ 3564.515509]  __switch_to+0x104/0x1c4
+[ 3564.515517]  __schedule+0x5fc/0xbb0
+[ 3564.515523]  schedule+0x6c/0xbc
+[ 3564.515530]  rwsem_down_write_slowpath+0x4a4/0x7a8
+[ 3564.515539]  down_write_killable+0x98/0xd0
+[ 3564.515547]  clear_refs_write+0x1c0/0x428
+[ 3564.515556]  vfs_write+0x16c/0x304
+[ 3564.515566]  ksys_write+0x80/0xec
+[ 3564.515574]  __arm64_sys_write+0x24/0x30
+[ 3564.515582]  invoke_syscall+0x4c/0x108
+[ 3564.515592]  el0_svc_common+0x98/0x104
+[ 3564.515601]  do_el0_svc+0x38/0xbc
+[ 3564.515609]  el0_svc+0x2c/0x74
+[ 3564.515618]  el0t_64_sync_handler+0x44/0xe4
+[ 3564.515627]  el0t_64_sync+0x190/0x194
+[ 3564.515692] task:chrome          state:D stack:0     pid:7260  ppid:4105   flags:0x00000a04
+[ 3564.515701] Call trace:
+[ 3564.515706]  __switch_to+0x104/0x1c4
+[ 3564.515713]  __schedule+0x5fc/0xbb0
+[ 3564.515720]  schedule+0x6c/0xbc
+[ 3564.515745]  schedule_preempt_disabled+0x2c/0x48
+[ 3564.515754]  __down_read_common+0x258/0x564
+[ 3564.515763]  down_read+0x1c/0x28
+[ 3564.515770]  do_page_fault+0x28c/0x448
+[ 3564.515777]  do_translation_fault+0x40/0x58
+[ 3564.515785]  do_mem_abort+0x48/0xac
+[ 3564.515792]  el0_da+0x44/0x90
+[ 3564.515799]  el0t_64_sync_handler+0xc0/0xe4
+[ 3564.515806]  el0t_64_sync+0x190/0x194
+[ 3564.515877] Kernel panic - not syncing: hung_task: blocked tasks
+[ 3564.515883] CPU: 3 PID: 70 Comm: khungtaskd Not tainted 6.1.21-CL4259239-v40 #1 db5ec24a4b794cbe39b53f22562e44cd4f39a009
+[ 3564.515898] Call trace:
+[ 3564.515901]  dump_backtrace+0xfc/0x11c
+[ 3564.515908]  show_stack+0x20/0x2c
+[ 3564.515913]  dump_stack_lvl+0x60/0x78
+[ 3564.515920]  dump_stack+0x18/0x38
+[ 3564.515927]  panic+0x154/0x338
+[ 3564.515934]  hung_task_panic+0x0/0x24
+[ 3564.515942]  kthread+0xf0/0x1b8
+[ 3564.515950]  ret_from_fork+0x10/0x20
+[ 3564.515958] SMP: stopping secondary CPUs
+[ 3564.516016] Kernel Offset: 0x26bd200000 from 0xffffffc008000000
+[ 3564.516021] PHYS_OFFSET: 0x40000000
+[ 3564.516025] CPU features: 0x30000,001700a4,6600720b
+[ 3564.516031] Memory Limit: none
+

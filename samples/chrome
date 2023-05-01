@@ -1,0 +1,100 @@
+2023-04-10T10:33:02.081069Z WARNING chrome[1206:1206]: [chrome_main_delegate.cc(591)] This is Chrome version 114.0.5702.0 (not a warning)
+2023-04-10T10:33:02.158679Z WARNING chrome[1206:1206]: [install_attributes.cc(134)] Install attributes missing, first sign in
+2023-04-10T10:33:02.227331Z VERBOSE1 chrome[1206:1206]: [drm_display_host_manager.cc(150)] Succeeded authenticating /dev/dri/card0 in 0 ms with 1 attempt(s)
+2023-04-10T10:33:02.228056Z VERBOSE1 chrome[1206:1206]: [drm_util.cc(618)] Failed to get EDID blob for connector 32
+2023-04-10T10:33:02.264449Z WARNING chrome[1206:1342]: [camera_hal_dispatcher_impl.cc(627)] Building Mojo channel. Socket info: creation_time: 2023-04-10 10:33:02.263 UTC last_accessed: 2023-04-10 10:33:02.263 UTC last_modified: 2023-04-10 10:33:02.263 UTC
+2023-04-10T10:33:02.279536Z VERBOSE1 chrome[1206:1206]: [power_event_observer.cc(250)] PowerEventObserver::PowerEventObserver lock=0, can_lock=0
+2023-04-10T10:33:02.280090Z VERBOSE1 chrome[1206:1206]: [power_event_observer.cc(366)] Lock screen on lid close: lid=0, lock=0, projecting=0, policy=0, can_lock=0
+2023-04-10T10:33:02.323575Z ERROR chrome[1206:1308]: [statistics_provider_impl.cc(622)] Bad regional data: '' << not found.
+2023-04-10T10:33:02.365760Z VERBOSE1 chrome[1338:1338]: [gbm_surface_factory.cc(226)] Found Gbm Device at /dev/dri/renderD128
+2023-04-10T10:33:02.372408Z WARNING chrome[1338:1338]: [gbm_surface_factory.cc(177)] Platform device extensions not found.
+2023-04-10T10:33:02.434437Z ERROR chrome[1338:1338]: [default_socket.cc(58)] /run/perfetto/ exists but cannot be accessed. Falling back on /tmp/  (errno: 13, Permission denied)
+2023-04-10T10:33:02.445841Z VERBOSE1 chrome[1206:1206]: [arc_session_manager.cc(1747)] Started expanding *.prop files
+2023-04-10T10:33:02.496608Z ERROR chrome[1206:1206]: [input_method_manager_impl.cc(1099)] IMEEngine for "jkghodnilhceideoidjikpgommlajknk" is not registered
+2023-04-10T10:33:02.500094Z WARNING chrome[1206:1206]: [rmad_client.cc(594)] Checking if RMA executable exists not completed before WasRmaStateDetected() called.
+2023-04-10T10:33:02.500145Z WARNING chrome[1206:1206]: [rmad_client.cc(598)] Checking if RMA state file exists not completed before WasRmaStateDetected() called.
+2023-04-10T10:33:02.519784Z WARNING chrome[1206:1206]: [oobe_ui.cc(612)] OobeUI created
+2023-04-10T10:33:02.535829Z VERBOSE1 chrome[1206:1206]: [wizard_controller.cc(443)] Starting OOBE wizard with screen: unknown
+2023-04-10T10:33:02.536222Z WARNING chrome[1206:1206]: [dlcservice_client.cc(446)] Uninstall called when dlcservice is not available.
+2023-04-10T10:33:02.536427Z ERROR chrome[1206:1341]: [camera_hal_dispatcher_impl.cc(735)] Camera HAL server is not registered
+2023-04-10T10:33:02.537213Z ERROR chrome[1206:1206]: [device_activity_controller.cc(209)] Halt - Client should enter device active reporting logic. Unknown and test image channels should not be counted as legitimate device counts.
+2023-04-10T10:33:02.538962Z ERROR chrome[1206:1206]: [object_proxy.cc(623)] Failed to call method: org.freedesktop.DBus.Properties.GetAll: object_path= /org/chromium/Hermes/Manager: org.freedesktop.DBus.Error.ServiceUnknown: The name org.chromium.Hermes was not provided by any .service files
+2023-04-10T10:33:02.539017Z WARNING chrome[1206:1206]: [property.cc(174)] GetAll request failed for: org.chromium.Hermes.Manager
+2023-04-10T10:33:02.539083Z ERROR chrome[1206:1206]: [object_proxy.cc(623)] Failed to call method: org.chromium.PowerManager.RegisterSuspendDelay: object_path= /org/chromium/PowerManager: org.freedesktop.DBus.Error.ServiceUnknown: The name org.chromium.PowerManager was not provided by any .service files
+2023-04-10T10:33:02.539135Z ERROR chrome[1206:1206]: [device_event_log_impl.cc(222)] [18:33:02.539] Power: power_manager_client.cc:1033 Error calling RegisterSuspendDelay
+2023-04-10T10:33:02.539179Z ERROR chrome[1206:1206]: [object_proxy.cc(623)] Failed to call method: org.chromium.PowerManager.RegisterDarkSuspendDelay: object_path= /org/chromium/PowerManager: org.freedesktop.DBus.Error.ServiceUnknown: The name org.chromium.PowerManager was not provided by any .service files
+2023-04-10T10:33:02.539234Z ERROR chrome[1206:1206]: [device_event_log_impl.cc(222)] [18:33:02.539] Power: power_manager_client.cc:1033 Error calling RegisterDarkSuspendDelay
+2023-04-10T10:33:02.539271Z ERROR chrome[1206:1206]: [object_proxy.cc(623)] Failed to call method: org.chromium.PowerManager.GetPowerSupplyProperties: object_path= /org/chromium/PowerManager: org.freedesktop.DBus.Error.ServiceUnknown: The name org.chromium.PowerManager was not provided by any .service files
+2023-04-10T10:33:02.539296Z ERROR chrome[1206:1206]: [device_event_log_impl.cc(222)] [18:33:02.539] Power: power_manager_client.cc:862 Error calling GetPowerSupplyProperties
+2023-04-10T10:33:02.539337Z ERROR chrome[1206:1206]: [object_proxy.cc(623)] Failed to call method: org.chromium.PowerManager.GetThermalState: object_path= /org/chromium/PowerManager: org.freedesktop.DBus.Error.ServiceUnknown: The name org.chromium.PowerManager was not provided by any .service files
+2023-04-10T10:33:02.539365Z ERROR chrome[1206:1206]: [device_event_log_impl.cc(222)] [18:33:02.539] Power: power_manager_client.cc:834 Error calling GetThermalState
+2023-04-10T10:33:02.539501Z ERROR chrome[1206:1206]: [object_proxy.cc(623)] Failed to call method: org.chromium.Rmad.IsRmaRequired: object_path= /org/chromium/Rmad: org.freedesktop.DBus.Error.ServiceUnknown: The name org.chromium.Rmad was not provided by any .service files
+2023-04-10T10:33:02.539529Z ERROR chrome[1206:1206]: [rmad_client.cc(179)] Error calling rmad function for OnCheckIfRmaIsRequired
+2023-04-10T10:33:02.547549Z VERBOSE1 chrome[1206:1206]: [drm_display_host_manager.cc(437)] Got display event ADD for /dev/dri/card0
+2023-04-10T10:33:02.547818Z VERBOSE1 chrome[1338:1452]: [drm_device_manager.cc(42)] Primary DRM device added: /sys/devices/platform/soc/1c100000.syscon/mediatek-drm.13.auto/drm/card0
+2023-04-10T10:33:02.549447Z ERROR chrome[1206:1206]: [object_proxy.cc(623)] Failed to call method: org.chromium.PowerManager.GetPowerSupplyProperties: object_path= /org/chromium/PowerManager: org.freedesktop.DBus.Error.ServiceUnknown: The name org.chromium.PowerManager was not provided by any .service files
+2023-04-10T10:33:02.549517Z ERROR chrome[1206:1206]: [device_event_log_impl.cc(222)] [18:33:02.549] Power: power_manager_client.cc:862 Error calling GetPowerSupplyProperties
+2023-04-10T10:33:02.549560Z ERROR chrome[1206:1206]: [object_proxy.cc(623)] Failed to call method: org.chromium.PowerManager.GetSwitchStates: object_path= /org/chromium/PowerManager: org.freedesktop.DBus.Error.ServiceUnknown: The name org.chromium.PowerManager was not provided by any .service files
+2023-04-10T10:33:02.549606Z ERROR chrome[1206:1206]: [device_event_log_impl.cc(222)] [18:33:02.549] Power: power_manager_client.cc:926 Error calling GetSwitchStates
+2023-04-10T10:33:02.549641Z ERROR chrome[1206:1206]: [object_proxy.cc(623)] Failed to call method: org.chromium.PowerManager.GetSwitchStates: object_path= /org/chromium/PowerManager: org.freedesktop.DBus.Error.ServiceUnknown: The name org.chromium.PowerManager was not provided by any .service files
+2023-04-10T10:33:02.549677Z ERROR chrome[1206:1206]: [object_proxy.cc(623)] Failed to call method: org.chromium.PowerManager.SetIsProjecting: object_path= /org/chromium/PowerManager: org.freedesktop.DBus.Error.ServiceUnknown: The name org.chromium.PowerManager was not provided by any .service files
+2023-04-10T10:33:02.550328Z ERROR chrome[1206:1206]: [object_proxy.cc(623)] Failed to call method: org.chromium.PowerManager.GetBacklightsForcedOff: object_path= /org/chromium/PowerManager: org.freedesktop.DBus.Error.ServiceUnknown: The name org.chromium.PowerManager was not provided by any .service files
+2023-04-10T10:33:02.550451Z ERROR chrome[1206:1206]: [device_event_log_impl.cc(222)] [18:33:02.550] Power: power_manager_client.cc:907 Error calling GetBacklightsForcedOff
+2023-04-10T10:33:02.550642Z ERROR chrome[1206:1206]: [object_proxy.cc(623)] Failed to call method: org.chromium.PowerManager.GetSwitchStates: object_path= /org/chromium/PowerManager: org.freedesktop.DBus.Error.ServiceUnknown: The name org.chromium.PowerManager was not provided by any .service files
+2023-04-10T10:33:02.550738Z ERROR chrome[1206:1206]: [device_event_log_impl.cc(222)] [18:33:02.550] Power: power_manager_client.cc:926 Error calling GetSwitchStates
+2023-04-10T10:33:02.550804Z ERROR chrome[1206:1206]: [object_proxy.cc(623)] Failed to call method: org.chromium.PowerManager.GetSwitchStates: object_path= /org/chromium/PowerManager: org.freedesktop.DBus.Error.ServiceUnknown: The name org.chromium.PowerManager was not provided by any .service files
+2023-04-10T10:33:02.558504Z ERROR chrome[1206:1206]: [object_proxy.cc(623)] Failed to call method: org.chromium.PowerManager.GetScreenBrightnessPercent: object_path= /org/chromium/PowerManager: org.freedesktop.DBus.Error.ServiceUnknown: The name org.chromium.PowerManager was not provided by any .service files
+2023-04-10T10:33:02.560007Z WARNING chrome[1338:1452]: [drm_gpu_display_manager.cc(376)] SetColorMatrix: there is no display with ID 256
+2023-04-10T10:33:02.587426Z ERROR chrome[1206:1206]: [upstart_client.cc(176)] Failed to stop arc_2dprepare_2dhost_2dgenerated_2ddir: com.ubuntu.Upstart0_6.Error.UnknownInstance: Unknown instance:
+2023-04-10T10:33:02.587633Z ERROR chrome[1206:1206]: [object_proxy.cc(623)] Failed to call method: org.chromium.VmConcierge.GetVmInfo: object_path= /org/chromium/VmConcierge: org.freedesktop.DBus.Error.ServiceUnknown: The name org.chromium.VmConcierge was not provided by any .service files
+2023-04-10T10:33:02.589679Z ERROR chrome[1206:1206]: [object_proxy.cc(623)] Failed to call method: org.chromium.OobeConfigRestore.ProcessAndGetOobeAutoConfig: object_path= /org/chromium/OobeConfigRestore: org.freedesktop.DBus.Error.ServiceUnknown: The name org.chromium.OobeConfigRestore was not provided by any .service files
+2023-04-10T10:33:02.591781Z ERROR chrome[1206:1206]: [object_proxy.cc(623)] Failed to call method: org.chromium.PowerManager.SetPolicy: object_path= /org/chromium/PowerManager: org.freedesktop.DBus.Error.ServiceUnknown: The name org.chromium.PowerManager was not provided by any .service files
+2023-04-10T10:33:02.602578Z VERBOSE1 chrome[1206:1206]: [wizard_controller.cc(2211)] SetCurrentScreen: packaged-license
+2023-04-10T10:33:02.602657Z VERBOSE1 chrome[1206:1206]: [wizard_controller.cc(1541)] Wizard screen packaged-license exited with reason: NotApplicable
+2023-04-10T10:33:02.602675Z VERBOSE1 chrome[1206:1206]: [wizard_controller.cc(946)] Showing login screen.
+2023-04-10T10:33:02.628703Z VERBOSE1 chrome[1206:1206]: [wizard_controller.cc(2348)] AdvanceToScreen user-creation
+2023-04-10T10:33:02.628773Z VERBOSE1 chrome[1206:1206]: [wizard_controller.cc(2211)] SetCurrentScreen: user-creation
+2023-04-10T10:33:02.629115Z WARNING chrome[1206:1206]: [error_screen.cc(214)] ShowNetworkErrorMessage state = offline reason = 7
+2023-04-10T10:33:02.629157Z WARNING chrome[1206:1206]: [error_screen.cc(163)] SetErrorState to Offline
+2023-04-10T10:33:02.629179Z WARNING chrome[1206:1206]: [error_screen.cc(154)] SetUIState to Signin
+2023-04-10T10:33:02.629197Z WARNING chrome[1206:1206]: [error_screen.cc(266)] Network error screen message is shown
+2023-04-10T10:33:02.650148Z ERROR chrome[1206:1206]: [dlcservice_client.cc(82)] Failed to set error based on ErrorResponse defaulted to kErrorInternal, was:org.freedesktop.DBus.Error.ServiceUnknown
+2023-04-10T10:33:02.650217Z ERROR chrome[1206:1206]: [object_proxy.cc(623)] Failed to call method: org.chromium.PowerManager.GetChargeHistory: object_path= /org/chromium/PowerManager: org.freedesktop.DBus.Error.ServiceUnknown: The name org.chromium.PowerManager was not provided by any .service files
+2023-04-10T10:33:02.650264Z ERROR chrome[1206:1206]: [device_event_log_impl.cc(222)] [18:33:02.650] Power: power_manager_client.cc:949 Error calling GetChargeHistory
+2023-04-10T10:33:02.650294Z ERROR chrome[1206:1206]: [object_proxy.cc(623)] Failed to call method: org.chromium.PowerManager.GetPowerSupplyProperties: object_path= /org/chromium/PowerManager: org.freedesktop.DBus.Error.ServiceUnknown: The name org.chromium.PowerManager was not provided by any .service files
+2023-04-10T10:33:02.650323Z ERROR chrome[1206:1206]: [device_event_log_impl.cc(222)] [18:33:02.650] Power: power_manager_client.cc:862 Error calling GetPowerSupplyProperties
+2023-04-10T10:33:02.650355Z ERROR chrome[1206:1206]: [object_proxy.cc(623)] Failed to call method: org.chromium.PowerManager.GetSwitchStates: object_path= /org/chromium/PowerManager: org.freedesktop.DBus.Error.ServiceUnknown: The name org.chromium.PowerManager was not provided by any .service files
+2023-04-10T10:33:02.650375Z ERROR chrome[1206:1206]: [device_event_log_impl.cc(222)] [18:33:02.650] Power: power_manager_client.cc:926 Error calling GetSwitchStates
+2023-04-10T10:33:02.650396Z ERROR chrome[1206:1206]: [object_proxy.cc(623)] Failed to call method: org.chromium.PowerManager.GetScreenBrightnessPercent: object_path= /org/chromium/PowerManager: org.freedesktop.DBus.Error.ServiceUnknown: The name org.chromium.PowerManager was not provided by any .service files
+2023-04-10T10:33:02.650418Z ERROR chrome[1206:1206]: [object_proxy.cc(623)] Failed to call method: org.chromium.PowerManager.GetPowerSupplyProperties: object_path= /org/chromium/PowerManager: org.freedesktop.DBus.Error.ServiceUnknown: The name org.chromium.PowerManager was not provided by any .service files
+2023-04-10T10:33:02.650436Z ERROR chrome[1206:1206]: [device_event_log_impl.cc(222)] [18:33:02.650] Power: power_manager_client.cc:862 Error calling GetPowerSupplyProperties
+2023-04-10T10:33:02.650457Z ERROR chrome[1206:1206]: [object_proxy.cc(623)] Failed to call method: org.chromium.PowerManager.GetSwitchStates: object_path= /org/chromium/PowerManager: org.freedesktop.DBus.Error.ServiceUnknown: The name org.chromium.PowerManager was not provided by any .service files
+2023-04-10T10:33:02.650475Z ERROR chrome[1206:1206]: [device_event_log_impl.cc(222)] [18:33:02.650] Power: power_manager_client.cc:926 Error calling GetSwitchStates
+2023-04-10T10:33:02.650496Z ERROR chrome[1206:1206]: [object_proxy.cc(623)] Failed to call method: org.chromium.PowerManager.GetInactivityDelays: object_path= /org/chromium/PowerManager: org.freedesktop.DBus.Error.ServiceUnknown: The name org.chromium.PowerManager was not provided by any .service files
+2023-04-10T10:33:02.650514Z ERROR chrome[1206:1206]: [device_event_log_impl.cc(222)] [18:33:02.650] Power: power_manager_client.cc:981 Error calling GetInactivityDelays
+2023-04-10T10:33:02.652412Z ERROR chrome[1206:1206]: [object_proxy.cc(623)] Failed to call method: org.chromium.PowerManager.RefreshAllPeripheralBattery: object_path= /org/chromium/PowerManager: org.freedesktop.DBus.Error.ServiceUnknown: The name org.chromium.PowerManager was not provided by any .service files
+2023-04-10T10:33:02.652484Z ERROR chrome[1206:1206]: [device_event_log_impl.cc(222)] [18:33:02.652] Power: power_manager_client.cc:880 Error calling RefreshAllPeripheralBattery
+2023-04-10T10:33:02.656805Z ERROR chrome[1206:1206]: [object_proxy.cc(623)] Failed to call method: org.chromium.PowerManager.GetPowerSupplyProperties: object_path= /org/chromium/PowerManager: org.freedesktop.DBus.Error.ServiceUnknown: The name org.chromium.PowerManager was not provided by any .service files
+2023-04-10T10:33:02.656883Z ERROR chrome[1206:1206]: [device_event_log_impl.cc(222)] [18:33:02.656] Power: power_manager_client.cc:862 Error calling GetPowerSupplyProperties
+2023-04-10T10:33:02.680273Z ERROR chrome[1206:1206]: [object_proxy.cc(623)] Failed to call method: org.chromium.cras.Control.SetPlayerMetadata: object_path= /org/chromium/cras: org.freedesktop.DBus.Error.ServiceUnknown: The name org.chromium.cras was not provided by any .service files
+2023-04-10T10:33:02.680448Z ERROR chrome[1206:1206]: [object_proxy.cc(623)] Failed to call method: org.chromium.cras.Control.SetPlayerIdentity: object_path= /org/chromium/cras: org.freedesktop.DBus.Error.ServiceUnknown: The name org.chromium.cras was not provided by any .service files
+2023-04-10T10:33:02.680541Z ERROR chrome[1206:1206]: [object_proxy.cc(623)] Failed to call method: org.chromium.cras.Control.SetPlayerPlaybackStatus: object_path= /org/chromium/cras: org.freedesktop.DBus.Error.ServiceUnknown: The name org.chromium.cras was not provided by any .service files
+2023-04-10T10:33:02.871219Z WARNING chrome[1206:1335]: [backend_impl.cc(1595)] Messed up entry found.
+2023-04-10T10:33:02.976083Z VERBOSE1 chrome[1206:1206]: [metrics_util.cc(76)] Ash system animation drops too many frames, smoothness= 0
+2023-04-10T10:33:03.024313Z VERBOSE1 chrome[1206:1206]: [metrics_util.cc(76)] Ash system animation drops too many frames, smoothness= 0
+2023-04-10T10:33:03.524370Z VERBOSE1 chrome[1206:1206]: [metrics_util.cc(76)] Ash system animation drops too many frames, smoothness= 0
+2023-04-10T10:33:03.554083Z VERBOSE1 chrome[1338:1452]: [drm_util.cc(618)] Failed to get EDID blob for connector 32
+2023-04-10T10:33:03.555026Z VERBOSE1 chrome[1338:1452]: [screen_manager.cc(358)] DRM testing: {"card0":{"base_connector=32":["{connector=32 crtc=48 mode=1200x2000@60+(0,0)}"]}}
+2023-04-10T10:33:03.556868Z VERBOSE1 chrome[1338:1452]: [screen_manager.cc(367)] Test-modeset succeeded.
+2023-04-10T10:33:03.557400Z VERBOSE1 chrome[1338:1452]: [screen_manager.cc(358)] DRM configuring: {"card0":{"base_connector=32":["{connector=32 crtc=48 mode=1200x2000@60+(0,0)}"]}}
+2023-04-10T10:33:03.562918Z VERBOSE1 chrome[1338:1452]: [screen_manager.cc(380)] Modeset succeeded.
+2023-04-10T10:33:03.563699Z VERBOSE1 chrome[1206:1206]: [power_event_observer.cc(366)] Lock screen on lid close: lid=0, lock=0, projecting=0, policy=0, can_lock=0
+2023-04-10T10:33:03.845327Z ERROR chrome[1206:1206]: [geolocation_handler.cc(149)] Failed to get Geolocation data
+2023-04-10T10:33:04.163584Z WARNING chrome[1206:1206]: [CONSOLE(1)] "Could not find style data in module named settings-shared", source: chrome://resources/polymer/v3_0/polymer/polymer_bundled.min.js (1)
+2023-04-10T10:33:05.157872Z WARNING chrome[1206:1206]: [login_display_host_webui.cc(744)] LoginDisplayHostWebUI::OnCurrentScreenChanged() NotifyLoginOrLockScreenVisible
+2023-04-10T10:33:05.158496Z VERBOSE1 chrome[1206:1206]: [arc_session_manager.cc(1739)] Starting ARCVM on login screen is not supported.
+2023-04-10T10:33:05.442375Z ERROR chrome[1206:1206]: [chrome_features_service_provider.cc(286)] No trial found for 'CrOSLateBootSecagentdXDRReporting', skipping.
+2023-04-10T10:33:05.442503Z ERROR chrome[1206:1206]: [chrome_features_service_provider.cc(286)] No trial found for 'CrOSLateBootSecagentdBatchEvents', skipping.
+2023-04-10T10:33:05.442520Z ERROR chrome[1206:1206]: [chrome_features_service_provider.cc(286)] No trial found for 'CrOSLateBootSecagentdCoalesceTerminates', skipping.
+2023-04-10T10:33:05.458489Z WARNING chrome[1206:1206]: [CONSOLE(1)] "Could not find style data in module named internet-shared", source: chrome://resources/polymer/v3_0/polymer/polymer_bundled.min.js (1)
+2023-04-10T10:33:06.621109Z WARNING chrome[1206:1206]: [chrome_content_verifier_delegate.cc(215)] Corruption detected in extension jkghodnilhceideoidjikpgommlajknk installed at: /usr/share/chromeos-assets/input_methods/input_tools, from webstore: 0, corruption reason: 1, should be repaired: 1, extension location: kComponent

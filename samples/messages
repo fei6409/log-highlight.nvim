@@ -1,0 +1,601 @@
+2023-04-10T10:33:00.960249Z INFO kernel: [    0.000000] Booting Linux on physical CPU 0x0000000000 [0x412fd050]
+2023-04-10T10:33:00.960282Z NOTICE kernel: [    0.000000] random: crng init done
+2023-04-10T10:33:00.960291Z WARNING kernel: [    0.000000] Malformed early option 'console'
+2023-04-10T10:33:00.960292Z ERR kernel: [    0.000000] A fake ERROR for syntax highlight checks
+2023-04-10T10:33:00.960294Z INFO kernel: [    0.000000] Reserved memory: created DMA memory pool at 0x0000000050000000, size 41 MiB
+2023-04-10T10:33:00.960298Z INFO kernel: [    0.000000] OF: reserved mem: initialized node scp_mem_region, compatible id shared-dma-pool
+2023-04-10T10:33:00.960305Z INFO kernel: [    0.000000] Zone ranges:
+2023-04-10T10:33:00.960309Z INFO kernel: [    0.000000]   DMA      [mem 0x0000000040000000-0x00000000ffffffff]
+2023-04-10T10:33:00.960313Z INFO kernel: [    0.000000]   DMA32    empty
+2023-04-10T10:33:00.960317Z INFO kernel: [    0.000000]   Normal   [mem 0x0000000100000000-0x000000013fffffff]
+2023-04-10T10:33:00.960320Z INFO kernel: [    0.000000] Movable zone start for each node
+2023-04-10T10:33:00.960324Z INFO kernel: [    0.000000] Early memory node ranges
+2023-04-10T10:33:00.960335Z INFO kernel: [    0.000000]   node   0: [mem 0x0000000040000000-0x000000004fffffff]
+2023-04-10T10:33:00.960339Z INFO kernel: [    0.000000]   node   0: [mem 0x0000000050000000-0x00000000528fffff]
+2023-04-10T10:33:00.960343Z INFO kernel: [    0.000000]   node   0: [mem 0x0000000052900000-0x00000000545fffff]
+2023-04-10T10:33:00.960347Z INFO kernel: [    0.000000]   node   0: [mem 0x0000000054700000-0x0000000069ffffff]
+2023-04-10T10:33:00.960351Z INFO kernel: [    0.000000]   node   0: [mem 0x000000006a100000-0x00000000ffdfffff]
+2023-04-10T10:33:00.960355Z INFO kernel: [    0.000000]   node   0: [mem 0x0000000100000000-0x000000013fffffff]
+2023-04-10T10:33:00.960358Z INFO kernel: [    0.000000] Initmem setup node 0 [mem 0x0000000040000000-0x000000013fffffff]
+2023-04-10T10:33:00.960365Z INFO kernel: [    0.000000] On node 0, zone DMA: 256 pages in unavailable ranges
+2023-04-10T10:33:00.960369Z INFO kernel: [    0.000000] On node 0, zone DMA: 256 pages in unavailable ranges
+2023-04-10T10:33:00.960378Z INFO kernel: [    0.000000] On node 0, zone Normal: 512 pages in unavailable ranges
+2023-04-10T10:33:00.960383Z INFO kernel: [    0.000000] psci: probing for conduit method from DT.
+2023-04-10T10:33:00.960387Z INFO kernel: [    0.000000] psci: PSCIv1.1 detected in firmware.
+2023-04-10T10:33:00.960391Z INFO kernel: [    0.000000] psci: Using standard PSCI v0.2 function IDs
+2023-04-10T10:33:00.960397Z INFO kernel: [    0.000000] psci: MIGRATE_INFO_TYPE not supported.
+2023-04-10T10:33:00.960401Z INFO kernel: [    0.000000] psci: SMC Calling Convention v1.2
+2023-04-10T10:33:00.960405Z INFO kernel: [    0.000000] percpu: Embedded 29 pages/cpu s80552 r8192 d30040 u118784
+2023-04-10T10:33:00.960409Z DEBUG kernel: [    0.000000] pcpu-alloc: s80552 r8192 d30040 u118784 alloc=29*4096
+2023-04-10T10:33:00.960412Z DEBUG kernel: [    0.000000] pcpu-alloc: [0] 0 [0] 1 [0] 2 [0] 3 [0] 4 [0] 5 [0] 6 [0] 7
+2023-04-10T10:33:00.960416Z INFO kernel: [    0.000000] Detected VIPT I-cache on CPU0
+2023-04-10T10:33:00.960422Z INFO kernel: [    0.000000] CPU features: detected: GIC system register CPU interface
+2023-04-10T10:33:00.960426Z INFO kernel: [    0.000000] CPU features: detected: Virtualization Host Extensions
+2023-04-10T10:33:00.960430Z INFO kernel: [    0.000000] CPU features: kernel page table isolation forced ON by KASLR
+2023-04-10T10:33:00.960434Z INFO kernel: [    0.000000] CPU features: detected: Kernel page table isolation (KPTI)
+2023-04-10T10:33:00.960437Z INFO kernel: [    0.000000] CPU features: detected: Qualcomm erratum 1009, or ARM erratum 1286807, 2441009
+2023-04-10T10:33:00.960441Z INFO kernel: [    0.000000] CPU features: detected: ARM errata 1165522, 1319367, or 1530923
+2023-04-10T10:33:00.960444Z INFO kernel: [    0.000000] alternatives: applying boot alternatives
+2023-04-10T10:33:00.960450Z INFO kernel: [    0.000000] Built 1 zonelists, mobility grouping on.  Total pages: 1031168
+2023-04-10T10:33:00.960455Z NOTICE kernel: [    0.000000] Kernel command line: cros_secure console= loglevel=7 init=/sbin/init cros_secure drm.trace=0x106 root=/dev/dm-0 rootwait ro dm_verity.error_behavior=3 dm_verity.max_bios=-1 dm_verity.dev_wait=1 dm="1 vroot none ro 1,0 4710400 verity payload=PARTUUID=fb21d561-e9c4-b441-bb2b-a9034baddee2/PARTNROFF=1 hashtree=PARTUUID=fb21d561-e9c4-b441-bb2b-a9034baddee2/PARTNROFF=1 hashstart=4710400 alg=sha256 root_hexdigest=0a92387d22c5fbbdf335df2d329229e44448c2446a9e89dedf223e5af1ead12f salt=6314b032796ad42c3b8ba3474f2a5291f0aa73aebb3a13701e4df0ae2ebf87bc" noinitrd cros_debug vt.global_cursor_default=0 kern_guid=fb21d561-e9c4-b441-bb2b-a9034baddee2
+2023-04-10T10:33:00.960459Z NOTICE kernel: [    0.000000] Unknown kernel command line parameters "cros_secure cros_debug dm=1 vroot none ro 1,0 4710400 verity payload=PARTUUID=fb21d561-e9c4-b441-bb2b-a9034baddee2/PARTNROFF=1 hashtree=PARTUUID=fb21d561-e9c4-b441-bb2b-a9034baddee2/PARTNROFF=1 hashstart=4710400 alg=sha256 root_hexdigest=0a92387d22c5fbbdf335df2d329229e44448c2446a9e89dedf223e5af1ead12f salt=6314b032796ad42c3b8ba3474f2a5291f0aa73aebb3a13701e4df0ae2ebf87bc", will be passed to user space.
+2023-04-10T10:33:00.960464Z INFO kernel: [    0.000000] Dentry cache hash table entries: 524288 (order: 10, 4194304 bytes, linear)
+2023-04-10T10:33:00.960470Z INFO kernel: [    0.000000] Inode-cache hash table entries: 262144 (order: 9, 2097152 bytes, linear)
+2023-04-10T10:33:00.960474Z INFO kernel: [    0.000000] mem auto-init: stack:all(zero), heap alloc:off, heap free:off
+2023-04-10T10:33:00.960478Z INFO kernel: [    0.000000] software IO TLB: area num 8.
+2023-04-10T10:33:00.960481Z INFO kernel: [    0.000000] software IO TLB: mapped [mem 0x00000000fbe00000-0x00000000ffe00000] (64MB)
+2023-04-10T10:33:00.960485Z INFO kernel: [    0.000000] Memory: 3975260K/4190208K available (12544K kernel code, 2648K rwdata, 5396K rodata, 1600K init, 1042K bss, 214948K reserved, 0K cma-reserved)
+2023-04-10T10:33:00.960489Z INFO kernel: [    0.000000] SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=8, Nodes=1
+2023-04-10T10:33:00.960492Z INFO kernel: [    0.000000] ftrace: allocating 45997 entries in 180 pages
+2023-04-10T10:33:00.960499Z INFO kernel: [    0.000000] ftrace: allocated 180 pages with 4 groups
+2023-04-10T10:33:00.960502Z INFO kernel: [    0.000000] trace event string verifier disabled
+2023-04-10T10:33:00.960506Z INFO kernel: [    0.000000] rcu: Preemptible hierarchical RCU implementation.
+2023-04-10T10:33:00.960510Z INFO kernel: [    0.000000] 	Trampoline variant of Tasks RCU enabled.
+2023-04-10T10:33:00.960514Z INFO kernel: [    0.000000] 	Rude variant of Tasks RCU enabled.
+2023-04-10T10:33:00.960517Z INFO kernel: [    0.000000] 	Tracing variant of Tasks RCU enabled.
+2023-04-10T10:33:00.960523Z INFO kernel: [    0.000000] rcu: RCU calculated value of scheduler-enlistment delay is 100 jiffies.
+2023-04-10T10:33:00.960527Z INFO kernel: [    0.000000] NR_IRQS: 64, nr_irqs: 64, preallocated irqs: 0
+2023-04-10T10:33:00.960531Z INFO kernel: [    0.000000] GICv3: GIC: Using split EOI/Deactivate mode
+2023-04-10T10:33:00.960535Z INFO kernel: [    0.000000] GICv3: 864 SPIs implemented
+2023-04-10T10:33:00.960539Z INFO kernel: [    0.000000] GICv3: 0 Extended SPIs implemented
+2023-04-10T10:33:00.960542Z INFO kernel: [    0.000000] Root IRQ handler: gic_handle_irq
+2023-04-10T10:33:00.960548Z INFO kernel: [    0.000000] GICv3: GICv3 features: 16 PPIs
+2023-04-10T10:33:00.960553Z INFO kernel: [    0.000000] GICv3: CPU0: found redistributor 0 region 0:0x000000000c040000
+2023-04-10T10:33:00.960557Z INFO kernel: [    0.000000] GICv3: GIC: PPI partition interrupt-partition-0[0] { /cpus/cpu@0[0] /cpus/cpu@100[1] /cpus/cpu@200[2] /cpus/cpu@300[3] /cpus/cpu@400[4] /cpus/cpu@500[5] }
+2023-04-10T10:33:00.960561Z INFO kernel: [    0.000000] GICv3: GIC: PPI partition interrupt-partition-1[1] { /cpus/cpu@600[6] /cpus/cpu@700[7] }
+2023-04-10T10:33:00.960565Z INFO kernel: [    0.000000] rcu: 	Offload RCU callbacks from CPUs: 0-7.
+2023-04-10T10:33:00.960568Z INFO kernel: [    0.000000] rcu: srcu_init: Setting srcu_struct sizes based on contention.
+2023-04-10T10:33:00.960574Z INFO kernel: [    0.000000] arch_timer: cp15 timer(s) running at 13.00MHz (phys).
+2023-04-10T10:33:00.960578Z INFO kernel: [    0.000000] clocksource: arch_sys_counter: mask: 0xffffffffffffff max_cycles: 0x2ff89eacb, max_idle_ns: 440795202429 ns
+2023-04-10T10:33:00.960582Z INFO kernel: [    0.000000] sched_clock: 56 bits at 13MHz, resolution 76ns, wraps every 4398046511101ns
+2023-04-10T10:33:00.960586Z INFO kernel: [    0.000483] kfence: initialized - using 2097152 bytes for 255 objects at 0x(____ptrval____)-0x(____ptrval____)
+2023-04-10T10:33:00.960590Z INFO kernel: [    0.000571] Calibrating delay loop (skipped), value calculated using timer frequency.. 26.00 BogoMIPS (lpj=13000)
+2023-04-10T10:33:00.960594Z INFO kernel: [    0.000578] pid_max: default: 32768 minimum: 301
+2023-04-10T10:33:00.960600Z INFO kernel: [    0.000648] LSM: Security Framework initializing
+2023-04-10T10:33:00.960604Z INFO kernel: [    0.000682] landlock: Up and running.
+2023-04-10T10:33:00.960608Z INFO kernel: [    0.000683] Yama: becoming mindful.
+2023-04-10T10:33:00.960612Z INFO kernel: [    0.000700] LoadPin: ready to pin (currently enforcing)
+2023-04-10T10:33:00.960619Z INFO kernel: [    0.000716] SELinux:  Initializing.
+2023-04-10T10:33:00.960625Z INFO kernel: [    0.000799] Mount-cache hash table entries: 8192 (order: 4, 65536 bytes, linear)
+2023-04-10T10:33:00.960629Z INFO kernel: [    0.000808] Mountpoint-cache hash table entries: 8192 (order: 4, 65536 bytes, linear)
+2023-04-10T10:33:00.960633Z INFO kernel: [    0.001986] cblist_init_generic: Setting adjustable number of callback queues.
+2023-04-10T10:33:00.960636Z INFO kernel: [    0.001996] cblist_init_generic: Setting shift to 3 and lim to 1.
+2023-04-10T10:33:00.960640Z INFO kernel: [    0.002048] cblist_init_generic: Setting shift to 3 and lim to 1.
+2023-04-10T10:33:00.960643Z INFO kernel: [    0.002101] cblist_init_generic: Setting shift to 3 and lim to 1.
+2023-04-10T10:33:00.960647Z INFO kernel: [    0.002215] rcu: Hierarchical SRCU implementation.
+2023-04-10T10:33:00.960653Z INFO kernel: [    0.002217] rcu: 	Max phase no-delay instances is 400.
+2023-04-10T10:33:00.960657Z INFO kernel: [    0.003148] smp: Bringing up secondary CPUs ...
+2023-04-10T10:33:00.960661Z INFO kernel: [    0.003537] Detected VIPT I-cache on CPU1
+2023-04-10T10:33:00.960664Z INFO kernel: [    0.003597] GICv3: CPU1: found redistributor 100 region 0:0x000000000c060000
+2023-04-10T10:33:00.960668Z INFO kernel: [    0.003625] CPU1: Booted secondary processor 0x0000000100 [0x412fd050]
+2023-04-10T10:33:00.960671Z INFO kernel: [    0.004355] Detected VIPT I-cache on CPU2
+2023-04-10T10:33:00.960678Z INFO kernel: [    0.004406] GICv3: CPU2: found redistributor 200 region 0:0x000000000c080000
+2023-04-10T10:33:00.960682Z INFO kernel: [    0.004425] CPU2: Booted secondary processor 0x0000000200 [0x412fd050]
+2023-04-10T10:33:00.960884Z INFO kernel: [    0.005063] Detected VIPT I-cache on CPU3
+2023-04-10T10:33:00.960895Z INFO kernel: [    0.005112] GICv3: CPU3: found redistributor 300 region 0:0x000000000c0a0000
+2023-04-10T10:33:00.960900Z INFO kernel: [    0.005128] CPU3: Booted secondary processor 0x0000000300 [0x412fd050]
+2023-04-10T10:33:00.960904Z INFO kernel: [    0.005822] Detected VIPT I-cache on CPU4
+2023-04-10T10:33:00.960908Z INFO kernel: [    0.005867] GICv3: CPU4: found redistributor 400 region 0:0x000000000c0c0000
+2023-04-10T10:33:00.960917Z INFO kernel: [    0.005883] CPU4: Booted secondary processor 0x0000000400 [0x412fd050]
+2023-04-10T10:33:00.960921Z INFO kernel: [    0.006508] Detected VIPT I-cache on CPU5
+2023-04-10T10:33:00.960925Z INFO kernel: [    0.006553] GICv3: CPU5: found redistributor 500 region 0:0x000000000c0e0000
+2023-04-10T10:33:00.960929Z INFO kernel: [    0.006567] CPU5: Booted secondary processor 0x0000000500 [0x412fd050]
+2023-04-10T10:33:00.960933Z INFO kernel: [    0.007239] CPU features: detected: Spectre-v4
+2023-04-10T10:33:00.960936Z INFO kernel: [    0.007246] CPU features: detected: Spectre-BHB
+2023-04-10T10:33:00.960948Z INFO kernel: [    0.007251] Detected PIPT I-cache on CPU6
+2023-04-10T10:33:00.960953Z INFO kernel: [    0.007325] GICv3: CPU6: found redistributor 600 region 0:0x000000000c100000
+2023-04-10T10:33:00.960957Z INFO kernel: [    0.007346] CPU6: Booted secondary processor 0x0000000600 [0x411fd410]
+2023-04-10T10:33:00.960961Z INFO kernel: [    0.008046] Detected PIPT I-cache on CPU7
+2023-04-10T10:33:00.960964Z INFO kernel: [    0.008124] GICv3: CPU7: found redistributor 700 region 0:0x000000000c120000
+2023-04-10T10:33:00.960968Z INFO kernel: [    0.008148] CPU7: Booted secondary processor 0x0000000700 [0x411fd410]
+2023-04-10T10:33:00.960975Z INFO kernel: [    0.008237] smp: Brought up 1 node, 8 CPUs
+2023-04-10T10:33:00.960979Z INFO kernel: [    0.008245] SMP: Total of 8 processors activated.
+2023-04-10T10:33:00.960983Z INFO kernel: [    0.008250] CPU features: detected: 32-bit EL0 Support
+2023-04-10T10:33:00.960987Z INFO kernel: [    0.008255] CPU features: detected: Data cache clean to the PoU not required for I/D coherence
+2023-04-10T10:33:00.960990Z INFO kernel: [    0.008260] CPU features: detected: Common not Private translations
+2023-04-10T10:33:00.960994Z INFO kernel: [    0.008264] CPU features: detected: CRC32 instructions
+2023-04-10T10:33:00.960998Z INFO kernel: [    0.008269] CPU features: detected: RCpc load-acquire (LDAPR)
+2023-04-10T10:33:00.961004Z INFO kernel: [    0.008273] CPU features: detected: LSE atomic instructions
+2023-04-10T10:33:00.961008Z INFO kernel: [    0.008276] CPU features: detected: Privileged Access Never
+2023-04-10T10:33:00.961012Z INFO kernel: [    0.008280] CPU features: detected: RAS Extension Support
+2023-04-10T10:33:00.961016Z INFO kernel: [    0.008285] CPU features: detected: Speculative Store Bypassing Safe (SSBS)
+2023-04-10T10:33:00.961020Z INFO kernel: [    0.008372] CPU: All CPU(s) started at EL2
+2023-04-10T10:33:00.961024Z INFO kernel: [    0.008374] alternatives: applying system-wide alternatives
+2023-04-10T10:33:00.961031Z INFO kernel: [    0.013331] devtmpfs: initialized
+2023-04-10T10:33:00.961035Z NOTICE kernel: [    0.020063] Registered cp15_barrier emulation handler
+2023-04-10T10:33:00.961039Z NOTICE kernel: [    0.020072] Registered setend emulation handler
+2023-04-10T10:33:00.961043Z INFO kernel: [    0.020183] clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 1911260446275000 ns
+2023-04-10T10:33:00.961047Z INFO kernel: [    0.020193] futex hash table entries: 2048 (order: 5, 131072 bytes, linear)
+2023-04-10T10:33:00.961051Z INFO kernel: [    0.020359] pinctrl core: initialized pinctrl subsystem
+2023-04-10T10:33:00.961057Z INFO kernel: [    0.020744] NET: Registered PF_NETLINK/PF_ROUTE protocol family
+2023-04-10T10:33:00.961061Z INFO kernel: [    0.021259] DMA: preallocated 512 KiB GFP_KERNEL pool for atomic allocations
+2023-04-10T10:33:00.961065Z INFO kernel: [    0.021306] DMA: preallocated 512 KiB GFP_KERNEL|GFP_DMA pool for atomic allocations
+2023-04-10T10:33:00.961069Z INFO kernel: [    0.021347] DMA: preallocated 512 KiB GFP_KERNEL|GFP_DMA32 pool for atomic allocations
+2023-04-10T10:33:00.961072Z INFO kernel: [    0.021373] audit: initializing netlink subsys (disabled)
+2023-04-10T10:33:00.961076Z NOTICE kernel: [    0.021452] audit: type=2000 audit(0.017:1): state=initialized audit_enabled=0 res=1
+2023-04-10T10:33:00.961080Z INFO kernel: [    0.021796] thermal_sys: Registered thermal governor 'step_wise'
+2023-04-10T10:33:00.961086Z INFO kernel: [    0.021800] thermal_sys: Registered thermal governor 'user_space'
+2023-04-10T10:33:00.961090Z INFO kernel: [    0.021802] thermal_sys: Registered thermal governor 'power_allocator'
+2023-04-10T10:33:00.961094Z INFO kernel: [    0.021890] cpuidle: using governor ladder
+2023-04-10T10:33:00.961098Z INFO kernel: [    0.021996] cpuidle: using governor menu
+2023-04-10T10:33:00.961101Z INFO kernel: [    0.022129] hw-breakpoint: found 6 breakpoint and 4 watchpoint registers.
+2023-04-10T10:33:00.961105Z INFO kernel: [    0.022237] ASID allocator initialised with 32768 entries
+2023-04-10T10:33:00.961111Z INFO kernel: [    0.023709] printk: console [ramoops-1] enabled
+2023-04-10T10:33:00.961115Z INFO kernel: [    0.023828] pstore: Registered ramoops as persistent store backend
+2023-04-10T10:33:00.961119Z INFO kernel: [    0.023835] ramoops: using 0x100000@0xffec5000, ecc: 0
+2023-04-10T10:33:00.961123Z DEBUG kernel: [    0.033611] gpiochip_find_base: found new base at 322
+2023-04-10T10:33:00.961127Z DEBUG kernel: [    0.033656] gpio gpiochip0: (pinctrl_paris): created GPIO range 0->175 ==> 10005000.pinctrl PIN 0->175
+2023-04-10T10:33:00.961131Z DEBUG kernel: [    0.033857] gpio gpiochip0: (pinctrl_paris): added GPIO chardev (254:0)
+2023-04-10T10:33:00.961137Z DEBUG kernel: [    0.033899] gpio gpiochip0: registered GPIOs 322 to 511 on pinctrl_paris
+2023-04-10T10:33:00.961142Z INFO kernel: [    0.049128] platform 1c113000.dp-intf: Fixed dependency cycle(s) with /soc/dp-tx@1c600000
+2023-04-10T10:33:00.961145Z INFO kernel: [    0.052382] KASLR enabled
+2023-04-10T10:33:00.961149Z INFO kernel: [    0.055790] cryptd: max_cpu_qlen set to 1000
+2023-04-10T10:33:00.961153Z DEBUG kernel: [    0.056429] reg-fixed-voltage avdd-lcd: GPIO lookup for consumer (null)
+2023-04-10T10:33:00.961156Z DEBUG kernel: [    0.056435] reg-fixed-voltage avdd-lcd: using device tree for GPIO lookup
+2023-04-10T10:33:00.961160Z DEBUG kernel: [    0.056447] of_get_named_gpiod_flags: can't parse 'gpios' property of node '/avdd-lcd[0]'
+2023-04-10T10:33:00.961182Z DEBUG kernel: [    0.056465] of_get_named_gpiod_flags: parsed 'gpio' property of node '/avdd-lcd[0]' - status (0)
+2023-04-10T10:33:00.961187Z DEBUG kernel: [    0.056481] gpio gpiochip0: Persistence not supported for GPIO 3
+2023-04-10T10:33:00.961191Z DEBUG kernel: [    0.056653] reg-fixed-voltage avee-lcd: GPIO lookup for consumer (null)
+2023-04-10T10:33:00.961194Z DEBUG kernel: [    0.056658] reg-fixed-voltage avee-lcd: using device tree for GPIO lookup
+2023-04-10T10:33:00.961198Z DEBUG kernel: [    0.056665] of_get_named_gpiod_flags: can't parse 'gpios' property of node '/avee-lcd[0]'
+2023-04-10T10:33:00.961202Z DEBUG kernel: [    0.056678] of_get_named_gpiod_flags: parsed 'gpio' property of node '/avee-lcd[0]' - status (0)
+2023-04-10T10:33:00.961208Z DEBUG kernel: [    0.056690] gpio gpiochip0: Persistence not supported for GPIO 4
+2023-04-10T10:33:00.961213Z DEBUG kernel: [    0.056820] reg-fixed-voltage regulator2: GPIO lookup for consumer (null)
+2023-04-10T10:33:00.961216Z DEBUG kernel: [    0.056825] reg-fixed-voltage regulator2: using device tree for GPIO lookup
+2023-04-10T10:33:00.961220Z DEBUG kernel: [    0.056831] of_get_named_gpiod_flags: can't parse 'gpios' property of node '/regulator2[0]'
+2023-04-10T10:33:00.961224Z DEBUG kernel: [    0.056839] of_get_named_gpiod_flags: can't parse 'gpio' property of node '/regulator2[0]'
+2023-04-10T10:33:00.961228Z DEBUG kernel: [    0.056846] reg-fixed-voltage regulator2: using lookup tables for GPIO lookup
+2023-04-10T10:33:00.961231Z DEBUG kernel: [    0.056850] reg-fixed-voltage regulator2: No GPIO consumer (null) found
+2023-04-10T10:33:00.961237Z DEBUG kernel: [    0.056967] reg-fixed-voltage regulator3: GPIO lookup for consumer (null)
+2023-04-10T10:33:00.961241Z DEBUG kernel: [    0.056971] reg-fixed-voltage regulator3: using device tree for GPIO lookup
+2023-04-10T10:33:00.961245Z DEBUG kernel: [    0.056977] of_get_named_gpiod_flags: can't parse 'gpios' property of node '/regulator3[0]'
+2023-04-10T10:33:00.961249Z DEBUG kernel: [    0.056984] of_get_named_gpiod_flags: can't parse 'gpio' property of node '/regulator3[0]'
+2023-04-10T10:33:00.961253Z DEBUG kernel: [    0.056990] reg-fixed-voltage regulator3: using lookup tables for GPIO lookup
+2023-04-10T10:33:00.961256Z DEBUG kernel: [    0.056994] reg-fixed-voltage regulator3: No GPIO consumer (null) found
+2023-04-10T10:33:00.961262Z DEBUG kernel: [    0.057122] reg-fixed-voltage pcie-3v3-en-regulator: GPIO lookup for consumer (null)
+2023-04-10T10:33:00.961267Z DEBUG kernel: [    0.057127] reg-fixed-voltage pcie-3v3-en-regulator: using device tree for GPIO lookup
+2023-04-10T10:33:00.961271Z DEBUG kernel: [    0.057133] of_get_named_gpiod_flags: can't parse 'gpios' property of node '/pcie-3v3-en-regulator[0]'
+2023-04-10T10:33:00.961275Z DEBUG kernel: [    0.057144] of_get_named_gpiod_flags: parsed 'gpio' property of node '/pcie-3v3-en-regulator[0]' - status (0)
+2023-04-10T10:33:00.961278Z DEBUG kernel: [    0.057156] gpio gpiochip0: Persistence not supported for GPIO 12
+2023-04-10T10:33:00.961282Z DEBUG kernel: [    0.057304] reg-fixed-voltage pp3300-dx-edp-regulator: GPIO lookup for consumer (null)
+2023-04-10T10:33:00.961289Z DEBUG kernel: [    0.057308] reg-fixed-voltage pp3300-dx-edp-regulator: using device tree for GPIO lookup
+2023-04-10T10:33:00.961293Z DEBUG kernel: [    0.057314] of_get_named_gpiod_flags: can't parse 'gpios' property of node '/pp3300-dx-edp-regulator[0]'
+2023-04-10T10:33:00.961297Z DEBUG kernel: [    0.057324] of_get_named_gpiod_flags: parsed 'gpio' property of node '/pp3300-dx-edp-regulator[0]' - status (0)
+2023-04-10T10:33:00.961301Z DEBUG kernel: [    0.057336] gpio gpiochip0: Persistence not supported for GPIO 27
+2023-04-10T10:33:00.961305Z DEBUG kernel: [    0.057478] reg-fixed-voltage regulator-pp3300-mipi: GPIO lookup for consumer (null)
+2023-04-10T10:33:00.961309Z DEBUG kernel: [    0.057482] reg-fixed-voltage regulator-pp3300-mipi: using device tree for GPIO lookup
+2023-04-10T10:33:00.961315Z DEBUG kernel: [    0.057488] of_get_named_gpiod_flags: can't parse 'gpios' property of node '/regulator-pp3300-mipi[0]'
+2023-04-10T10:33:00.961319Z DEBUG kernel: [    0.057495] of_get_named_gpiod_flags: can't parse 'gpio' property of node '/regulator-pp3300-mipi[0]'
+2023-04-10T10:33:00.961323Z DEBUG kernel: [    0.057502] reg-fixed-voltage regulator-pp3300-mipi: using lookup tables for GPIO lookup
+2023-04-10T10:33:00.961327Z DEBUG kernel: [    0.057505] reg-fixed-voltage regulator-pp3300-mipi: No GPIO consumer (null) found
+2023-04-10T10:33:00.961330Z DEBUG kernel: [    0.057666] reg-fixed-voltage pp3300-s3-regulator: GPIO lookup for consumer (null)
+2023-04-10T10:33:00.961334Z DEBUG kernel: [    0.057670] reg-fixed-voltage pp3300-s3-regulator: using device tree for GPIO lookup
+2023-04-10T10:33:00.961341Z DEBUG kernel: [    0.057676] of_get_named_gpiod_flags: can't parse 'gpios' property of node '/pp3300-s3-regulator[0]'
+2023-04-10T10:33:00.961345Z DEBUG kernel: [    0.057692] of_get_named_gpiod_flags: parsed 'gpio' property of node '/pp3300-s3-regulator[0]' - status (0)
+2023-04-10T10:33:00.961350Z DEBUG kernel: [    0.057703] gpio gpiochip0: Persistence not supported for GPIO 144
+2023-04-10T10:33:00.961353Z DEBUG kernel: [    0.057855] reg-fixed-voltage regulator-usb-p1-vbus: GPIO lookup for consumer (null)
+2023-04-10T10:33:00.961545Z DEBUG kernel: [    0.057859] reg-fixed-voltage regulator-usb-p1-vbus: using device tree for GPIO lookup
+2023-04-10T10:33:00.961554Z DEBUG kernel: [    0.057867] of_get_named_gpiod_flags: can't parse 'gpios' property of node '/regulator-usb-p1-vbus[0]'
+2023-04-10T10:33:00.961583Z DEBUG kernel: [    0.057878] of_get_named_gpiod_flags: parsed 'gpio' property of node '/regulator-usb-p1-vbus[0]' - status (0)
+2023-04-10T10:33:00.961591Z DEBUG kernel: [    0.057889] gpio gpiochip0: Persistence not supported for GPIO 150
+2023-04-10T10:33:00.961596Z INFO kernel: [    0.058171] iommu: Default domain type: Translated
+2023-04-10T10:33:00.961600Z INFO kernel: [    0.058181] iommu: DMA domain TLB invalidation policy: strict mode
+2023-04-10T10:33:00.961608Z NOTICE kernel: [    0.058443] SCSI subsystem initialized
+2023-04-10T10:33:00.961616Z INFO kernel: [    0.058533] usbcore: registered new interface driver usbfs
+2023-04-10T10:33:00.961632Z INFO kernel: [    0.058555] usbcore: registered new interface driver hub
+2023-04-10T10:33:00.961638Z INFO kernel: [    0.058574] usbcore: registered new device driver usb
+2023-04-10T10:33:00.961642Z INFO kernel: [    0.058640] mc: Linux media interface: v0.10
+2023-04-10T10:33:00.961645Z INFO kernel: [    0.058654] videodev: Linux video capture interface: v2.00
+2023-04-10T10:33:00.961664Z DEBUG kernel: [    0.059431] of_get_named_gpiod_flags: can't parse 'wp-gpios' property of node '/soc/efuse@11f20000[0]'
+2023-04-10T10:33:00.961673Z DEBUG kernel: [    0.059442] of_get_named_gpiod_flags: can't parse 'wp-gpio' property of node '/soc/efuse@11f20000[0]'
+2023-04-10T10:33:00.961686Z INFO kernel: [    0.059646] Advanced Linux Sound Architecture Driver Initialized.
+2023-04-10T10:33:00.961690Z INFO kernel: [    0.060091] vgaarb: loaded
+2023-04-10T10:33:00.961701Z INFO kernel: [    0.060339] clocksource: Switched to clocksource arch_sys_counter
+2023-04-10T10:33:00.961710Z NOTICE kernel: [    0.060529] VFS: Disk quotas dquot_6.6.0
+2023-04-10T10:33:00.961715Z INFO kernel: [    0.060561] VFS: Dquot-cache hash table entries: 512 (order 0, 4096 bytes)
+2023-04-10T10:33:00.961719Z INFO kernel: [    0.061397] NET: Registered PF_INET protocol family
+2023-04-10T10:33:00.961723Z INFO kernel: [    0.061515] IP idents hash table entries: 65536 (order: 7, 524288 bytes, linear)
+2023-04-10T10:33:00.961727Z INFO kernel: [    0.064082] tcp_listen_portaddr_hash hash table entries: 2048 (order: 3, 32768 bytes, linear)
+2023-04-10T10:33:00.961730Z INFO kernel: [    0.064105] Table-perturb hash table entries: 65536 (order: 6, 262144 bytes, linear)
+2023-04-10T10:33:00.961745Z INFO kernel: [    0.064116] TCP established hash table entries: 32768 (order: 6, 262144 bytes, linear)
+2023-04-10T10:33:00.961750Z INFO kernel: [    0.064205] TCP bind hash table entries: 32768 (order: 8, 1048576 bytes, linear)
+2023-04-10T10:33:00.961754Z INFO kernel: [    0.065026] TCP: Hash tables configured (established 32768 bind 32768)
+2023-04-10T10:33:00.961758Z INFO kernel: [    0.065089] UDP hash table entries: 2048 (order: 4, 65536 bytes, linear)
+2023-04-10T10:33:00.961762Z INFO kernel: [    0.065117] UDP-Lite hash table entries: 2048 (order: 4, 65536 bytes, linear)
+2023-04-10T10:33:00.961765Z INFO kernel: [    0.065219] NET: Registered PF_UNIX/PF_LOCAL protocol family
+2023-04-10T10:33:00.961779Z INFO kernel: [    0.065244] PCI: CLS 0 bytes, default 64
+2023-04-10T10:33:00.961784Z INFO kernel: [    0.065921] hw perfevents: enabled with armv8_cortex_a55 PMU driver, 7 counters available
+2023-04-10T10:33:00.961789Z INFO kernel: [    0.066190] hw perfevents: enabled with armv8_cortex_a78 PMU driver, 7 counters available
+2023-04-10T10:33:00.961793Z INFO kernel: [    0.066760] kvm [1]: IPA Size Limit: 40 bits
+2023-04-10T10:33:00.961797Z INFO kernel: [    0.066782] kvm [1]: GICv3: no GICV resource entry
+2023-04-10T10:33:00.961801Z INFO kernel: [    0.066789] kvm [1]: disabling GICv2 emulation
+2023-04-10T10:33:00.961804Z INFO kernel: [    0.066805] kvm [1]: GIC system register CPU interface enabled
+2023-04-10T10:33:00.961818Z INFO kernel: [    0.066929] kvm [1]: vgic interrupt IRQ18
+2023-04-10T10:33:00.961824Z INFO kernel: [    0.067063] kvm [1]: VHE mode initialized successfully
+2023-04-10T10:33:00.961828Z NOTICE kernel: [    0.069157] Initialise system trusted keyrings
+2023-04-10T10:33:00.961832Z INFO kernel: [    0.069248] workingset: timestamp_bits=62 max_order=20 bucket_order=0
+2023-04-10T10:33:00.961835Z INFO kernel: [    0.072952] squashfs: version 4.0 (2009/01/31) Phillip Lougher
+2023-04-10T10:33:00.961839Z INFO kernel: [    0.073139] Registering esdfs 0.2
+2023-04-10T10:33:00.961867Z INFO kernel: [    0.073254] alt_syscall: table 'read_write_test' available.
+2023-04-10T10:33:00.961874Z INFO kernel: [    0.073280] alt_syscall: table 'android' available.
+2023-04-10T10:33:00.961879Z INFO kernel: [    0.073302] alt_syscall: table 'android_permissive' available.
+2023-04-10T10:33:00.961882Z INFO kernel: [    0.073322] alt_syscall: table 'third_party' available.
+2023-04-10T10:33:00.961886Z INFO kernel: [    0.073352] alt_syscall: table 'third_party_permissive' available.
+2023-04-10T10:33:00.961890Z INFO kernel: [    0.073366] alt_syscall: table 'complete' available.
+2023-04-10T10:33:00.961901Z INFO kernel: [    0.073379] alt_syscall: table 'complete_permissive' available.
+2023-04-10T10:33:00.961909Z NOTICE kernel: [    0.106762] Key type asymmetric registered
+2023-04-10T10:33:00.961914Z NOTICE kernel: [    0.106775] Asymmetric key parser 'x509' registered
+2023-04-10T10:33:00.961918Z INFO kernel: [    0.106817] Block layer SCSI generic (bsg) driver version 0.4 loaded (major 246)
+2023-04-10T10:33:00.961921Z INFO kernel: [    0.106824] io scheduler mq-deadline registered
+2023-04-10T10:33:00.961925Z INFO kernel: [    0.106830] io scheduler kyber registered
+2023-04-10T10:33:00.961929Z INFO kernel: [    0.106954] io scheduler bfq registered
+2023-04-10T10:33:00.961948Z NOTICE kernel: [    0.132227] get clk [0]: infra_ao_uart0 ok
+2023-04-10T10:33:00.961952Z NOTICE kernel: [    0.135584] systracker probe
+2023-04-10T10:33:00.961956Z NOTICE kernel: [    0.135603] of_iomap for systracker @ 0x00000000bb632a35
+2023-04-10T10:33:00.961960Z NOTICE kernel: [    0.135618] [systracker] bus_dbg_con is in infra_ao
+2023-04-10T10:33:00.961963Z NOTICE kernel: [    0.135657] systracker_probe:83: irq # 255
+2023-04-10T10:33:00.961977Z INFO kernel: [    0.136631] Serial: 8250/16550 driver, 4 ports, IRQ sharing disabled
+2023-04-10T10:33:00.961990Z DEBUG kernel: [    0.137874] of_get_named_gpiod_flags: can't parse 'rs485-term-gpios' property of node '/soc/serial@11001100[0]'
+2023-04-10T10:33:00.961994Z DEBUG kernel: [    0.137889] of_get_named_gpiod_flags: can't parse 'rs485-term-gpio' property of node '/soc/serial@11001100[0]'
+2023-04-10T10:33:00.962017Z INFO kernel: [    0.158064] 11001100.serial: ttyS0 at MMIO 0x11001100 (irq = 256, base_baud = 1625000) is a ST16650V2
+2023-04-10T10:33:00.962021Z INFO kernel: [    0.180632] usbcore: registered new interface driver udl
+2023-04-10T10:33:00.962025Z INFO kernel: [    0.188277] loop: module loaded
+2023-04-10T10:33:00.962029Z INFO kernel: [    0.188518] lkdtm: No crash points registered, enable through debugfs
+2023-04-10T10:33:00.962032Z INFO kernel: [    0.191614] vgpu11_sshub: Bringing 400000uV into 550000-550000uV
+2023-04-10T10:33:00.962051Z INFO kernel: [    0.208912] spi-nor spi3.0: w25q64jwm (8192 Kbytes)
+2023-04-10T10:33:00.962060Z DEBUG kernel: [    0.210019] mdio_bus fixed-0: GPIO lookup for consumer reset
+2023-04-10T10:33:00.962063Z DEBUG kernel: [    0.210026] mdio_bus fixed-0: using lookup tables for GPIO lookup
+2023-04-10T10:33:00.962067Z DEBUG kernel: [    0.210030] mdio_bus fixed-0: No GPIO consumer reset found
+2023-04-10T10:33:00.962070Z INFO kernel: [    0.210035] PPP generic driver version 2.4.2
+2023-04-10T10:33:00.962084Z INFO kernel: [    0.210234] PPP MPPE Compression module registered
+2023-04-10T10:33:00.962089Z INFO kernel: [    0.211926] usbcore: registered new interface driver cdc_acm
+2023-04-10T10:33:00.962093Z INFO kernel: [    0.211934] cdc_acm: USB Abstract Control Model driver for USB modems and ISDN adapters
+2023-04-10T10:33:00.962097Z INFO kernel: [    0.212021] usbcore: registered new interface driver uas
+2023-04-10T10:33:00.962101Z INFO kernel: [    0.212047] usbcore: registered new interface driver usb-storage
+2023-04-10T10:33:00.962124Z INFO kernel: [    0.213534] i2c_dev: i2c /dev entries driver
+2023-04-10T10:33:00.962128Z INFO kernel: [    0.217170] cr50_i2c 1-0050: ti50 TPM 2.0 (i2c 0x50 irq 27 id 0x504a)
+2023-04-10T10:33:00.962181Z WARNING kernel: [    0.281364] thermal thermal_zone0: power_allocator: sustainable_power will be estimated
+2023-04-10T10:33:00.962196Z WARNING kernel: [    0.281447] thermal thermal_zone1: power_allocator: sustainable_power will be estimated
+2023-04-10T10:33:00.962201Z WARNING kernel: [    0.281516] thermal thermal_zone2: power_allocator: sustainable_power will be estimated
+2023-04-10T10:33:00.962205Z WARNING kernel: [    0.281588] thermal thermal_zone3: power_allocator: sustainable_power will be estimated
+2023-04-10T10:33:00.962209Z WARNING kernel: [    0.281657] thermal thermal_zone4: power_allocator: sustainable_power will be estimated
+2023-04-10T10:33:00.962213Z WARNING kernel: [    0.281725] thermal thermal_zone5: power_allocator: sustainable_power will be estimated
+2023-04-10T10:33:00.962402Z WARNING kernel: [    0.281794] thermal thermal_zone6: power_allocator: sustainable_power will be estimated
+2023-04-10T10:33:00.962422Z WARNING kernel: [    0.281867] thermal thermal_zone7: power_allocator: sustainable_power will be estimated
+2023-04-10T10:33:00.962445Z WARNING kernel: [    0.282648] thermal thermal_zone8: power_allocator: sustainable_power will be estimated
+2023-04-10T10:33:00.962460Z WARNING kernel: [    0.282710] thermal thermal_zone9: power_allocator: sustainable_power will be estimated
+2023-04-10T10:33:00.962465Z WARNING kernel: [    0.282772] thermal thermal_zone10: power_allocator: sustainable_power will be estimated
+2023-04-10T10:33:00.962469Z WARNING kernel: [    0.282832] thermal thermal_zone11: power_allocator: sustainable_power will be estimated
+2023-04-10T10:33:00.962473Z WARNING kernel: [    0.282893] thermal thermal_zone12: power_allocator: sustainable_power will be estimated
+2023-04-10T10:33:00.962477Z WARNING kernel: [    0.282955] thermal thermal_zone13: power_allocator: sustainable_power will be estimated
+2023-04-10T10:33:00.962494Z INFO kernel: [    0.284387] device-mapper: ioctl: 4.47.0-ioctl (2022-07-28) initialised: dm-devel@redhat.com
+2023-04-10T10:33:00.962499Z INFO kernel: [    0.284537] device-mapper: verity-chromeos: dm-verity-chromeos registered
+2023-04-10T10:33:00.962503Z INFO kernel: [    0.287810] cpu cpu0: EM: created perf domain
+2023-04-10T10:33:00.962507Z INFO kernel: [    0.288146] cpu cpu6: EM: created perf domain
+2023-04-10T10:33:00.962511Z INFO kernel: [    0.288640] sdhci: Secure Digital Host Controller Interface driver
+2023-04-10T10:33:00.962514Z INFO kernel: [    0.288643] sdhci: Copyright(c) Pierre Ossman
+2023-04-10T10:33:00.962527Z INFO kernel: [    0.288829] sdhci-pltfm: SDHCI platform and OF driver helper
+2023-04-10T10:33:00.962541Z DEBUG kernel: [    0.289133] of_get_named_gpiod_flags: can't parse 'wp-gpios' property of node '/soc/mmc@11230000[0]'
+2023-04-10T10:33:00.962545Z DEBUG kernel: [    0.289137] of_get_named_gpiod_flags: can't parse 'wp-gpio' property of node '/soc/mmc@11230000[0]'
+2023-04-10T10:33:00.962567Z INFO kernel: [    0.289276] SMCCC: SOC_ID: ID = jep106:0426:8188 Revision = 0x00000000
+2023-04-10T10:33:00.962571Z INFO kernel: [    0.289287] hid: raw HID events driver (C) Jiri Kosina
+2023-04-10T10:33:00.962575Z INFO kernel: [    0.289368] usbcore: registered new interface driver usbhid
+2023-04-10T10:33:00.962579Z INFO kernel: [    0.289371] usbhid: USB HID core driver
+2023-04-10T10:33:00.962599Z DEBUG kernel: [    0.289417] of_get_named_gpiod_flags: parsed 'cd-gpios' property of node '/soc/mmc@11240000[0]' - status (0)
+2023-04-10T10:33:00.962605Z DEBUG kernel: [    0.289438] gpio gpiochip0: Persistence not supported for GPIO 107
+2023-04-10T10:33:00.962620Z DEBUG kernel: [    0.289464] of_get_named_gpiod_flags: can't parse 'wp-gpios' property of node '/soc/mmc@11240000[0]'
+2023-04-10T10:33:00.962633Z DEBUG kernel: [    0.289474] of_get_named_gpiod_flags: can't parse 'wp-gpio' property of node '/soc/mmc@11240000[0]'
+2023-04-10T10:33:00.962647Z INFO kernel: [    0.289580] spi_master spi0: will run message pump with realtime priority
+2023-04-10T10:33:00.962651Z INFO kernel: [    0.289591] mmc0: CQHCI version 5.10
+2023-04-10T10:33:00.962654Z INFO kernel: [    0.291674] max98390 0-0038: no optional property 'temperature_calib' found, default:
+2023-04-10T10:33:00.962668Z INFO kernel: [    0.291679] max98390 0-0038: no optional property 'r0_calib' found, default:
+2023-04-10T10:33:00.962673Z INFO kernel: [    0.291681] max98390 0-0038: max98390_i2c_probe: r0_calib: 0x0,temperature_calib: 0x0
+2023-04-10T10:33:00.962677Z DEBUG kernel: [    0.291718] max98390 0-0038: GPIO lookup for consumer reset
+2023-04-10T10:33:00.962681Z DEBUG kernel: [    0.291719] max98390 0-0038: using device tree for GPIO lookup
+2023-04-10T10:33:00.962684Z DEBUG kernel: [    0.291724] of_get_named_gpiod_flags: parsed 'reset-gpios' property of node '/soc/i2c@11280000/max98390@38[0]' - status (0)
+2023-04-10T10:33:00.962688Z DEBUG kernel: [    0.291734] gpio gpiochip0: Persistence not supported for GPIO 118
+2023-04-10T10:33:00.962702Z INFO kernel: [    0.295497] max98390 0-0038: MAX98390 revisionID: 0x42
+2023-04-10T10:33:00.962707Z INFO kernel: [    0.295524] max98390 0-0039: no optional property 'temperature_calib' found, default:
+2023-04-10T10:33:00.962711Z INFO kernel: [    0.295526] max98390 0-0039: no optional property 'r0_calib' found, default:
+2023-04-10T10:33:00.962715Z INFO kernel: [    0.295528] max98390 0-0039: max98390_i2c_probe: r0_calib: 0x0,temperature_calib: 0x0
+2023-04-10T10:33:00.962719Z DEBUG kernel: [    0.295549] max98390 0-0039: GPIO lookup for consumer reset
+2023-04-10T10:33:00.962723Z DEBUG kernel: [    0.295550] max98390 0-0039: using device tree for GPIO lookup
+2023-04-10T10:33:00.962726Z DEBUG kernel: [    0.295552] of_get_named_gpiod_flags: can't parse 'reset-gpios' property of node '/soc/i2c@11280000/max98390@39[0]'
+2023-04-10T10:33:00.962741Z DEBUG kernel: [    0.295555] of_get_named_gpiod_flags: can't parse 'reset-gpio' property of node '/soc/i2c@11280000/max98390@39[0]'
+2023-04-10T10:33:00.962746Z DEBUG kernel: [    0.295558] max98390 0-0039: using lookup tables for GPIO lookup
+2023-04-10T10:33:00.962750Z DEBUG kernel: [    0.295560] max98390 0-0039: No GPIO consumer reset found
+2023-04-10T10:33:00.962754Z INFO kernel: [    0.295711] max98390 0-0039: MAX98390 revisionID: 0x42
+2023-04-10T10:33:00.962758Z INFO kernel: [    0.295731] max98390 0-003a: no optional property 'temperature_calib' found, default:
+2023-04-10T10:33:00.962762Z INFO kernel: [    0.295733] max98390 0-003a: no optional property 'r0_calib' found, default:
+2023-04-10T10:33:00.962775Z INFO kernel: [    0.295735] max98390 0-003a: max98390_i2c_probe: r0_calib: 0x0,temperature_calib: 0x0
+2023-04-10T10:33:00.962781Z DEBUG kernel: [    0.295763] max98390 0-003a: GPIO lookup for consumer reset
+2023-04-10T10:33:00.962785Z DEBUG kernel: [    0.295764] max98390 0-003a: using device tree for GPIO lookup
+2023-04-10T10:33:00.962789Z DEBUG kernel: [    0.295767] of_get_named_gpiod_flags: can't parse 'reset-gpios' property of node '/soc/i2c@11280000/max98390@3A[0]'
+2023-04-10T10:33:00.962793Z DEBUG kernel: [    0.295770] of_get_named_gpiod_flags: can't parse 'reset-gpio' property of node '/soc/i2c@11280000/max98390@3A[0]'
+2023-04-10T10:33:00.962797Z DEBUG kernel: [    0.295772] max98390 0-003a: using lookup tables for GPIO lookup
+2023-04-10T10:33:00.962811Z DEBUG kernel: [    0.295773] max98390 0-003a: No GPIO consumer reset found
+2023-04-10T10:33:00.962816Z INFO kernel: [    0.295928] max98390 0-003a: MAX98390 revisionID: 0x42
+2023-04-10T10:33:00.962820Z INFO kernel: [    0.295945] max98390 0-003b: no optional property 'temperature_calib' found, default:
+2023-04-10T10:33:00.962824Z INFO kernel: [    0.295947] max98390 0-003b: no optional property 'r0_calib' found, default:
+2023-04-10T10:33:00.962828Z INFO kernel: [    0.295949] max98390 0-003b: max98390_i2c_probe: r0_calib: 0x0,temperature_calib: 0x0
+2023-04-10T10:33:00.962832Z DEBUG kernel: [    0.295967] max98390 0-003b: GPIO lookup for consumer reset
+2023-04-10T10:33:00.962845Z DEBUG kernel: [    0.295968] max98390 0-003b: using device tree for GPIO lookup
+2023-04-10T10:33:00.962866Z DEBUG kernel: [    0.295970] of_get_named_gpiod_flags: can't parse 'reset-gpios' property of node '/soc/i2c@11280000/max98390@3B[0]'
+2023-04-10T10:33:00.962872Z DEBUG kernel: [    0.295972] of_get_named_gpiod_flags: can't parse 'reset-gpio' property of node '/soc/i2c@11280000/max98390@3B[0]'
+2023-04-10T10:33:00.962877Z DEBUG kernel: [    0.295975] max98390 0-003b: using lookup tables for GPIO lookup
+2023-04-10T10:33:00.962880Z DEBUG kernel: [    0.295976] max98390 0-003b: No GPIO consumer reset found
+2023-04-10T10:33:00.962884Z INFO kernel: [    0.296127] max98390 0-003b: MAX98390 revisionID: 0x42
+2023-04-10T10:33:00.962911Z INFO kernel: [    0.296310] nau8825 0-001a: No 'mclk' clock found, assume MCLK is managed externally
+2023-04-10T10:33:00.962915Z INFO kernel: [    0.302301] GACT probability NOT on
+2023-04-10T10:33:00.962919Z INFO kernel: [    0.302548] xt_time: kernel timezone is -0000
+2023-04-10T10:33:00.962922Z INFO kernel: [    0.302604] Initializing XFRM netlink socket
+2023-04-10T10:33:00.962926Z INFO kernel: [    0.302720] NET: Registered PF_INET6 protocol family
+2023-04-10T10:33:00.962941Z INFO kernel: [    0.303017] Segment Routing with IPv6
+2023-04-10T10:33:00.962946Z INFO kernel: [    0.303023] In-situ OAM (IOAM) with IPv6
+2023-04-10T10:33:00.962951Z INFO kernel: [    0.303061] NET: Registered PF_PACKET protocol family
+2023-04-10T10:33:00.962955Z INFO kernel: [    0.303065] NET: Registered PF_KEY protocol family
+2023-04-10T10:33:00.962958Z INFO kernel: [    0.303358] registered taskstats version 1
+2023-04-10T10:33:00.962962Z NOTICE kernel: [    0.303369] Loading compiled-in X.509 certificates
+2023-04-10T10:33:00.962965Z NOTICE kernel: [    0.303467] Key type .fscrypt registered
+2023-04-10T10:33:00.962980Z NOTICE kernel: [    0.303469] Key type fscrypt-provisioning registered
+2023-04-10T10:33:00.962985Z INFO kernel: [    0.303640] pstore: Using crash dump compression: deflate
+2023-04-10T10:33:00.962990Z NOTICE kernel: [    0.303819] Key type encrypted registered
+2023-04-10T10:33:00.962993Z DEBUG kernel: [    0.317249] pwm-backlight backlight_lcd1: GPIO lookup for consumer enable
+2023-04-10T10:33:00.962997Z DEBUG kernel: [    0.317264] pwm-backlight backlight_lcd1: using device tree for GPIO lookup
+2023-04-10T10:33:00.963001Z DEBUG kernel: [    0.317278] of_get_named_gpiod_flags: parsed 'enable-gpios' property of node '/backlight_lcd1[0]' - status (0)
+2023-04-10T10:33:00.963014Z DEBUG kernel: [    0.317297] gpio gpiochip0: Persistence not supported for GPIO 1
+2023-04-10T10:33:00.963020Z DEBUG kernel: [    0.317301] gpio-323 (enable): no flags found for enable
+2023-04-10T10:33:00.963207Z DEBUG kernel: [    0.318950] sbs-battery 7-000b: GPIO lookup for consumer sbs,battery-detect
+2023-04-10T10:33:00.963212Z DEBUG kernel: [    0.318956] sbs-battery 7-000b: using device tree for GPIO lookup
+2023-04-10T10:33:00.963229Z DEBUG kernel: [    0.318965] of_get_named_gpiod_flags: can't parse 'sbs,battery-detect-gpios' property of node '/soc/spi0@1100a000/cros-ec@0/i2c-tunnel/sbs-battery@b[0]'
+2023-04-10T10:33:00.963236Z DEBUG kernel: [    0.318979] of_get_named_gpiod_flags: can't parse 'sbs,battery-detect-gpio' property of node '/soc/spi0@1100a000/cros-ec@0/i2c-tunnel/sbs-battery@b[0]'
+2023-04-10T10:33:00.963240Z DEBUG kernel: [    0.318991] sbs-battery 7-000b: using lookup tables for GPIO lookup
+2023-04-10T10:33:00.963244Z DEBUG kernel: [    0.318996] sbs-battery 7-000b: No GPIO consumer sbs,battery-detect found
+2023-04-10T10:33:00.963287Z WARNING kernel: [    0.325932] thermal thermal_zone15: power_allocator: sustainable_power will be estimated
+2023-04-10T10:33:00.963301Z INFO kernel: [    0.326030] sbs-battery 7-000b: sbs-battery: battery gas gauge device registered
+2023-04-10T10:33:00.963306Z INFO kernel: [    0.326397] input: cros_ec as /devices/platform/soc/1100a000.spi0/spi_master/spi0/spi0.0/1100a000.spi0:cros-ec@0:keyboard-controller/input/input0
+2023-04-10T10:33:00.963384Z INFO kernel: [    0.337608] usb usb1: New USB device found, idVendor=1d6b, idProduct=0002, bcdDevice= 6.01
+2023-04-10T10:33:00.963388Z INFO kernel: [    0.337616] usb usb1: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+2023-04-10T10:33:00.963391Z INFO kernel: [    0.337623] usb usb1: Product: xHCI Host Controller
+2023-04-10T10:33:00.963405Z INFO kernel: [    0.337628] usb usb1: Manufacturer: Linux 6.1.21-CL4259239-v40 xhci-hcd
+2023-04-10T10:33:00.963410Z INFO kernel: [    0.337634] usb usb1: SerialNumber: 11200000.usb
+2023-04-10T10:33:00.963414Z INFO kernel: [    0.337905] hub 1-0:1.0: USB hub found
+2023-04-10T10:33:00.963418Z INFO kernel: [    0.337928] hub 1-0:1.0: 1 port detected
+2023-04-10T10:33:00.963421Z INFO kernel: [    0.338166] usb usb2: We don't know the algorithms for LPM for this host, disabling LPM.
+2023-04-10T10:33:00.963425Z INFO kernel: [    0.338226] usb usb2: New USB device found, idVendor=1d6b, idProduct=0003, bcdDevice= 6.01
+2023-04-10T10:33:00.963429Z INFO kernel: [    0.338234] usb usb2: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+2023-04-10T10:33:00.963442Z INFO kernel: [    0.338240] usb usb2: Product: xHCI Host Controller
+2023-04-10T10:33:00.963447Z INFO kernel: [    0.338246] usb usb2: Manufacturer: Linux 6.1.21-CL4259239-v40 xhci-hcd
+2023-04-10T10:33:00.963451Z INFO kernel: [    0.338251] usb usb2: SerialNumber: 11200000.usb
+2023-04-10T10:33:00.963455Z INFO kernel: [    0.338488] hub 2-0:1.0: USB hub found
+2023-04-10T10:33:00.963458Z INFO kernel: [    0.338510] hub 2-0:1.0: 1 port detected
+2023-04-10T10:33:00.963509Z INFO kernel: [    0.339773] input: cros_ec_buttons as /devices/platform/soc/1100a000.spi0/spi_master/spi0/spi0.0/1100a000.spi0:cros-ec@0:keyboard-controller/input/input1
+2023-04-10T10:33:00.963526Z INFO kernel: [    0.339988] usb usb3: New USB device found, idVendor=1d6b, idProduct=0002, bcdDevice= 6.01
+2023-04-10T10:33:00.963530Z INFO kernel: [    0.339997] usb usb3: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+2023-04-10T10:33:00.963534Z INFO kernel: [    0.340003] usb usb3: Product: xHCI Host Controller
+2023-04-10T10:33:00.963547Z INFO kernel: [    0.340008] usb usb3: Manufacturer: Linux 6.1.21-CL4259239-v40 xhci-hcd
+2023-04-10T10:33:00.963552Z INFO kernel: [    0.340014] usb usb3: SerialNumber: 112a0000.usb
+2023-04-10T10:33:00.963556Z INFO kernel: [    0.340235] hub 3-0:1.0: USB hub found
+2023-04-10T10:33:00.963562Z INFO kernel: [    0.340255] hub 3-0:1.0: 1 port detected
+2023-04-10T10:33:00.963569Z INFO kernel: [    0.340455] usb usb4: We don't know the algorithms for LPM for this host, disabling LPM.
+2023-04-10T10:33:00.963573Z INFO kernel: [    0.340514] usb usb4: New USB device found, idVendor=1d6b, idProduct=0003, bcdDevice= 6.01
+2023-04-10T10:33:00.963589Z INFO kernel: [    0.340521] usb usb4: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+2023-04-10T10:33:00.963594Z INFO kernel: [    0.340528] usb usb4: Product: xHCI Host Controller
+2023-04-10T10:33:00.963598Z INFO kernel: [    0.340533] usb usb4: Manufacturer: Linux 6.1.21-CL4259239-v40 xhci-hcd
+2023-04-10T10:33:00.963602Z INFO kernel: [    0.340539] usb usb4: SerialNumber: 112a0000.usb
+2023-04-10T10:33:00.963605Z INFO kernel: [    0.340775] hub 4-0:1.0: USB hub found
+2023-04-10T10:33:00.963609Z ERR kernel: [    0.340794] hub 4-0:1.0: config failed, hub doesn't have any ports! (err -19)
+2023-04-10T10:33:00.963828Z INFO kernel: [    0.342139] usb usb5: New USB device found, idVendor=1d6b, idProduct=0002, bcdDevice= 6.01
+2023-04-10T10:33:00.963832Z INFO kernel: [    0.342147] usb usb5: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+2023-04-10T10:33:00.963846Z INFO kernel: [    0.342154] usb usb5: Product: xHCI Host Controller
+2023-04-10T10:33:00.963864Z INFO kernel: [    0.342159] usb usb5: Manufacturer: Linux 6.1.21-CL4259239-v40 xhci-hcd
+2023-04-10T10:33:00.963870Z INFO kernel: [    0.342165] usb usb5: SerialNumber: 112b0000.usb
+2023-04-10T10:33:00.963874Z INFO kernel: [    0.342400] hub 5-0:1.0: USB hub found
+2023-04-10T10:33:00.967472Z INFO kernel: [    0.342421] hub 5-0:1.0: 1 port detected
+2023-04-10T10:33:00.967490Z INFO kernel: [    0.342621] usb usb6: We don't know the algorithms for LPM for this host, disabling LPM.
+2023-04-10T10:33:00.967508Z INFO kernel: [    0.342679] usb usb6: New USB device found, idVendor=1d6b, idProduct=0003, bcdDevice= 6.01
+2023-04-10T10:33:00.967510Z INFO kernel: [    0.342687] usb usb6: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+2023-04-10T10:33:00.967511Z INFO kernel: [    0.342693] usb usb6: Product: xHCI Host Controller
+2023-04-10T10:33:00.967513Z INFO kernel: [    0.342699] usb usb6: Manufacturer: Linux 6.1.21-CL4259239-v40 xhci-hcd
+2023-04-10T10:33:00.967514Z INFO kernel: [    0.342704] usb usb6: SerialNumber: 112b0000.usb
+2023-04-10T10:33:00.967515Z INFO kernel: [    0.342924] hub 6-0:1.0: USB hub found
+2023-04-10T10:33:00.967517Z ERR kernel: [    0.342945] hub 6-0:1.0: config failed, hub doesn't have any ports! (err -19)
+2023-04-10T10:33:00.967640Z WARNING kernel: [    0.356707] panel-boe-tv101wum-nl6 1c008000.disp_dsi0.0: supply pp3300 not found, using dummy regulator
+2023-04-10T10:33:00.967641Z DEBUG kernel: [    0.356878] panel-boe-tv101wum-nl6 1c008000.disp_dsi0.0: GPIO lookup for consumer enable
+2023-04-10T10:33:00.967642Z DEBUG kernel: [    0.356884] panel-boe-tv101wum-nl6 1c008000.disp_dsi0.0: using device tree for GPIO lookup
+2023-04-10T10:33:00.967644Z DEBUG kernel: [    0.356898] of_get_named_gpiod_flags: parsed 'enable-gpios' property of node '/soc/disp_dsi0@1c008000/panel1@0[0]' - status (0)
+2023-04-10T10:33:00.967649Z DEBUG kernel: [    0.356920] gpio gpiochip0: Persistence not supported for GPIO 25
+2023-04-10T10:33:00.967653Z INFO kernel: [    0.358568] mali 13000000.mali: Kernel DDK version r40p0-01eac0
+2023-04-10T10:33:00.967654Z WARNING kernel: [    0.359521] sbs-battery 7-000b: I2C adapter does not support I2C_FUNC_SMBUS_READ_BLOCK_DATA.
+2023-04-10T10:33:00.967656Z WARNING kernel: [    0.359521] Fallback method does not support PEC.
+2023-04-10T10:33:00.967662Z INFO kernel: [    0.361348] mali 13000000.mali: GPU identified as 0x1 arch 9.0.9 r0p0 status 0
+2023-04-10T10:33:00.967663Z INFO kernel: [    0.361823] mali 13000000.mali: No priority control manager is configured
+2023-04-10T10:33:00.967664Z INFO kernel: [    0.361832] mali 13000000.mali: No memory group manager is configured
+2023-04-10T10:33:00.967666Z INFO kernel: [    0.362464] mali 13000000.mali: OPP 0 : opp_freq=390000000 core_mask=10005
+2023-04-10T10:33:00.967667Z INFO kernel: [    0.362475] mali 13000000.mali: OPP 1 : opp_freq=431000000 core_mask=10005
+2023-04-10T10:33:00.967668Z INFO kernel: [    0.362484] mali 13000000.mali: OPP 2 : opp_freq=473000000 core_mask=10005
+2023-04-10T10:33:00.967673Z INFO kernel: [    0.362491] mali 13000000.mali: OPP 3 : opp_freq=515000000 core_mask=10005
+2023-04-10T10:33:00.967675Z INFO kernel: [    0.362499] mali 13000000.mali: OPP 4 : opp_freq=556000000 core_mask=10005
+2023-04-10T10:33:00.967676Z INFO kernel: [    0.362507] mali 13000000.mali: OPP 5 : opp_freq=598000000 core_mask=10005
+2023-04-10T10:33:00.967677Z INFO kernel: [    0.362515] mali 13000000.mali: OPP 6 : opp_freq=640000000 core_mask=10005
+2023-04-10T10:33:00.967679Z INFO kernel: [    0.362523] mali 13000000.mali: OPP 7 : opp_freq=670000000 core_mask=10005
+2023-04-10T10:33:00.967680Z INFO kernel: [    0.362531] mali 13000000.mali: OPP 8 : opp_freq=700000000 core_mask=10005
+2023-04-10T10:33:00.967684Z INFO kernel: [    0.362539] mali 13000000.mali: OPP 9 : opp_freq=730000000 core_mask=10005
+2023-04-10T10:33:00.967686Z INFO kernel: [    0.362546] mali 13000000.mali: OPP 10 : opp_freq=760000000 core_mask=10005
+2023-04-10T10:33:00.967687Z INFO kernel: [    0.362554] mali 13000000.mali: OPP 11 : opp_freq=790000000 core_mask=10005
+2023-04-10T10:33:00.967688Z INFO kernel: [    0.362561] mali 13000000.mali: OPP 12 : opp_freq=835000000 core_mask=10005
+2023-04-10T10:33:00.967690Z INFO kernel: [    0.362569] mali 13000000.mali: OPP 13 : opp_freq=880000000 core_mask=10005
+2023-04-10T10:33:00.967691Z INFO kernel: [    0.362577] mali 13000000.mali: OPP 14 : opp_freq=915000000 core_mask=10005
+2023-04-10T10:33:00.967692Z INFO kernel: [    0.362585] mali 13000000.mali: OPP 15 : opp_freq=950000000 core_mask=10005
+2023-04-10T10:33:00.967697Z INFO kernel: [    0.362951] mali 13000000.mali: Probed as mali0
+2023-04-10T10:33:00.967700Z INFO kernel: [    0.383377] mmc0: Command Queue Engine enabled
+2023-04-10T10:33:00.967701Z INFO kernel: [    0.383382] mmc0: new HS400 MMC card at address 0001
+2023-04-10T10:33:00.967702Z INFO kernel: [    0.383565] mmcblk0: mmc0:0001 DV4032 29.1 GiB
+2023-04-10T10:33:00.967704Z INFO kernel: [    0.385661]  mmcblk0: p1 p2 p3 p4 p5 p6 p7 p8 p9 p10 p11 p12
+2023-04-10T10:33:00.967708Z INFO kernel: [    0.386249] mmcblk0boot0: mmc0:0001 DV4032 4.00 MiB
+2023-04-10T10:33:00.967710Z INFO kernel: [    0.386436] mmcblk0boot1: mmc0:0001 DV4032 4.00 MiB
+2023-04-10T10:33:00.967711Z INFO kernel: [    0.386624] mmcblk0rpmb: mmc0:0001 DV4032 16.0 MiB, chardev (243:0)
+2023-04-10T10:33:00.967715Z DEBUG kernel: [    0.396151] dmic-codec dmic-codec: GPIO lookup for consumer dmicen
+2023-04-10T10:33:00.967719Z DEBUG kernel: [    0.396157] dmic-codec dmic-codec: using device tree for GPIO lookup
+2023-04-10T10:33:00.967721Z DEBUG kernel: [    0.396162] of_get_named_gpiod_flags: can't parse 'dmicen-gpios' property of node '/dmic-codec[0]'
+2023-04-10T10:33:00.967722Z DEBUG kernel: [    0.396168] of_get_named_gpiod_flags: can't parse 'dmicen-gpio' property of node '/dmic-codec[0]'
+2023-04-10T10:33:00.967724Z DEBUG kernel: [    0.396172] dmic-codec dmic-codec: using lookup tables for GPIO lookup
+2023-04-10T10:33:00.967725Z DEBUG kernel: [    0.396174] dmic-codec dmic-codec: No GPIO consumer dmicen found
+2023-04-10T10:33:00.967726Z WARNING kernel: [    0.420829] max98390 0-0038: Direct firmware load for dsm_param.bin failed with error -2
+2023-04-10T10:33:00.967727Z WARNING kernel: [    0.420842] max98390 0-0038: Direct firmware load for dsm_param.bin failed with error -2
+2023-04-10T10:33:00.967732Z WARNING kernel: [    0.420850] max98390 0-0038: Direct firmware load for dsmparam.bin failed with error -2
+2023-04-10T10:33:00.967733Z WARNING kernel: [    0.443795] max98390 0-0039: Direct firmware load for dsm_param.bin failed with error -2
+2023-04-10T10:33:00.967735Z WARNING kernel: [    0.443805] max98390 0-0039: Direct firmware load for dsm_param.bin failed with error -2
+2023-04-10T10:33:00.967736Z WARNING kernel: [    0.443812] max98390 0-0039: Direct firmware load for dsmparam.bin failed with error -2
+2023-04-10T10:33:00.967737Z WARNING kernel: [    0.466796] max98390 0-003a: Direct firmware load for dsm_param.bin failed with error -2
+2023-04-10T10:33:00.967739Z WARNING kernel: [    0.466804] max98390 0-003a: Direct firmware load for dsm_param.bin failed with error -2
+2023-04-10T10:33:00.967743Z WARNING kernel: [    0.466811] max98390 0-003a: Direct firmware load for dsmparam.bin failed with error -2
+2023-04-10T10:33:00.967745Z INFO kernel: [    0.483365] input: hid-over-i2c 0603:F7FC as /devices/platform/soc/11281000.i2c/i2c-2/2-0001/0018:0603:F7FC.0001/input/input2
+2023-04-10T10:33:00.967746Z INFO kernel: [    0.483539] input: hid-over-i2c 0603:F7FC Stylus as /devices/platform/soc/11281000.i2c/i2c-2/2-0001/0018:0603:F7FC.0001/input/input3
+2023-04-10T10:33:00.967748Z INFO kernel: [    0.483674] input: hid-over-i2c 0603:F7FC UNKNOWN as /devices/platform/soc/11281000.i2c/i2c-2/2-0001/0018:0603:F7FC.0001/input/input4
+2023-04-10T10:33:00.967749Z INFO kernel: [    0.483842] hid-multitouch 0018:0603:F7FC.0001: input,hidraw0: I2C HID v1.00 Device [hid-over-i2c 0603:F7FC] on 2-0001
+2023-04-10T10:33:00.967756Z WARNING kernel: [    0.489809] max98390 0-003b: Direct firmware load for dsm_param.bin failed with error -2
+2023-04-10T10:33:00.967758Z WARNING kernel: [    0.489818] max98390 0-003b: Direct firmware load for dsm_param.bin failed with error -2
+2023-04-10T10:33:00.967759Z WARNING kernel: [    0.489824] max98390 0-003b: Direct firmware load for dsmparam.bin failed with error -2
+2023-04-10T10:33:00.967774Z DEBUG kernel: [    0.498853] of_get_named_gpiod_flags: parsed 'dsc-reset-gpios' property of node '/soc/pcie@112f0000[0]' - status (0)
+2023-04-10T10:33:00.967782Z DEBUG kernel: [    0.498877] of_get_named_gpiod_flags: parsed 'dsc-reset-gpios' property of node '/soc/pcie@112f0000[0]' - status (0)
+2023-04-10T10:33:00.967783Z DEBUG kernel: [    0.498898] gpio gpiochip0: Persistence not supported for GPIO 145
+2023-04-10T10:33:00.967787Z INFO kernel: [    0.624665] pci_bus 0000:00: root bus resource [bus 00-ff]
+2023-04-10T10:33:00.967791Z INFO kernel: [    0.624673] pci_bus 0000:00: root bus resource [mem 0x20000000-0x23ffffff]
+2023-04-10T10:33:00.967793Z INFO kernel: [    0.624704] pci 0000:00:00.0: [14c3:8188] type 01 class 0x060400
+2023-04-10T10:33:00.967794Z INFO kernel: [    0.624727] pci 0000:00:00.0: reg 0x10: [mem 0x00000000-0x00007fff 64bit]
+2023-04-10T10:33:00.967795Z INFO kernel: [    0.624808] pci 0000:00:00.0: PME# supported from D0 D3hot D3cold
+2023-04-10T10:33:00.967845Z INFO kernel: [    0.627268] pci 0000:00:00.0: bridge configuration invalid ([bus 00-00]), reconfiguring
+2023-04-10T10:33:00.967847Z INFO kernel: [    0.627388] pci 0000:01:00.0: [14c3:7961] type 00 class 0x028000
+2023-04-10T10:33:00.967866Z INFO kernel: [    0.627425] pci 0000:01:00.0: reg 0x10: [mem 0x00000000-0x000fffff 64bit pref]
+2023-04-10T10:33:00.967869Z INFO kernel: [    0.627449] pci 0000:01:00.0: reg 0x18: [mem 0x00000000-0x00003fff 64bit pref]
+2023-04-10T10:33:00.967871Z INFO kernel: [    0.627472] pci 0000:01:00.0: reg 0x20: [mem 0x00000000-0x00000fff 64bit pref]
+2023-04-10T10:33:00.967872Z INFO kernel: [    0.627597] pci 0000:01:00.0: supports D1 D2
+2023-04-10T10:33:00.967873Z INFO kernel: [    0.627604] pci 0000:01:00.0: PME# supported from D0 D1 D2 D3hot D3cold
+2023-04-10T10:33:00.967875Z INFO kernel: [    0.630392] pci_bus 0000:01: busn_res: [bus 01-ff] end is updated to 01
+2023-04-10T10:33:00.967876Z INFO kernel: [    0.630417] pci 0000:00:00.0: BAR 9: assigned [mem 0x20000000-0x201fffff 64bit pref]
+2023-04-10T10:33:00.967882Z INFO kernel: [    0.630425] pci 0000:00:00.0: BAR 0: assigned [mem 0x20200000-0x20207fff 64bit]
+2023-04-10T10:33:00.967884Z INFO kernel: [    0.630441] pci 0000:01:00.0: BAR 0: assigned [mem 0x20000000-0x200fffff 64bit pref]
+2023-04-10T10:33:00.967885Z INFO kernel: [    0.630461] pci 0000:01:00.0: BAR 2: assigned [mem 0x20100000-0x20103fff 64bit pref]
+2023-04-10T10:33:00.967886Z INFO kernel: [    0.630481] pci 0000:01:00.0: BAR 4: assigned [mem 0x20104000-0x20104fff 64bit pref]
+2023-04-10T10:33:00.967888Z INFO kernel: [    0.630501] pci 0000:00:00.0: PCI bridge to [bus 01]
+2023-04-10T10:33:00.967889Z INFO kernel: [    0.630512] pci 0000:00:00.0:   bridge window [mem 0x20000000-0x201fffff 64bit pref]
+2023-04-10T10:33:00.967893Z INFO kernel: [    0.630544] pci 0000:00:00.0: attach allowed to drvr pcieport [internal device]
+2023-04-10T10:33:00.967895Z INFO kernel: [    0.630665] pcieport 0000:00:00.0: Adding to iommu group 0
+2023-04-10T10:33:00.967896Z INFO kernel: [    0.630851] pcieport 0000:00:00.0: enabling device (0000 -> 0002)
+2023-04-10T10:33:00.967897Z INFO kernel: [    0.631849] pcieport 0000:00:00.0: PME: Signaling with IRQ 294
+2023-04-10T10:33:00.967899Z INFO kernel: [    0.632038] pcieport 0000:00:00.0: AER: enabled with IRQ 294
+2023-04-10T10:33:00.968102Z INFO kernel: [    0.652073] device-mapper: init: waiting for all devices to be available before creating mapped devices
+2023-04-10T10:33:00.968103Z INFO kernel: [    0.652199] device-mapper: verity: sha256 using implementation "sha256-ce"
+2023-04-10T10:33:00.968104Z INFO kernel: [    0.652481] device-mapper: ioctl: dm-0 (vroot) is ready
+2023-04-10T10:33:00.968106Z INFO kernel: [    0.652940] ALSA device list:
+2023-04-10T10:33:00.968111Z ERR kernel: [    0.652961] Warning: unable to open an initial console.
+2023-04-10T10:33:00.968113Z INFO kernel: [    0.655610] EXT4-fs (dm-0): mounting ext2 file system using the ext4 subsystem
+2023-04-10T10:33:00.968114Z INFO kernel: [    0.656878] EXT4-fs (dm-0): mounted filesystem without journal. Quota mode: none.
+2023-04-10T10:33:00.968115Z INFO kernel: [    0.656892] VFS: Mounted root (ext2 filesystem) readonly on device 254:0.
+2023-04-10T10:33:00.968117Z INFO kernel: [    0.658933] devtmpfs: mounted
+2023-04-10T10:33:00.968118Z INFO kernel: [    0.659538] Freeing unused kernel memory: 1600K
+2023-04-10T10:33:00.968121Z INFO kernel: [    0.676448] Run /sbin/init as init process
+2023-04-10T10:33:00.968124Z DEBUG kernel: [    0.676451]   with arguments:
+2023-04-10T10:33:00.968125Z DEBUG kernel: [    0.676452]     /sbin/init
+2023-04-10T10:33:00.968126Z DEBUG kernel: [    0.676453]     cros_secure
+2023-04-10T10:33:00.968128Z DEBUG kernel: [    0.676454]     cros_debug
+2023-04-10T10:33:00.968129Z DEBUG kernel: [    0.676454]   with environment:
+2023-04-10T10:33:00.968130Z DEBUG kernel: [    0.676455]     HOME=/
+2023-04-10T10:33:00.968135Z DEBUG kernel: [    0.676456]     TERM=linux
+2023-04-10T10:33:00.968136Z DEBUG kernel: [    0.676457]     dm=1 vroot none ro 1,0 4710400 verity payload=PARTUUID=fb21d561-e9c4-b441-bb2b-a9034baddee2/PARTNROFF=1 hashtree=PARTUUID=fb21d561-e9c4-b441-bb2b-a9034baddee2/PARTNROFF=1 hashstart=4710400 alg=sha256 root_hexdigest=0a92387d22c5fbbdf335df2d329229e44448c2446a9e89dedf223e5af1ead12f salt=6314b032796ad42c3b8ba3474f2a5291f0aa73aebb3a13701e4df0ae2ebf87bc
+2023-04-10T10:33:00.968138Z WARNING kernel: [    0.700617] devfreq 13000000.mali: Couldn't update frequency transition information.
+2023-04-10T10:33:00.968139Z NOTICE kernel: [    0.725959] audit: type=1404 audit(1681122779.011:2): enforcing=1 old_enforcing=0 auid=4294967295 ses=4294967295 enabled=1 old-enabled=1 lsm=selinux res=1
+2023-04-10T10:33:00.968145Z INFO kernel: [    0.750446] SELinux:  Permission nlmsg_getneigh in class netlink_route_socket not defined in policy.
+2023-04-10T10:33:00.968146Z INFO kernel: [    0.750475] SELinux:  Permission bpf in class capability2 not defined in policy.
+2023-04-10T10:33:00.968148Z INFO kernel: [    0.750478] SELinux:  Permission checkpoint_restore in class capability2 not defined in policy.
+2023-04-10T10:33:00.968149Z INFO kernel: [    0.750484] SELinux:  Permission bpf in class cap2_userns not defined in policy.
+2023-04-10T10:33:00.968150Z INFO kernel: [    0.750486] SELinux:  Permission checkpoint_restore in class cap2_userns not defined in policy.
+2023-04-10T10:33:00.968151Z INFO kernel: [    0.750506] SELinux:  Class mctp_socket not defined in policy.
+2023-04-10T10:33:00.968153Z INFO kernel: [    0.750509] SELinux:  Class anon_inode not defined in policy.
+2023-04-10T10:33:00.968157Z INFO kernel: [    0.750511] SELinux:  Class io_uring not defined in policy.
+2023-04-10T10:33:00.968158Z INFO kernel: [    0.750513] SELinux:  Class user_namespace not defined in policy.
+2023-04-10T10:33:00.968160Z INFO kernel: [    0.750514] SELinux: the above unknown classes and permissions will be denied
+2023-04-10T10:33:00.968161Z INFO kernel: [    0.752186] SELinux:  policy capability network_peer_controls=1
+2023-04-10T10:33:00.968162Z INFO kernel: [    0.752193] SELinux:  policy capability open_perms=1
+2023-04-10T10:33:00.968163Z INFO kernel: [    0.752195] SELinux:  policy capability extended_socket_class=1
+2023-04-10T10:33:00.968168Z INFO kernel: [    0.752197] SELinux:  policy capability always_check_network=0
+2023-04-10T10:33:00.968169Z INFO kernel: [    0.752199] SELinux:  policy capability cgroup_seclabel=0
+2023-04-10T10:33:00.968171Z INFO kernel: [    0.752201] SELinux:  policy capability nnp_nosuid_transition=1
+2023-04-10T10:33:00.968172Z INFO kernel: [    0.752202] SELinux:  policy capability genfs_seclabel_symlinks=0
+2023-04-10T10:33:00.968173Z INFO kernel: [    0.752204] SELinux:  policy capability ioctl_skip_cloexec=0
+2023-04-10T10:33:00.968175Z NOTICE kernel: [    0.808415] audit: type=1403 audit(1681122779.094:3): auid=4294967295 ses=4294967295 lsm=selinux res=1
+2023-04-10T10:33:00.968179Z INFO kernel: [    0.871742] usb 1-1: New USB device found, idVendor=0bda, idProduct=5412, bcdDevice= 1.16
+2023-04-10T10:33:00.968181Z INFO kernel: [    0.871766] usb 1-1: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+2023-04-10T10:33:00.968182Z INFO kernel: [    0.871773] usb 1-1: Product: USB2.1 Hub
+2023-04-10T10:33:00.968184Z INFO kernel: [    0.871779] usb 1-1: Manufacturer: Generic
+2023-04-10T10:33:00.968185Z INFO kernel: [    0.872964] hub 1-1:1.0: USB hub found
+2023-04-10T10:33:00.968186Z INFO kernel: [    0.873945] hub 1-1:1.0: 2 ports detected
+2023-04-10T10:33:00.968193Z NOTICE kernel: [    0.987847] audit: type=1400 audit(1681122779.273:4): avc:  granted  { execute } for  pid=249 comm="sh" name="crash_reporter" dev="dm-0" ino=27644 scontext=u:r:cros_init_scripts:s0 tcontext=u:object_r:cros_crash_reporter_exec:s0 tclass=file
+2023-04-10T10:33:00.968195Z INFO kernel: [    1.003669] usb 2-1: New USB device found, idVendor=0bda, idProduct=0412, bcdDevice= 1.16
+2023-04-10T10:33:00.968196Z INFO kernel: [    1.003695] usb 2-1: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+2023-04-10T10:33:00.968197Z INFO kernel: [    1.003702] usb 2-1: Product: USB3.2 Hub
+2023-04-10T10:33:00.968199Z INFO kernel: [    1.003707] usb 2-1: Manufacturer: Generic
+2023-04-10T10:33:00.968203Z INFO kernel: [    1.005382] hub 2-1:1.0: USB hub found
+2023-04-10T10:33:00.968205Z INFO kernel: [    1.006496] hub 2-1:1.0: 2 ports detected
+2023-04-10T10:33:00.968206Z INFO kernel: [    1.086829] usb 3-1: New USB device found, idVendor=0e8d, idProduct=7961, bcdDevice= 1.00
+2023-04-10T10:33:00.968207Z INFO kernel: [    1.086854] usb 3-1: New USB device strings: Mfr=5, Product=6, SerialNumber=7
+2023-04-10T10:33:00.968209Z INFO kernel: [    1.086860] usb 3-1: Product: Wireless_Device
+2023-04-10T10:33:00.968214Z INFO kernel: [    1.086871] usb 3-1: SerialNumber: 000000000
+2023-04-10T10:33:00.968217Z INFO kernel: [    1.151294] loop0: detected capacity change from 0 to 8
+2023-04-10T10:33:00.968220Z INFO kernel: [    1.188095] udevd[266]: starting version 225
+2023-04-10T10:33:00.968221Z INFO kernel: [    1.249597] usb 1-1.2: New USB device found, idVendor=1a40, idProduct=0801, bcdDevice= 1.00
+2023-04-10T10:33:00.968225Z INFO kernel: [    1.249622] usb 1-1.2: New USB device strings: Mfr=0, Product=1, SerialNumber=0
+2023-04-10T10:33:00.968227Z INFO kernel: [    1.249629] usb 1-1.2: Product: USB 2.0 Hub
+2023-04-10T10:33:00.968228Z INFO kernel: [    1.250316] hub 1-1.2:1.0: USB hub found
+2023-04-10T10:33:00.968229Z INFO kernel: [    1.250386] hub 1-1.2:1.0: 4 ports detected
+2023-04-10T10:33:00.968231Z INFO kernel: [    1.367025] LoadPin: dm-0 (254:0): read-only
+2023-04-10T10:33:00.968232Z INFO kernel: [    1.367051] LoadPin: load pinning engaged.
+2023-04-10T10:33:00.968233Z NOTICE kernel: [    1.367072] LoadPin: kernel-module pinned obj="/lib/modules/6.1.21-CL4259239-v40/kernel/drivers/input/joydev.ko.gz" pid=284 cmdline="udevd --daemon"
+2023-04-10T10:33:00.968242Z INFO kernel: [    1.558203] EXT4-fs (mmcblk0p1): recovery complete
+2023-04-10T10:33:00.968243Z INFO kernel: [    1.558679] EXT4-fs (mmcblk0p1): mounted filesystem with ordered data mode. Quota mode: journalled.
+2023-04-10T10:33:00.968245Z INFO kernel: [    1.560174] EXT4-fs (mmcblk0p8): mounted filesystem without journal. Quota mode: none.
+2023-04-10T10:33:00.968246Z INFO kernel: [    1.604749] EXT4-fs (mmcblk0p1): re-mounted. Quota mode: journalled.
+2023-04-10T10:33:00.968247Z INFO kernel: [    1.624001] usb 1-1.2.1: New USB device found, idVendor=0bda, idProduct=8152, bcdDevice=20.00
+2023-04-10T10:33:00.968252Z INFO kernel: [    1.624028] usb 1-1.2.1: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+2023-04-10T10:33:00.968254Z INFO kernel: [    1.624035] usb 1-1.2.1: Product: USB 10/100 LAN
+2023-04-10T10:33:00.968255Z INFO kernel: [    1.624041] usb 1-1.2.1: Manufacturer: Realtek
+2023-04-10T10:33:00.968256Z INFO kernel: [    1.624047] usb 1-1.2.1: SerialNumber: 00E04C3601B6
+2023-04-10T10:33:00.968263Z INFO kernel: [    1.736711] loop1: detected capacity change from 0 to 12735592
+2023-04-10T10:33:00.968265Z INFO kernel: [    1.805922] usb 1-1.2.3: No LPM exit latency info found, disabling LPM.
+2023-04-10T10:33:00.968266Z INFO kernel: [    1.828270] usb 1-1.2.3: New USB device found, idVendor=343c, idProduct=0000, bcdDevice= 0.00
+2023-04-10T10:33:00.968267Z INFO kernel: [    1.828296] usb 1-1.2.3: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+2023-04-10T10:33:00.968269Z INFO kernel: [    1.828303] usb 1-1.2.3: Product: USB Type-C Digital AV Adapter
+2023-04-10T10:33:00.968270Z INFO kernel: [    1.828309] usb 1-1.2.3: Manufacturer: xxxxxxxx
+2023-04-10T10:33:00.968275Z INFO kernel: [    1.828315] usb 1-1.2.3: SerialNumber: 000000000000
+2023-04-10T10:33:00.968278Z INFO kernel: [    2.012363] usb 1-1.2.4: New USB device found, idVendor=1a2c, idProduct=2124, bcdDevice= 1.10
+2023-04-10T10:33:00.968279Z INFO kernel: [    2.012389] usb 1-1.2.4: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+2023-04-10T10:33:00.968280Z INFO kernel: [    2.012396] usb 1-1.2.4: Product: USB Keyboard
+2023-04-10T10:33:00.968281Z INFO kernel: [    2.012402] usb 1-1.2.4: Manufacturer: SEM
+2023-04-10T10:33:00.968283Z INFO kernel: [    2.016186] input: SEM USB Keyboard as /devices/platform/soc/11200000.usb/usb1/1-1/1-1.2/1-1.2.4/1-1.2.4:1.0/0003:1A2C:2124.0002/input/input7
+2023-04-10T10:33:00.968302Z INFO kernel: [    2.067873] hid-generic 0003:1A2C:2124.0002: input,hidraw1: USB HID v1.10 Keyboard [SEM USB Keyboard] on usb-11200000.usb-1.2.4/input0
+2023-04-10T10:33:00.968305Z INFO kernel: [    2.070734] input: SEM USB Keyboard Consumer Control as /devices/platform/soc/11200000.usb/usb1/1-1/1-1.2/1-1.2.4/1-1.2.4:1.1/0003:1A2C:2124.0003/input/input8
+2023-04-10T10:33:00.968306Z INFO kernel: [    2.122443] input: SEM USB Keyboard System Control as /devices/platform/soc/11200000.usb/usb1/1-1/1-1.2/1-1.2.4/1-1.2.4:1.1/0003:1A2C:2124.0003/input/input9
+2023-04-10T10:33:00.968308Z INFO kernel: [    2.122650] hid-generic 0003:1A2C:2124.0003: input,hidraw2: USB HID v1.10 Device [SEM USB Keyboard] on usb-11200000.usb-1.2.4/input1
+2023-04-10T10:33:00.968309Z INFO kernel: [    2.147142] usbcore: registered new interface driver r8152
+2023-04-10T10:33:00.968314Z INFO kernel: [    2.151590] usbcore: registered new interface driver cdc_ether
