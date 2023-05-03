@@ -1,7 +1,7 @@
 # log-highlight.nvim
 
 A simple and lightweight Neovim plugin that brings syntax highlighting to
-general log files and provides straight-forward configuration to manage the log
+generic log files and provides straight-forward configuration to manage the log
 file type detection.  
 
 ![preview-1](./doc/images/kernel-log.png)
