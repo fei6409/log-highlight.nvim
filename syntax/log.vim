@@ -1,7 +1,7 @@
 " Vim syntax file
-" Language:         asd
-" Maintainer:       asdasd
-" Latest Revision:  asdasdasd
+" Language:         Generic logs
+" Maintainer:       fei6409 <fei6409@gmail.com>
+" Latest Revision:  2023-05-03
 
 if exists("b:current_syntax")
   finish
