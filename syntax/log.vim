@@ -1,7 +1,7 @@
 " Vim syntax file
 " Language:         Generic logs
 " Maintainer:       fei6409 <fei6409@gmail.com>
-" Latest Revision:  2023-05-03
+" Latest Revision:  2023-05-06
 
 if exists("b:current_syntax")
   finish
@@ -67,17 +67,19 @@ syn match logSHA        display     '\<\(\x\{40}\|\x\{56}\|\x\{64}\|\x\{96}\|\x\
 
 " Log Levels
 " ------------------------------
-syn keyword logLevelFatal       FATAL
-syn keyword logLevelEmergency   EMERGENCY EMERG
-syn keyword logLevelAlert       ALERT
-syn keyword logLevelCritical    CRITICAL CRIT
-syn keyword logLevelError       ERROR ERRORS ERR
-syn keyword logLevelFailure     FAILURE FAILED FAIL
-syn keyword logLevelWarning     WARNING WARN
-syn keyword logLevelNotice      NOTICE
-syn keyword logLevelInfo        INFO
-syn keyword logLevelDebug       DEBUG DBG
-syn keyword logLevelTrace       TRACE
+syn keyword logLvFatal      FATAL
+syn keyword logLvEmergency  EMERGENCY EMERG
+syn keyword logLvAlert      ALERT
+syn keyword logLvCritical   CRITICAL CRIT
+syn keyword logLvError      ERROR ERRORS ERR
+syn keyword logLvFailure    FAILURE FAILED FAIL
+syn keyword logLvWarning    WARNING WARN
+syn keyword logLvNotice     NOTICE
+syn keyword logLvInfo       INFO
+syn keyword logLvDebug      DEBUG DBG
+syn keyword logLvTrace      TRACE
+
+syn cluster logLvs contains=logLvFatal,logLvEmergency,logLvAlert,logLvCritical,logLvError,logLvFailure,logLvWarning,logLvNotice,logLvInfo,logLvDebug,logLvTrace
 
 " Highlight Links
 " ------------------------------
@@ -109,17 +111,17 @@ hi def link logUUID             Label
 hi def link logMD5              Label
 hi def link logSHA              Label
 
-hi def link logLevelFatal       ErrorMsg
-hi def link logLevelEmergency   ErrorMsg
-hi def link logLevelAlert       ErrorMsg
-hi def link logLevelCritical    ErrorMsg
-hi def link logLevelError       ErrorMsg
-hi def link logLevelFailure     ErrorMsg
-hi def link logLevelWarning     WarningMsg
-hi def link logLevelNotice      Include
-hi def link logLevelInfo        Repeat
-hi def link logLevelDebug       Debug
-hi def link logLevelTrace       Comment
+hi def link logLvFatal       ErrorMsg
+hi def link logLvEmergency   ErrorMsg
+hi def link logLvAlert       ErrorMsg
+hi def link logLvCritical    ErrorMsg
+hi def link logLvError       ErrorMsg
+hi def link logLvFailure     ErrorMsg
+hi def link logLvWarning     WarningMsg
+hi def link logLvNotice      Include
+hi def link logLvInfo        Repeat
+hi def link logLvDebug       Debug
+hi def link logLvTrace       Comment
 
 
 let b:current_syntax = "log"
