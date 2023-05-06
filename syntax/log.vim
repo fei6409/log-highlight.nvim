@@ -121,17 +121,17 @@ hi def link logUUID             Label
 hi def link logMD5              Label
 hi def link logSHA              Label
 
-hi def link logLvFatal       ErrorMsg
-hi def link logLvEmergency   ErrorMsg
-hi def link logLvAlert       ErrorMsg
-hi def link logLvCritical    ErrorMsg
-hi def link logLvError       ErrorMsg
-hi def link logLvFailure     ErrorMsg
-hi def link logLvWarning     WarningMsg
-hi def link logLvNotice      Include
-hi def link logLvInfo        Repeat
-hi def link logLvDebug       Debug
-hi def link logLvTrace       Comment
+hi def link logLvFatal          ErrorMsg
+hi def link logLvEmergency      ErrorMsg
+hi def link logLvAlert          ErrorMsg
+hi def link logLvCritical       ErrorMsg
+hi def link logLvError          ErrorMsg
+hi def link logLvFailure        ErrorMsg
+hi def link logLvWarning        WarningMsg
+hi def link logLvNotice         Include
+hi def link logLvInfo           Repeat
+hi def link logLvDebug          Debug
+hi def link logLvTrace          Comment
 
 
 let b:current_syntax = "log"
