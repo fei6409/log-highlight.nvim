@@ -2,7 +2,7 @@
 
 A simple and lightweight Neovim plugin that brings syntax highlighting to
 generic log files and provides straight-forward configuration to manage the log
-file type detection.  
+filetype detection.
 
 ![preview-1](./doc/images/kernel-log.png)
 
@@ -10,12 +10,13 @@ file type detection.
 
 ### Note
 
-This plugin is still working in progress.  
-However, the main features are in place already, so one should be able to
-give the plugin a try by following the [installation](#installation) and
+Although this plugin is still working in progress, the major features are in
+place already.  
+Feel free to give it a try by following the [installation](#installation) and
 [configuration](#configuration).
 
-Missing syntax highlighting will be added soon (based on the logs I found).  
+Missing syntax highlighting will be added sooooon (based on the logs I read or
+find).  
 More detailed documentation is on the way (though not much to say given this
 plugin is quite simple).  
 
@@ -51,7 +52,8 @@ use {
 Plug 'fei6409/log-highlight.nvim'
 ```
 
-Don't forget to add `syntax on` in your `.vimrc`, `init.vim` or `init.lua`.
+Don't forget to add `syntax on` in your `.vimrc`, `init.vim` or `init.lua` to
+allow syntax highlighting to work.
 
 ## Configuration
 
@@ -77,8 +79,8 @@ require('log-highlight').setup {
     },
 
     -- The glob patterns, e.g. `.*%.lg`, `/var/log/.*`.
-    -- Note: `%.` is to match a literal dot (`.`) in a pattern, but most of the time
-    -- it makes no observable difference.
+    -- Note: `%.` is to match a literal dot (`.`) in a pattern in Lua, but most
+    -- of the time `.` and `%.` here make no observable difference.
     pattern = {
     },
 }
@@ -89,11 +91,11 @@ require('log-highlight').setup {
 By default, `log` filetype will apply to files if the name matches `*.log` or
 `*_log`.  
 
-To allow more customized patterns, add autocmd in your `.vimrc` like below.
+To allow more customized patterns, add autocommands in your `.vimrc` like below.
 
 ```vim
-" autocmd BufNewFile,BufRead <file pattern> set filetype=log
-autocmd BufNewFile,BufRead /var/log/* set filetype=log
+" autocmd BufNewFile,BufRead  <file pattern>  set filetype=log
+autocmd BufNewFile,BufRead  /var/log/*  set filetype=log
 ```
 
 ## Release Notes
@@ -102,11 +104,13 @@ autocmd BufNewFile,BufRead /var/log/* set filetype=log
 
 ## Contributing
 
-Bug report, feature request and PR are welcome.  
+Bug reports, feature requests and pull requests are welcome.  
 Please also consider attaching a snippet of the log patterns when doing so.
 
-If you're sending PR, please also consider adding the log samples in `samples/`:
+If you're sending pull requests, please also consider adding the log samples in
+`samples/`:
 - For atomic patterns or smaller pieces, add them to `patterns.log`.
 - For longer snippets of real-world logs, create a new log file.
+
 That would be helpful for me to examine if new changes break any existing syntax
 highlighting.
