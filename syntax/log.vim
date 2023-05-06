@@ -46,14 +46,21 @@ syn match logDate       display     '\<20\d{6}'
 syn match logDateDay    display     '0[1-9]\|[1-2]\d\|3[0-1]\>'  contained
 
 " 12:34:56 or 12:34:56.700000Z or 12:34:56.700000+08:00
-syn match logTime       display     '\d\d:\d\d:\d\d\(\.\d\{2,6}\)\?'  nextgroup=logTimeZone,logTimeAMPM  skipwhite
+syn match logTime       display     '\d\d:\d\d:\d\d\(\.\d\{2,6}\)\?'  skipwhite  nextgroup=logTimeZone,logTimeAMPM,logSysColumns
 " AM / PM
-syn match logTimeAMPM   display     '\cAM\|\cPM\>'  contained
+syn match logTimeAMPM   display     '\cAM\|\cPM\>'  contained  skipwhite  nextgroup=logSysColumns
 " Time zones, e.g. PST, CST etc.
-syn match logTimeZone   display     'Z\|[+-]\d\d:\d\d\|\a\{3}\>'  contained
+syn match logTimeZone   display     'Z\|[+-]\d\d:\d\d\|\a\{3}\>'  contained  skipwhite  nextgroup=logSysColumns
 
 syn keyword logDateMonth    Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec  nextgroup=logDateDay  skipwhite
 syn keyword logDateWeekDay  Mon Tue Wed Thu Fri Sat Sun
+
+" System info
+" ------------------------------
+" Match letters & digits, dots, underscores and hyphens in system columns.
+" Usually the first column is the host name or log level keywords.
+syn match logSysColumns     display     '\<[[:alnum:]\._-]\+ [[:alnum:]\._-]\+\(\[[[:digit:]:]\+\]\)\?:'  contained  contains=@logLvs,logSysProcess
+syn match logSysProcess     display     '\<[[:alnum:]\._-]\+\(\[[[:digit:]:]\+\]\)\?:'  contained  contains=logNumber
 
 " Objects
 " ------------------------------
@@ -102,6 +109,9 @@ hi def link logDateWeekDay      Identifier
 hi def link logTime             Type
 hi def link logTimeAMPM         Type
 hi def link logTimeZone         Type
+
+hi def link logSysColumns       Conditional
+hi def link logSysProcess       Function
 
 hi def link logUrl              Underlined
 hi def link logIPv4             Underlined
