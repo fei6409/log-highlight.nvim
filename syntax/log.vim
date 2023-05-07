@@ -102,15 +102,15 @@ hi def link logBool             Boolean
 hi def link logNull             Constant
 hi def link logString           String
 
-hi def link logDate             Identifier
-hi def link logDateDay          Identifier
-hi def link logDateMonth        Identifier
-hi def link logDateWeekDay      Identifier
-hi def link logTime             Type
-hi def link logTimeAMPM         Type
-hi def link logTimeZone         Type
+hi def link logDate             Type
+hi def link logDateDay          Type
+hi def link logDateMonth        Type
+hi def link logDateWeekDay      Type
+hi def link logTime             Operator
+hi def link logTimeAMPM         Operator
+hi def link logTimeZone         Operator
 
-hi def link logSysColumns       Conditional
+hi def link logSysColumns       Statement
 hi def link logSysProcess       Function
 
 hi def link logUrl              Underlined
@@ -128,8 +128,8 @@ hi def link logLvCritical       ErrorMsg
 hi def link logLvError          ErrorMsg
 hi def link logLvFailure        ErrorMsg
 hi def link logLvWarning        WarningMsg
-hi def link logLvNotice         Include
-hi def link logLvInfo           Repeat
+hi def link logLvNotice         Exception
+hi def link logLvInfo           MoreMsg
 hi def link logLvDebug          Debug
 hi def link logLvTrace          Comment
 
