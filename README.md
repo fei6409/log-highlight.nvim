@@ -69,7 +69,7 @@ You can customize the filetype detection patterns like below:
 
 ```lua
 require('log-highlight').setup {
-    -- Currently, the following opions support either a string or a table of strings.
+    -- The following options support either a string or a table of strings.
 
     -- The file extensions.
     extension = 'log',
@@ -94,7 +94,7 @@ By default, `log` filetype will apply to files if the name matches `*.log` or
 To allow more customized patterns, add autocommands in your `.vimrc` like below.
 
 ```vim
-" autocmd BufNewFile,BufRead  <file pattern>  set filetype=log
+" Example:
 autocmd BufNewFile,BufRead  /var/log/*  set filetype=log
 ```
 
