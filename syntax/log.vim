@@ -78,12 +78,12 @@ syn keyword logLvFatal      FATAL
 syn keyword logLvEmergency  EMERGENCY EMERG
 syn keyword logLvAlert      ALERT
 syn keyword logLvCritical   CRITICAL CRIT
-syn keyword logLvError      ERROR ERRORS ERR
-syn keyword logLvFailure    FAILURE FAILED FAIL
-syn keyword logLvWarning    WARNING WARN
+syn keyword logLvError      ERROR ERRORS ERR E
+syn keyword logLvFailure    FAILURE FAILED FAIL F
+syn keyword logLvWarning    WARNING WARN W
 syn keyword logLvNotice     NOTICE
-syn keyword logLvInfo       INFO
-syn keyword logLvDebug      DEBUG DBG
+syn keyword logLvInfo       INFO I
+syn keyword logLvDebug      DEBUG DBG D
 syn keyword logLvTrace      TRACE
 
 syn cluster logLvs contains=logLvFatal,logLvEmergency,logLvAlert,logLvCritical,logLvError,logLvFailure,logLvWarning,logLvNotice,logLvInfo,logLvDebug,logLvTrace
