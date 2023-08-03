@@ -47,7 +47,7 @@ Jan 01, Dec 31
 2023-04-10T10:33:00.960249+08:00
 2023-04-10T10:33:00.960249 +08:00
 
--- System info
+--- System info
 Apr 10 10:06:11AM hostname tag: strings
 2023-04-10T10:33:00.960305Z INFO kernel: strings
 2023-04-10T10:33:02.081069+08:00 ERROR process[1206:1206]: strings
