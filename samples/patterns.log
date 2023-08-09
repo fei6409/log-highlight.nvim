@@ -50,7 +50,7 @@ Jan 01, Dec 31
 --- System info
 Apr 10 10:06:11AM hostname tag: strings
 2023-04-10T10:33:00.960305Z INFO kernel: strings
-2023-04-10T10:33:02.081069+08:00 ERROR process[1206:1206]: strings
+2023-04-10T10:33:02.081069+08:00 SYSTEM_ERROR process[1206:1206]: strings
 
 --- Objects
 https://github.com/fei6409/log-highlight.nvim#installation
@@ -78,3 +78,10 @@ NOTICE
 INFO
 DEBUG
 TRACE
+
+A_FATAL
+B_FAIL
+C_ERROR
+D_WARN
+E_NOTICE
+TEST_INFO

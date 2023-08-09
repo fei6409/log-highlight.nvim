@@ -86,6 +86,19 @@ syn keyword logLvInfo       INFO I
 syn keyword logLvDebug      DEBUG DBG D
 syn keyword logLvTrace      TRACE
 
+" Composite log levels e.g. *_INFO
+syn match logLvFatal        display '\<\u\+_FATAL\>'
+syn match logLvEmergency    display '\<\u\+_EMERG\(ENCY\)\?\>'
+syn match logLvAlert        display '\<\u\+_ALERT\>'
+syn match logLvCritical     display '\<\u\+_CRIT\(ICAL\)\?\>'
+syn match logLvError        display '\<\u\+_ERR\(\OR\)\?\>'
+syn match logLvFailure      display '\<\u\+_FAIL\(URE\)\?\>'
+syn match logLvWarning      display '\<\u\+_WARN\(ING\)\?\>'
+syn match logLvNotice       display '\<\u\+_NOTICE\>'
+syn match logLvInfo         display '\<\u\+_INFO\>'
+syn match logLvDebug        display '\<\u\+_DEBUG\>'
+syn match logLvTrace        display '\<\u\+_TRACE\>'
+
 syn cluster logLvs contains=logLvFatal,logLvEmergency,logLvAlert,logLvCritical,logLvError,logLvFailure,logLvWarning,logLvNotice,logLvInfo,logLvDebug,logLvTrace
 
 " Highlight Links
