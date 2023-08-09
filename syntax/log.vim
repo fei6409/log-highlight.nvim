@@ -14,6 +14,13 @@ set cpo&vim
 " ------------------------------
 syn match logSeparatorLine  display     '-\{3,}\|=\{3,}\|#\{3,}\|\*\{3,}\|<\{3,}\|>\{3,}'
 
+" Strings
+" ------------------------------
+syn region logString      start=/"/  end=/"/  end=/$/  skip=/\\./
+syn region logString      start=/`/  end=/`/  end=/$/  skip=/\\./
+" Quoted strings, but no match on quotes like `don't`, possessive `s'` and `'s`
+syn region logString      start=/\(s\)\@<!'\(s \|t \)\@!/  end=/'/  end=/$/  skip=/\\./
+
 " Numbers
 " ------------------------------
 syn match logNumber         display     '\<\d\+\>'
@@ -22,17 +29,17 @@ syn match logNumberBin      display     '\<0[bB][01]\+\>'
 syn match logNumberOctal    display     '\<0[oO]\o\+\>'
 syn match logNumberHex      display     '\<0[xX]\x\+\>'
 
+" Numbers in Hardware Description Languages e.g. Verilog
+" Note that this must come after logString to have a higher priority over it
+syn match logNumber         display     '\'d\d\+\>'
+syn match logNumberBin      display     '\'b[01]\+\>'
+syn match logNumberOctal    display     '\'o\o\+\>'
+syn match logNumberHex      display     '\'h\x\+\>'
+
 " Constants
 " ------------------------------
 syn keyword logBool    TRUE True true FALSE False false
 syn keyword logNull    NULL Null null
-
-" Strings
-" ------------------------------
-syn region logString      start=/"/  end=/"/  end=/$/  skip=/\\./
-syn region logString      start=/`/  end=/`/  end=/$/  skip=/\\./
-" Quoted strings, but no match on quotes like `don't`, possessive `s'` and `'s`
-syn region logString      start=/\(s\)\@<!'\(s \|t \)\@!/  end=/'/  end=/$/  skip=/\\./
 
 " Date & Time
 " ------------------------------

@@ -19,6 +19,11 @@
 0xc0ffee
 0X1234567890ABCEDF
 
+'b111000
+'o12345670
+'d1235467890
+'h1234567890ABCEDF
+
 --- Constants
 TRUE True true
 FALSE False false
