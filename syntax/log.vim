@@ -10,6 +10,10 @@ endif
 let s:cpo_save = &cpo
 set cpo&vim
 
+" Symbols / special characters
+" ------------------------------
+syn match logSymbol    display     '[!@#$%^&*;:?]'
+
 " Separators
 " ------------------------------
 syn match logSeparatorLine  display     '-\{3,}\|=\{3,}\|#\{3,}\|\*\{3,}\|<\{3,}\|>\{3,}'
@@ -116,6 +120,7 @@ hi def link logNumberBin        Number
 hi def link logNumberOctal      Number
 hi def link logNumberHex        Number
 
+hi def link logSymbol           Special
 hi def link logSeparatorLine    Comment
 
 hi def link logBool             Boolean

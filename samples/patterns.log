@@ -1,5 +1,8 @@
 --- Snippets for syntax highlight checks
 
+--- Symbols
+! @ # $ % ^ & * ; : ?
+
 --- Separator lines
 ====
 *****
