@@ -64,7 +64,9 @@ Apr 10 10:06:11AM hostname tag: strings
 https://github.com/fei6409/log-highlight.nvim#installation
 http://google.com
 192.168.1.1
+192.168.0.0/24
 2001:0db8:85a3:0000:0000:8a2e:0370:7334
+2001:0db8:85a3:0000:0000:8a2e:0370:7334/64
 01:23:45:ab:cd:ef
 UUID: 123e4567-e89b-12d3-a456-426655440000
 MD5: d41d8cd98f00b204e9800998ecf8427e
