@@ -82,6 +82,9 @@ syn match logMacAddr    display     '\x\{2}\(:\x\{2}\)\{5}'
 syn match logUUID       display     '\<\x\{8}-\x\{4}-\x\{4}-\x\{4}-\x\{12}\>'
 syn match logMD5        display     '\<\x\{32}\>'
 syn match logSHA        display     '\<\(\x\{40}\|\x\{56}\|\x\{64}\|\x\{96}\|\x\{128}\)\>'
+" File path starting with '/' , './', '../' and '~/'.
+" Must be start-of-line or prefixed with space
+syn match logPath       display     '\(^\|\s\)\(\.\{0,2}\|\~\)\/[[:alnum:]\/\._-]\+'
 
 " Log Levels
 " ------------------------------
@@ -145,6 +148,7 @@ hi def link logMacAddr          Label
 hi def link logUUID             Label
 hi def link logMD5              Label
 hi def link logSHA              Label
+hi def link logPath             Structure
 
 hi def link logLvFatal          ErrorMsg
 hi def link logLvEmergency      ErrorMsg
