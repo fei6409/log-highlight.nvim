@@ -76,12 +76,15 @@ require('log-highlight').setup {
 
     -- The file names or the full file paths.
     filename = {
+        'messages',
     },
 
-    -- The glob patterns, e.g. `.*%.lg`, `/var/log/.*`.
+    -- The file path glob patterns, e.g. `.*%.lg`, `/var/log/.*`.
     -- Note: `%.` is to match a literal dot (`.`) in a pattern in Lua, but most
     -- of the time `.` and `%.` here make no observable difference.
     pattern = {
+        '/var/log/.*',
+        'messages%..*',
     },
 }
 ```
@@ -101,6 +104,7 @@ autocmd BufNewFile,BufRead  /var/log/*  set filetype=log
 ## Release Notes
 
 - v0.0.1: Initial release
+- v0.0.2: More supports for HDL
 
 ## Contributing
 
@@ -114,3 +118,8 @@ If you're sending pull requests, please also consider adding the log samples in
 
 That would be helpful for me to examine if new changes break any existing syntax
 highlighting.
+
+## Acknowledgement
+
+- [vim-log-highlighting](https://github.com/MTDL9/vim-log-highlighting) by MTDL9
+- [Built-in messages.vim](https://github.com/vim/vim/blob/master/runtime/syntax/messages.vim)
