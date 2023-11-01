@@ -84,7 +84,7 @@ syn match logMD5        display     '\<\x\{32}\>'
 syn match logSHA        display     '\<\(\x\{40}\|\x\{56}\|\x\{64}\|\x\{96}\|\x\{128}\)\>'
 " File path starting with '/' , './', '../' and '~/'.
 " Must be start-of-line or prefixed with space
-syn match logPath       display     '\(^\|\s\)\(\.\{0,2}\|\~\)\/[[:alnum:]\/\._-]\+'
+syn match logPath       display     '\(^\|\s\)\(\.\{0,2}\|\~\)\/[[:alnum:]\/\.:_-]\+'
 
 " Log Levels
 " ------------------------------
