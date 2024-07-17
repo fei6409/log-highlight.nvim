@@ -13,12 +13,16 @@ local function parse_config(tbl, cfg)
 
     if t == 'table' then
         for _, v in ipairs(cfg) do
-            tbl[v] = ft
+            if type(v) == 'string' then
+                tbl[v] = ft
+            else
+                error('Not a string: (' .. type(v) .. ') ' .. vim.inspect(v))
+            end
         end
     elseif t == 'string' then
         tbl[cfg] = ft
     else
-        error('This should be a string or table of strings: ' .. cfg)
+        error('Not a string or table: (' .. t .. ') ' .. vim.inspect(cfg))
     end
 end
 
