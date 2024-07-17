@@ -1,24 +1,12 @@
 # log-highlight.nvim
 
 A simple and lightweight Neovim plugin that brings syntax highlighting to
-generic log files and provides straight-forward configuration to manage the log
-filetype detection.
+generic log patterns and provides straight-forward configuration to manage the
+filetype detection rules over your preferred log files.
 
 ![preview-1](./doc/images/kernel-log.png)
 
 ![preview-2](./doc/images/patterns-log.png)
-
-### Note
-
-Although this plugin is still working in progress, the major features are in
-place already.  
-Feel free to give it a try by following the [installation](#installation) and
-[configuration](#configuration).
-
-Missing syntax highlighting will be added sooooon (based on the logs I read or
-find).  
-More detailed documentation is on the way (though not much to say given this
-plugin is quite simple).  
 
 ## Installation
 
@@ -94,7 +82,7 @@ require('log-highlight').setup {
 By default, `log` filetype will apply to files if the name matches `*.log` or
 `*_log`.  
 
-To allow more customized patterns, add autocommands in your `.vimrc` like below.
+To allow more customized patterns, add auto commands in your `.vimrc` like below.
 
 ```vim
 " Example:
@@ -105,14 +93,15 @@ autocmd BufNewFile,BufRead  /var/log/*  set filetype=log
 
 - v0.0.1: Initial release
 - v0.0.2: More supports for HDL
+- v1.0.0: Minor cleanup and official (?) release
 
 ## Contributing
 
 Bug reports, feature requests and pull requests are welcome.  
 Please also consider attaching a snippet of the log patterns when doing so.
 
-If you're sending pull requests, please also consider adding the log samples in
-`samples/`:
+If you're sending pull requests, please also consider adding the new log samples
+in `samples/`:
 - For atomic patterns or smaller pieces, add them to `patterns.log`.
 - For longer snippets of real-world logs, create a new log file.
 
