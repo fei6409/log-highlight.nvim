@@ -98,7 +98,7 @@ syn keyword logLvWarning    WARNING WARN W warning warn
 syn keyword logLvNotice     NOTICE
 syn keyword logLvInfo       INFO I info
 syn keyword logLvDebug      DEBUG DBG D debug dbg
-syn keyword logLvTrace      TRACE trace
+syn keyword logLvTrace      TRACE
 
 " Composite log levels e.g. *_INFO
 syn match logLvFatal        display '\<\u\+_FATAL\>'
