@@ -94,6 +94,7 @@ autocmd BufNewFile,BufRead  /var/log/*  set filetype=log
 - v0.0.1: Initial release
 - v0.0.2: More supports for HDL
 - v1.0.0: Minor cleanup and official (?) release
+- v1.0.1: Support lowercase and [spdlog](https://github.com/gabime/spdlog)-style log levels
 
 ## Contributing
 
