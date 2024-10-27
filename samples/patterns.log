@@ -91,9 +91,24 @@ INFO
 DEBUG
 TRACE
 
+### composites
 A_FATAL
 B_FAIL
 C_ERROR
 D_WARN
 E_NOTICE
 TEST_INFO
+
+### lowercase
+error
+warning
+info
+debug
+
+### spdlog
+[critical]
+[error]
+[warning]
+[info]
+[debug]
+[trace]
