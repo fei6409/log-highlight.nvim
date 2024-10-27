@@ -114,12 +114,12 @@ syn match logLvDebug        display '\<\u\+_DEBUG\>'
 syn match logLvTrace        display '\<\u\+_TRACE\>'
 
 " spdlog pattern level: [trace] [info] ...
-syn match logLvTrace        display '\[\zstrace\ze\]'
-syn match logLvDebug        display '\[\zsdebug\ze\]'
-syn match logLvInfo         display '\[\zsinfo\ze\]'
-syn match logLvWarning      display '\[\zswarning\ze\]'
-syn match logLvError        display '\[\zserror\ze\]'
 syn match logLvCritical     display '\[\zscritical\ze\]'
+syn match logLvError        display '\[\zserror\ze\]'
+syn match logLvWarning      display '\[\zswarning\ze\]'
+syn match logLvInfo         display '\[\zsinfo\ze\]'
+syn match logLvDebug        display '\[\zsdebug\ze\]'
+syn match logLvTrace        display '\[\zstrace\ze\]'
 
 syn cluster logLvs contains=logLvFatal,logLvEmergency,logLvAlert,logLvCritical,logLvError,logLvFailure,logLvWarning,logLvNotice,logLvInfo,logLvDebug,logLvTrace
 
