@@ -88,13 +88,13 @@ syn match logPath       display     '\(^\|\s\)\(\.\{0,2}\|\~\)\/[[:alnum:]\/\.:_
 
 " Log Levels
 " ------------------------------
-syn keyword logLvFatal      FATAL
-syn keyword logLvEmergency  EMERGENCY EMERG
-syn keyword logLvAlert      ALERT
-syn keyword logLvCritical   CRITICAL CRIT
-syn keyword logLvError      ERROR ERRORS ERR E error
-syn keyword logLvFailure    FAILURE FAILED FAIL F
-syn keyword logLvWarning    WARNING WARN W warning warn
+syn keyword logLvFatal      FATAL Fatal fatal
+syn keyword logLvEmergency  EMERGENCY EMERG Emergency emergency
+syn keyword logLvAlert      ALERT Alert alert
+syn keyword logLvCritical   CRITICAL CRIT Critical critical
+syn keyword logLvError      ERROR ERRORS ERR E Error Errors Err error errors err
+syn keyword logLvFailure    FAILURE FAILED FAIL F Failure Failed Fail failure failed fail
+syn keyword logLvWarning    WARNING WARN W Warning Warn warning warn
 syn keyword logLvNotice     NOTICE
 syn keyword logLvInfo       INFO I info
 syn keyword logLvDebug      DEBUG DBG D debug dbg
