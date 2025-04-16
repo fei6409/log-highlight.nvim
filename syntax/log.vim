@@ -94,7 +94,10 @@ syn keyword logLvAlert      ALERT Alert alert
 syn keyword logLvCritical   CRITICAL CRIT Critical critical
 syn keyword logLvError      ERROR ERRORS ERR E Error Errors Err error errors err
 syn keyword logLvFailure    FAILURE FAILED FAIL F Failure Failed Fail failure failed fail
+syn keyword logLvFault      FAULT Fault fault
+syn keyword logLvNack       NACK NAK Nack Nak nack nak
 syn keyword logLvWarning    WARNING WARN W Warning Warn warning warn
+syn keyword logLvBad        BAD Bad bad
 syn keyword logLvNotice     NOTICE
 syn keyword logLvInfo       INFO I info
 syn keyword logLvDebug      DEBUG DBG D debug dbg
@@ -121,7 +124,7 @@ syn match logLvInfo         display '\[\zsinfo\ze\]'
 syn match logLvDebug        display '\[\zsdebug\ze\]'
 syn match logLvTrace        display '\[\zstrace\ze\]'
 
-syn cluster logLvs contains=logLvFatal,logLvEmergency,logLvAlert,logLvCritical,logLvError,logLvFailure,logLvWarning,logLvNotice,logLvInfo,logLvDebug,logLvTrace
+syn cluster logLvs contains=logLvFatal,logLvEmergency,logLvAlert,logLvCritical,logLvError,logLvFailure,logLvFault,logLvNack,logLvWarning,logLvBad,logLvNotice,logLvInfo,logLvDebug,logLvTrace
 
 " Highlight Links
 " ------------------------------
@@ -164,7 +167,10 @@ hi def link logLvAlert          ErrorMsg
 hi def link logLvCritical       ErrorMsg
 hi def link logLvError          ErrorMsg
 hi def link logLvFailure        ErrorMsg
+hi def link logLvFault          ErrorMsg
+hi def link logLvNack           ErrorMsg
 hi def link logLvWarning        WarningMsg
+hi def link logLvBad            WarningMsg
 hi def link logLvNotice         Exception
 hi def link logLvInfo           MoreMsg
 hi def link logLvDebug          Debug
