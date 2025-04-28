@@ -99,8 +99,8 @@ syn keyword logLvNack       NACK NAK Nack Nak nack nak
 syn keyword logLvWarning    WARNING WARN W Warning Warn warning warn
 syn keyword logLvBad        BAD Bad bad
 syn keyword logLvNotice     NOTICE
-syn keyword logLvInfo       INFO I info
-syn keyword logLvDebug      DEBUG DBG D debug dbg
+syn keyword logLvInfo       INFO I Info info
+syn keyword logLvDebug      DEBUG DBG D Debug Dbg debug dbg
 syn keyword logLvTrace      TRACE
 
 " Composite log levels e.g. *_INFO
