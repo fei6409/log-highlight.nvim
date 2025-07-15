@@ -1,55 +1,48 @@
-local log_highlight = {}
+---@class log-highlight
+local M = {}
 
 local ft = 'log'
-local conf = {
-    -- Type: string or a table of strings
-    extension = 'log',
+local defaults = {
+    extension = ft,
     filename = {},
     pattern = {},
 }
 
-local function parse_config(tbl, cfg)
-    local t = type(cfg)
+---Generate a filetype table for vim.filetype.add()
+---@param items string|table: a list of file extensions, filenames, or patterns
+---@param item_name string: the name of what the items represent
+---@return table: a table that maps the value to the filetype
+local function gen_ft_table(items, item_name)
+    local map = {}
 
-    if t == 'table' then
-        for _, v in ipairs(cfg) do
-            if type(v) == 'string' then
-                tbl[v] = ft
-            else
-                error('Not a string: (' .. type(v) .. ') ' .. vim.inspect(v))
-            end
-        end
-    elseif t == 'string' then
-        tbl[cfg] = ft
-    else
-        error('Not a string or table: (' .. t .. ') ' .. vim.inspect(cfg))
-    end
-end
-
-local function set_filetype()
-    local ext = {}
-    local name = {}
-    local pat = {}
-
-    parse_config(ext, conf.extension)
-    parse_config(name, conf.filename)
-    parse_config(pat, conf.pattern)
-
-    vim.filetype.add({
-        extension = ext,
-        filename = name,
-        pattern = pat,
-    })
-end
-
-function log_highlight.setup(opts)
-    opts = opts or {}
-
-    for k, v in pairs(opts) do
-        conf[k] = v
+    if not items then
+        return map
     end
 
-    set_filetype()
+    vim.validate(item_name, items, { 'string', 'table' })
+    if type(items) == 'string' then
+        map[items] = ft
+        return map
+    end
+
+    for _, v in ipairs(items) do
+        vim.validate(item_name, v, 'string')
+        map[v] = ft
+    end
+
+    return map
 end
 
-return log_highlight
+---Setup the log-highlight plugin
+---@param opts table: a table of options to override the defaults
+function M.setup(opts)
+    M.config = vim.tbl_deep_extend('force', defaults, opts)
+
+    vim.filetype.add {
+        extension = gen_ft_table(M.config.extension, 'extension'),
+        filename = gen_ft_table(M.config.filename, 'filename'),
+        pattern = gen_ft_table(M.config.pattern, 'pattern'),
+    }
+end
+
+return M
