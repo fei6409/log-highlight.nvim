@@ -19,14 +19,24 @@ local function gen_ft_table(items, item_name)
         return map
     end
 
-    vim.validate(item_name, items, { 'string', 'table' })
+    if vim.fn.has('nvim-0.11') ~= 1 then
+        vim.validate { [item_name] = { items, { 'string', 'table' } } }
+    else
+        vim.validate(item_name, items, { 'string', 'table' })
+    end
+
     if type(items) == 'string' then
         map[items] = ft
         return map
     end
 
     for _, v in ipairs(items) do
-        vim.validate(item_name, v, 'string')
+        if vim.fn.has('nvim-0.11') ~= 1 then
+            vim.validate { [item_name] = { v, 'string' } }
+        else
+            vim.validate(item_name, v, 'string')
+        end
+
         map[v] = ft
     end
 
