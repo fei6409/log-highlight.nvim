@@ -1,2 +1,2 @@
-*.vim linguist-detectable=false
+*.vim linguist-detectable=true
 *.lua linguist-detectable=true
