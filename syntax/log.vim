@@ -52,7 +52,7 @@ syn match logDate       display     '\<\d\{4}[-\/]\(\d\d\|\a\{3}\)[-\/]\d\d\|\d\
 " RFC3339 e.g. 2023-01-01T
 syn match logDate       display     '\<\d\{4}-\d\d-\d\dT'
 " YYYYMMDD starting with '20' e.g. 20230101
-syn match logDate       display     '\<20\d{6}'
+syn match logDate       display     '\<20\d\{6}'
 " Day 01-31
 syn match logDateDay    display     '0[1-9]\|[1-2]\d\|3[0-1]\>'  contained
 
@@ -108,7 +108,7 @@ syn match logLvFatal        display '\<\u\+_FATAL\>'
 syn match logLvEmergency    display '\<\u\+_EMERG\(ENCY\)\?\>'
 syn match logLvAlert        display '\<\u\+_ALERT\>'
 syn match logLvCritical     display '\<\u\+_CRIT\(ICAL\)\?\>'
-syn match logLvError        display '\<\u\+_ERR\(\OR\)\?\>'
+syn match logLvError        display '\<\u\+_ERR\(OR\)\?\>'
 syn match logLvFailure      display '\<\u\+_FAIL\(URE\)\?\>'
 syn match logLvWarning      display '\<\u\+_WARN\(ING\)\?\>'
 syn match logLvNotice       display '\<\u\+_NOTICE\>'
