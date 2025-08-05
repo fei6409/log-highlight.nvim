@@ -21,17 +21,6 @@ Use your favorite plugin manager to download and configure the plugin:
 },
 ```
 
-### [packer.nvim](https://github.com/wbthomason/packer.nvim)
-
-```lua
-use {
-    'fei6409/log-highlight.nvim',
-    config = function()
-        require('log-highlight').setup {}
-    end,
-},
-```
-
 ### [vim-plug](https://github.com/junegunn/vim-plug)
 
 ```lua
