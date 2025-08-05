@@ -17,9 +17,7 @@ Use your favorite plugin manager to download and configure the plugin:
 ```lua
 {
     'fei6409/log-highlight.nvim',
-    config = function()
-        require('log-highlight').setup {}
-    end,
+    opts = {},
 },
 ```
 
