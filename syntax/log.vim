@@ -47,24 +47,28 @@ syn keyword logNull    NULL Null null
 
 " Date & Time
 " ------------------------------
-" 2023-01-01 or 2023/01/01 or 01/01/2023 or 01-Jan-2023
-syn match logDate       display     '\<\d\{4}[-\/]\(\d\d\|\a\{3}\)[-\/]\d\d\|\d\d[-\/]\(\d\d\|\a\{3}\)[-\/]\d\{4}'  contains=logDateMonth
-" RFC3339 e.g. 2023-01-01T
-syn match logDate       display     '\<\d\{4}-\d\d-\d\dT'
-" YYYYMMDD starting with '20' e.g. 20230101
-syn match logDate       display     '\<20\d\{6}'
-" Day 01-31
-syn match logDateDay    display     '0[1-9]\|[1-2]\d\|3[0-1]\>'  contained
+" MM-DD, DD-MM, MM/DD, DD/MM
+syn match logDate       display     '\<\d\{2}[-\/]\d\{2}\>'
+" YYYY-MM-DD, YYYY/MM/DD
+syn match logDate       display     '\<\d\{4}[-\/]\d\{2}[-\/]\d\{2}\>'
+" DD-MM-YYYY, DD/MM/YYYY
+syn match logDate       display     '\<\d\{2}[-\/]\d\{2}[-\/]\d\{4}\>'
+" First half of RFC3339 e.g. 2023-01-01T
+syn match logDate       display     '\<\d\{4}-\d\{2}-\d\{2}T'
+" 'Dec 31', 'Dec 31, 2023', 'Dec 31 2023'
+syn match logDate       display     '\<\a\{3} \d\{1,2}\(,\? \d\{4}\)\?\>'
+" '31-Dec-2023', '31 Dec 2023'
+syn match logDate       display     '\<\d\{1,2}[- ]\a\{3}[- ]\d\{4}\>'
 
-" 12:34:56 or 12:34:56.700000Z or 12:34:56.700000+08:00
-syn match logTime       display     '\d\d:\d\d:\d\d\(\.\d\{2,6}\)\?'  skipwhite  nextgroup=logTimeZone,logTimeAMPM,logSysColumns
+" Weekday string
+syn keyword logWeekdayStr   Mon Tue Wed Thu Fri Sat Sun
+
+" 12:34:56, 12:34:56.700000
+syn match logTime       display     '\d\{2}:\d\{2}:\d\{2}\(\.\d\{2,6}\)\?'  skipwhite  nextgroup=logTimeZone,logTimeAMPM,logSysColumns
 " AM / PM
 syn match logTimeAMPM   display     '\cAM\|\cPM\>'  contained  skipwhite  nextgroup=logSysColumns
-" Time zones, e.g. PST, CST etc.
-syn match logTimeZone   display     'Z\|[+-]\d\d:\d\d\|\a\{3}\>'  contained  skipwhite  nextgroup=logSysColumns
-
-syn keyword logDateMonth    Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec  nextgroup=logDateDay  skipwhite
-syn keyword logDateWeekDay  Mon Tue Wed Thu Fri Sat Sun
+" Time zone e.g. Z, +08:00, PST
+syn match logTimeZone   display     'Z\|[+-]\d\{2}:\d\{2}\|\a\{3}\>'  contained  skipwhite  nextgroup=logSysColumns
 
 " System info
 " ------------------------------
@@ -142,9 +146,7 @@ hi def link logNull             Constant
 hi def link logString           String
 
 hi def link logDate             Type
-hi def link logDateDay          Type
-hi def link logDateMonth        Type
-hi def link logDateWeekDay      Type
+hi def link logWeekdayStr       Type
 hi def link logTime             Operator
 hi def link logTimeAMPM         Operator
 hi def link logTimeZone         Operator

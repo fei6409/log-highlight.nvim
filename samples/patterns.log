@@ -39,16 +39,22 @@ first `string 3` second `string 3`
 Here's counterexample, shouldn't start with these quotes' 'string starts here'
 
 --- Date & Time
-2023-01-01
-2023/01/01
-2023/Jan/01
-01-01-2023
-01/01/2023
-01-Jan-2023
-Jan 01, Dec 31
+01-01   12/31
+Jan 01  Dec 31
+2025-12-31  2025/12/31
+31-12-2025  31/12/2025
+Dec 31, 2025
+Dec 31 2025
+31-Dec-2025
+31 Dec 2025
+Mon, Tue, Wed, Thu, Fri, Sat, Sun
+
 10:33:00 AM
 10:33:00 pm
 10:33:00.960249 +08:00
+10:33:00.960249 PST
+
+2023-01-01T
 2023-01-01T10:33:00
 2023-01-01T10:33:00Z
 2023-04-10T10:33:00.960249Z
