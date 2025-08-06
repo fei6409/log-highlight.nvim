@@ -1,7 +1,7 @@
 " Vim syntax file
 " Language:         Generic logs
 " Maintainer:       fei6409 <fei6409@gmail.com>
-" Latest Revision:  2023-05-06
+" Latest Revision:  2025-08-07
 
 if exists("b:current_syntax")
   finish
@@ -69,6 +69,9 @@ syn match logTime       display     '\d\{2}:\d\{2}:\d\{2}\(\.\d\{2,6}\)\?'  skip
 syn match logTimeAMPM   display     '\cAM\|\cPM\>'  contained  skipwhite  nextgroup=logSysColumns
 " Time zone e.g. Z, +08:00, PST
 syn match logTimeZone   display     'Z\|[+-]\d\{2}:\d\{2}\|\a\{3}\>'  contained  skipwhite  nextgroup=logSysColumns
+
+" Duration e.g. 10d20h30m40s, 123.456s, 123ms, 456us, 789ns
+syn match logDuration   display     '\(\(\(\d\+d\)\?\d\+h\)\?\d\+m\)\?\d\+\(\.\d\+\)\?[mun]\?s\>'
 
 " System info
 " ------------------------------
@@ -150,6 +153,7 @@ hi def link logWeekdayStr       Type
 hi def link logTime             Operator
 hi def link logTimeAMPM         Operator
 hi def link logTimeZone         Operator
+hi def link logDuration         Operator
 
 hi def link logSysColumns       Statement
 hi def link logSysProcess       Function

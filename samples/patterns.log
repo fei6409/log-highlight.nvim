@@ -61,6 +61,9 @@ Mon, Tue, Wed, Thu, Fri, Sat, Sun
 2023-04-10T10:33:00.960249+08:00
 2023-04-10T10:33:00.960249 +08:00
 
+10d20h30m40s, 20h30m40s, 30m40s, 40s
+1.1235813s, 1ms, 2us, 3ns
+
 --- System info
 Apr 10 10:06:11AM hostname tag: strings
 2023-04-10T10:33:00.960305Z INFO kernel: strings
