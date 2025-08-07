@@ -1,8 +1,8 @@
 # log-highlight.nvim
 
 A simple and lightweight Neovim plugin that brings syntax highlighting to
-generic log patterns and provides straight-forward configuration to manage the
-filetype detection rules over your preferred log files.
+generic log files and provides straightforward configuration to manage filetype
+detection rules for your logs.
 
 ![preview-1](./doc/images/kernel-log.png)
 
@@ -10,7 +10,7 @@ filetype detection rules over your preferred log files.
 
 ## Installation
 
-Use your favorite plugin manager to download and configure the plugin:
+Use your favorite plugin manager to install the plugin.
 
 ### [lazy.nvim](https://github.com/folke/lazy.nvim)
 
@@ -23,80 +23,86 @@ Use your favorite plugin manager to download and configure the plugin:
 
 ### [vim-plug](https://github.com/junegunn/vim-plug)
 
-```lua
+```vim
 Plug 'fei6409/log-highlight.nvim'
 ```
 
-Don't forget to add `syntax on` in your `.vimrc`, `init.vim` or `init.lua` to
-allow syntax highlighting to work.
+Don't forget to add `syntax on` in your `.vimrc`, `init.vim`, or `init.lua` to
+enable syntax highlighting.
 
 ## Configuration
 
 ### Neovim
 
-This plugin makes use of Neovim's built-in [filetype
-detection](https://neovim.io/doc/user/filetype.html) mechanism.  
+This plugin uses Neovim's built-in
+[filetype detection](https://neovim.io/doc/user/filetype.html) mechanism.
 
-By default, `log` filetype will apply to files with `log` extension (e.g.
-`sys.log`, `my_log` etc.) after setting up.
+By default, the `log` filetype is applied to files with a `.log` extension
+(e.g., `sys.log`) after setup.
 
-You can customize the filetype detection patterns like below:
+You can customize the filetype detection patterns as follows:
 
 ```lua
 require('log-highlight').setup {
-    -- The following options support either a string or a table of strings.
-
-    -- The file extensions.
+    ---@type string|string[]
+    -- File extensions
     extension = 'log',
 
-    -- The file names or the full file paths.
+    ---@type string|string[]
+    -- File names or full file paths
     filename = {
-        'messages',
+        'syslog',
     },
 
-    -- The file path glob patterns, e.g. `.*%.lg`, `/var/log/.*`.
-    -- Note: `%.` is to match a literal dot (`.`) in a pattern in Lua, but most
-    -- of the time `.` and `%.` here make no observable difference.
+    ---@type string|string[]
+    -- File path glob patterns
+    -- Note: In Lua, `%` escapes special characters to match them literally.
     pattern = {
-        '/var/log/.*',
-        'messages%..*',
+        '%/var%/log%/.*',
+        'console%-ramoops.*',
+        'log.*%.txt',
+        'logcat.*',
     },
 }
 ```
 
 ### Vim
 
-By default, `log` filetype will apply to files if the name matches `*.log` or
-`*_log`.  
+By default, the `log` filetype is applied to files matching `*.log` or `*_log`.
 
-To allow more customized patterns, add auto commands in your `.vimrc` like below.
+To add custom patterns, add autocommands to your `.vimrc` like this:
 
 ```vim
 " Example:
-autocmd BufNewFile,BufRead  /var/log/*  set filetype=log
+autocmd BufNewFile,BufRead /var/log/* set filetype=log
 ```
 
 ## Release Notes
 
-- v0.0.1: Initial release
+- v1.0.1: Support lowercase and [spdlog](https://github.com/gabime/spdlog)-style
+  log levels
+- v1.0.0: Minor cleanup and official release
 - v0.0.2: More supports for HDL
-- v1.0.0: Minor cleanup and official (?) release
-- v1.0.1: Support lowercase and [spdlog](https://github.com/gabime/spdlog)-style log levels
+- v0.0.1: Initial release
 
 ## Contributing
 
-Bug reports, feature requests and pull requests are welcome.  
-Please also consider attaching a snippet of the log patterns when doing so.
+Bug reports, feature requests, and pull requests are welcome. When opening an
+issue or PR, please consider attaching a snippet of the relevant log pattern.
 
-If you're sending pull requests, please also consider adding the new log samples
-in `samples/`:
-- For atomic patterns or smaller pieces, add them to `patterns.log`.
-- For longer snippets of real-world logs, create a new log file.
+If you are submitting a pull request, please also consider adding new log
+samples to the `samples/` directory:
 
-That would be helpful for me to examine if new changes break any existing syntax
-highlighting.
+- For atomic patterns or small snippets, add them to `patterns.log`.
+- For longer, real-world log examples, create a new file.
 
-## Acknowledgement
+This helps verify that new changes do not break existing syntax highlighting.
+
+## Acknowledgements
 
 - [vim-log-highlighting](https://github.com/MTDL9/vim-log-highlighting) by MTDL9
 - [Built-in messages.vim](https://github.com/vim/vim/blob/master/runtime/syntax/messages.vim)
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
