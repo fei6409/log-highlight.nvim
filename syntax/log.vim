@@ -85,7 +85,7 @@ syn match LogSysProcess     display     '\<[[:alnum:]\._-]\+\(\[[[:digit:]:]\+\]
 syn match LogUrl        display     '\<https\?:\/\/\S\+'
 syn match LogIPv4       display     '\<\d\{1,3}\(\.\d\{1,3}\)\{3}\(\/\d\+\)\?\>'
 syn match LogIPv6       display     '\<\x\{1,4}\(:\x\{1,4}\)\{7}\(\/\d\+\)\?\>'
-syn match LogMacAddr    display     '\x\{2}\(:\x\{2}\)\{5}'
+syn match LogMacAddr    display     '\x\{2}\([:-]\?\x\{2}\)\{5}'
 syn match LogUUID       display     '\<\x\{8}-\x\{4}-\x\{4}-\x\{4}-\x\{12}\>'
 syn match LogMD5        display     '\<\x\{32}\>'
 syn match LogSHA        display     '\<\(\x\{40}\|\x\{56}\|\x\{64}\|\x\{96}\|\x\{128}\)\>'
