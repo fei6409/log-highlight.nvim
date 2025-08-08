@@ -1,62 +1,41 @@
---- Snippets for syntax highlight checks
-
 --- Symbols
 ! @ # $ % ^ & * ; : ?
 
---- Separator lines
-====
-*****
-######
-<<<<<<<
->>>>>>>>
+--- Horizontal rules
+=====,  *****,  #####,  <<<<<,  >>>>>
 
 --- Numbers
-1234567890
-7.6603
-123.4567e-10
-123.4567E+10
-0b01010100
-0B10101100
-0o12346570
-0O12346570
-0xc0ffee
-0X1234567890ABCEDF
-
-'b111000
-'o12345670
-'d1235467890
-'h1234567890ABCEDF
+1234567890      7.6603
+123.4567e-10    123.4567E+10
+0b01010100      0B10101100
+0o12346570      0O12346570
+0xc0ffee        0X1234567890ABCEDF
+'b111000        'o12345670
+'d1235467890    'h1234567890ABCEDF
 
 --- Constants
-TRUE True true
-FALSE False false
-NULL Null null
+TRUE    True    true
+FALSE   False   false
+NULL    Null    null
 
 --- Strings
-first "string 1" second "string 1"
-first 'string 2' second 'string 2'
-first `string 3` second `string 3`
-Here's counterexample, shouldn't start with these quotes' 'string starts here'
+1st "string foo", 2nd 'string bar', 3rd `string baz`
+Here's counterexample, shouldn't highlight these quotes' 'string foo bar baz'
 
 --- Date & Time
-01-01   12/31
-Jan 01  Dec 31
-2025-12-31  2025/12/31
-31-12-2025  31/12/2025
-Dec 31, 2025
-Dec 31 2025
-31-Dec-2025
-31 Dec 2025
+01-01           12/31
+Jan 01          Dec 31
+2025-12-31      2025/12/31
+31-12-2025      31/12/2025
+Dec 31, 2025    Dec 31 2025
+31-Dec-2025     31 Dec 2025
 Mon, Tue, Wed, Thu, Fri, Sat, Sun
 
-10:33:00 AM
-10:33:00 pm
+10:33:00 AM     10:33:00 pm
 10:33:00.960249 +08:00
 10:33:00.960249 PST
 
-2023-01-01T
-2023-01-01T10:33:00
-2023-01-01T10:33:00Z
+2023-04-10T10:33:00
 2023-04-10T10:33:00.960249Z
 2023-04-10T10:33:00.960249+08:00
 2023-04-10T10:33:00.960249 +08:00
@@ -65,9 +44,19 @@ Mon, Tue, Wed, Thu, Fri, Sat, Sun
 1.1235813s, 1ms, 2us, 3ns
 
 --- System info
-Apr 10 10:06:11AM hostname tag: strings
-2023-04-10T10:33:00.960305Z INFO kernel: strings
-2023-04-10T10:33:02.081069+08:00 SYSTEM_ERROR process[1206:1206]: strings
+Apr 10 10:06:11AM hostname tag: logs
+2023-04-10T10:33:00.960305Z INFO kernel: logs
+2023-04-10T10:33:02.081069+08:00 SYSTEM_ERROR process[1206:1206]: logs
+
+--- Log levels
+FATAL   EMERG   ALERT   CRIT    FAIL
+ERROR   WARNING NOTICE  INFO    DEBUG   TRACE
+
+A_FATAL     B_FAIL      C_ERROR
+D_WARN      E_NOTICE    TEST_INFO
+
+[fatal]     [error]     [warning]
+[info]      [debug]     [trace]
 
 --- Objects
 https://github.com/fei6409/log-highlight.nvim#installation
@@ -77,6 +66,7 @@ http://google.com
 2001:0db8:85a3:0000:0000:8a2e:0370:7334
 2001:0db8:85a3:0000:0000:8a2e:0370:7334/64
 01:23:45:ab:cd:ef
+
 UUID: 123e4567-e89b-12d3-a456-426655440000
 MD5: d41d8cd98f00b204e9800998ecf8427e
 SHA-1: da39a3ee5e6b4b0d3255bfef95601890afd80709
@@ -84,42 +74,8 @@ SHA-224: d14a028c2a3a2bc9476102bb288234c415a2b01f828ea62ac5b3e42f
 SHA-256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
 SHA-384: 38b060a751ac96384cd9327eb1b1e36a21fdb71114be07434c0cc7bf63f6e1da274edebfe76f65fbd51ad2f14898b95b
 SHA-512: cf83e1357eefb8bdf1542850d66d8007d620e4050b5715dc83f4a921d36ce9ce47d0d13c5d85f2b0ff8318d2877eec2f63b931bd47417a81a538327af927da3e
+
 /var/log/system.log     ./run.sh    ../dir-1/a_b-c+d(1).txt     ~/.local/bin/
 /sys/devices/pci0000:00/0000:00:09.0/usb2       /soc/video@324c0000
 PATH=/usr/sbin:/usr/bin:/sbin:/bin
 C:\Users\Test       \\server\share
-
---- Log levels
-FATAL
-EMERGENCY
-ALERT
-CRITICAL
-ERROR
-FAIL
-WARNING
-NOTICE
-INFO
-DEBUG
-TRACE
-
-### composites
-A_FATAL
-B_FAIL
-C_ERROR
-D_WARN
-E_NOTICE
-TEST_INFO
-
-### lowercase
-error
-warning
-info
-debug
-
-### spdlog
-[critical]
-[error]
-[warning]
-[info]
-[debug]
-[trace]
