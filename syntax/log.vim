@@ -92,8 +92,12 @@ syn match LogSHA        display     '\<\(\x\{40}\|\x\{56}\|\x\{64}\|\x\{96}\|\x\
 
 " Only highlight a path which is at the start of a line, or preceded by a space
 " or an equal sign (for env vars, e.g. PATH=/usr/bin)
-" POSIX-style path e.g. '/var/log/system.log', './run.sh', '../a/b', '~/c'.
-syn match LogPath       display     '\(^\|\s\|=\)\zs\(\.\{0,2}\|\~\)\/[[:alnum:]\/\.@:_-]\+\ze'
+" POSIX-style path    e.g. '/var/log/system.log', './run.sh', '../a/b', '~/c'.
+syn match LogPath       display     '\(^\|\s\|=\)\zs\(\.\{0,2}\|\~\)\/[^ \t\n\r]\+\ze'
+" Windows drive path  e.g. 'C:\Users\Test'
+syn match LogPath       display     '\(^\|\s\|=\)\zs\a:\\[^ \t\n\r]\+\ze'
+" Windows UNC path    e.g. '\\server\share'
+syn match LogPath       display     '\(^\|\s\|=\)\zs\\\\[^ \t\n\r]\+\ze'
 
 " Log Levels
 " ------------------------------
