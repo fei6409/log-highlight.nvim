@@ -159,7 +159,7 @@ hi def link LogSysProcess       Function
 hi def link LogUrl              Underlined
 hi def link LogIPv4             Underlined
 hi def link LogIPv6             Underlined
-hi def link LogMacAddr          Label
+hi def link LogMacAddr          Underlined
 hi def link LogUUID             Label
 hi def link LogMD5              Label
 hi def link LogSHA              Label
