@@ -110,7 +110,7 @@ syn keyword LogLvBad        BAD Bad bad
 syn keyword LogLvNotice     NOTICE
 syn keyword LogLvInfo       INFO I Info info
 syn keyword LogLvDebug      DEBUG DBG D Debug Dbg debug dbg
-syn keyword LogLvTrace      TRACE
+syn keyword LogLvTrace      TRACE Trace trace
 
 " Composite log levels e.g. *_INFO
 syn match LogLvFatal        display '\<\u\+_FATAL\>'
@@ -124,14 +124,6 @@ syn match LogLvNotice       display '\<\u\+_NOTICE\>'
 syn match LogLvInfo         display '\<\u\+_INFO\>'
 syn match LogLvDebug        display '\<\u\+_DEBUG\>'
 syn match LogLvTrace        display '\<\u\+_TRACE\>'
-
-" spdlog pattern level: [trace] [info] ...
-syn match LogLvCritical     display '\[\zscritical\ze\]'
-syn match LogLvError        display '\[\zserror\ze\]'
-syn match LogLvWarning      display '\[\zswarning\ze\]'
-syn match LogLvInfo         display '\[\zsinfo\ze\]'
-syn match LogLvDebug        display '\[\zsdebug\ze\]'
-syn match LogLvTrace        display '\[\zstrace\ze\]'
 
 syn cluster LogLvs contains=LogLvFatal,LogLvEmergency,LogLvAlert,LogLvCritical,LogLvError,LogLvFailure,LogLvFault,LogLvNack,LogLvWarning,LogLvBad,LogLvNotice,LogLvInfo,LogLvDebug,LogLvTrace
 
@@ -182,7 +174,7 @@ hi def link LogLvBad            WarningMsg
 hi def link LogLvNotice         Exception
 hi def link LogLvInfo           MoreMsg
 hi def link LogLvDebug          Debug
-hi def link LogLvTrace          Comment
+hi def link LogLvTrace          Debug
 
 
 let b:current_syntax = "log"
