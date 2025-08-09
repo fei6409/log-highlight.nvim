@@ -32,6 +32,8 @@ syn match LogNumberFloat    display     '\<\d\+\.\d\+\([eE][+-]\?\d\+\)\?\>'
 syn match LogNumberBin      display     '\<0[bB][01]\+\>'
 syn match LogNumberOctal    display     '\<0[oO]\o\+\>'
 syn match LogNumberHex      display     '\<0[xX]\x\+\>'
+" Possible hex numbers without the '0x' prefix
+syn match LogNumberHex      display     '\<\x\{4,}\>'
 
 " Numbers in Hardware Description Languages e.g. Verilog
 " These must be placed after LogString to ensure they take precedence
