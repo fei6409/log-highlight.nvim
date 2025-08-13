@@ -1,7 +1,7 @@
 " Vim syntax file
 " Language:         Generic logs
 " Maintainer:       fei6409 <fei6409@gmail.com>
-" Latest Revision:  2025-08-07
+" Latest Revision:  2025-08-14
 
 if exists("b:current_syntax")
   finish
@@ -117,6 +117,8 @@ syn keyword LogLvNotice     NOTICE
 syn keyword LogLvInfo       INFO I Info info
 syn keyword LogLvDebug      DEBUG DBG D Debug Dbg debug dbg
 syn keyword LogLvTrace      TRACE Trace trace
+syn keyword LogLvPass       PASS PASSED Pass Passed pass passed
+syn keyword LogLvSuccess    SUCCESS SUCCEEDED Success Succeeded success succeeded
 
 " Composite log levels e.g. *_INFO
 syn match LogLvFatal        display '\<\u\+_FATAL\>'
@@ -181,6 +183,12 @@ hi def link LogLvNotice         Exception
 hi def link LogLvInfo           MoreMsg
 hi def link LogLvDebug          Debug
 hi def link LogLvTrace          Debug
+hi def link LogLvPass           LogGreen
+hi def link LogLvSuccess        LogGreen
+
+" Custom highlight group
+" ------------------------------
+hi LogGreen     ctermfg=lightgreen guifg=#a4c672
 
 
 let b:current_syntax = "log"
