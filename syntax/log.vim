@@ -85,9 +85,9 @@ syn match LogSysProcess     display     '\<[[:alnum:]\._-]\+\(\[[[:digit:]:]\+\]
 " Objects
 " ------------------------------
 syn match LogUrl        display     '\<https\?:\/\/\S\+'
+syn match LogMacAddr    display     '\<\x\{2}\([:-]\?\x\{2}\)\{5}\>'
 syn match LogIPv4       display     '\<\d\{1,3}\(\.\d\{1,3}\)\{3}\(\/\d\+\)\?\>'
 syn match LogIPv6       display     '\<\x\{1,4}\(:\x\{1,4}\)\{7}\(\/\d\+\)\?\>'
-syn match LogMacAddr    display     '\<\x\{2}\([:-]\?\x\{2}\)\{5}\>'
 syn match LogUUID       display     '\<\x\{8}-\x\{4}-\x\{4}-\x\{4}-\x\{12}\>'
 syn match LogMD5        display     '\<\x\{32}\>'
 syn match LogSHA        display     '\<\(\x\{40}\|\x\{56}\|\x\{64}\|\x\{96}\|\x\{128}\)\>'
@@ -161,9 +161,9 @@ hi def link LogSysColumns       Statement
 hi def link LogSysProcess       Function
 
 hi def link LogUrl              Underlined
+hi def link LogMacAddr          Underlined
 hi def link LogIPv4             Underlined
 hi def link LogIPv6             Underlined
-hi def link LogMacAddr          Underlined
 hi def link LogUUID             Label
 hi def link LogMD5              Label
 hi def link LogSHA              Label
