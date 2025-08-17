@@ -180,7 +180,7 @@ hi def link LogLvNack           ErrorMsg
 hi def link LogLvWarning        WarningMsg
 hi def link LogLvBad            WarningMsg
 hi def link LogLvNotice         Exception
-hi def link LogLvInfo           MoreMsg
+hi def link LogLvInfo           LogBlue
 hi def link LogLvDebug          Debug
 hi def link LogLvTrace          Debug
 hi def link LogLvPass           LogGreen
@@ -189,6 +189,7 @@ hi def link LogLvSuccess        LogGreen
 " Custom highlight group
 " ------------------------------
 hi LogGreen     ctermfg=lightgreen guifg=#a4c672
+hi LogBlue      ctermfg=lightblue guifg=#92bcfc
 
 
 let b:current_syntax = "log"
