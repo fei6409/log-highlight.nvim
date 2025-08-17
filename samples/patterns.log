@@ -43,10 +43,10 @@ Mon, Tue, Wed, Thu, Fri, Sat, Sun
 10d20h30m40s, 20h30m40s, 30m40s, 40s
 1.1235813s, 1ms, 2us, 3ns
 
---- System info
-Apr 10 10:06:11AM hostname tag: logs
-2023-04-10T10:33:00.960305Z INFO kernel: logs
-2023-04-10T10:33:02.081069+08:00 SYSTEM_ERROR process[1206:1206]: logs
+--- System logs
+Apr 10 10:06:11AM hostname tag: log string
+2023-04-10T10:33:00.960305Z INFO kernel: log string
+2023-04-10T10:33:02.081069+08:00 SYSTEM_ERROR process[1206:1206]: log string
 
 --- Log levels
 FATAL   EMERG   ALERT   CRIT    ERROR   FAIL    FAULT   NACK
