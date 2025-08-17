@@ -4,9 +4,11 @@ A simple and lightweight Neovim plugin that brings syntax highlighting to
 generic log files and provides straightforward configuration to manage filetype
 detection rules for your logs.
 
-![preview-1](./doc/images/kernel-log.png)
+![preview-1](./doc/images/messages.png)
 
-![preview-2](./doc/images/patterns-log.png)
+![preview-2](./doc/images/patterns-1.png)
+
+![preview-3](./doc/images/patterns-2.png)
 
 ## Installation
 
@@ -37,27 +39,24 @@ enable syntax highlighting.
 This plugin uses Neovim's built-in
 [filetype detection](https://neovim.io/doc/user/filetype.html) mechanism.
 
-By default, the `log` filetype is applied to files with a `.log` extension
+By default, the `log` filetype is only applied to files with `.log` extension
 (e.g., `sys.log`) after setup.
 
-You can customize the filetype detection patterns as follows:
+You can further customize your filetype detection patterns as needed:
 
 ```lua
 require('log-highlight').setup {
-    ---@type string|string[]
-    -- File extensions
+    ---@type string|string[]  File extensions. Default: 'log'
     extension = 'log',
 
-    ---@type string|string[]
-    -- File names or full file paths
+    ---@type string|string[]  File names or full file paths. Default: {}
     filename = {
         'syslog',
     },
 
-    ---@type string|string[]
-    -- File path glob patterns
-    -- Note: In Lua, `%` escapes special characters to match them literally.
+    ---@type string|string[]  File name/path glob patterns. Default: {}
     pattern = {
+        -- Use `%` to escape special characters and match them literally.
         '%/var%/log%/.*',
         'console%-ramoops.*',
         'log.*%.txt',
@@ -70,19 +69,18 @@ require('log-highlight').setup {
 
 By default, the `log` filetype is applied to files matching `*.log` or `*_log`.
 
-To add custom patterns, add autocommands to your `.vimrc` like this:
+You can add custom patterns by adding autocommands to your `.vimrc` like this:
 
 ```vim
-" Example:
 autocmd BufNewFile,BufRead /var/log/* set filetype=log
 ```
 
 ## Release Notes
 
-- v1.0.1: Support lowercase and [spdlog](https://github.com/gabime/spdlog)-style
-  log levels
-- v1.0.0: Minor cleanup and official release
-- v0.0.2: More supports for HDL
+- v1.0.1: Add support for [spdlog](https://github.com/gabime/spdlog)-style and
+  lowercase log levels
+- v1.0.0: Perform minor cleanup and mark official release
+- v0.0.2: Add more support for HDL
 - v0.0.1: Initial release
 
 ## Contributing
