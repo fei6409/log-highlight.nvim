@@ -8,39 +8,38 @@ local defaults = {
     pattern = {},
 }
 
----Generate a filetype table for vim.filetype.add()
----@param items string|table: a list of file extensions, filenames, or patterns
----@param item_name string: the name of what the items represent
----@return table: a table that maps the value to the filetype
-local function gen_ft_table(items, item_name)
-    local map = {}
-
-    if not items then
-        return map
-    end
-
+local function validate_type(name, value, validator)
     if vim.fn.has('nvim-0.11') ~= 1 then
-        vim.validate { [item_name] = { items, { 'string', 'table' } } }
+        vim.validate { [name] = { value, validator } }
     else
-        vim.validate(item_name, items, { 'string', 'table' })
+        vim.validate(name, value, validator)
+    end
+end
+
+---Generate a filetype table for vim.filetype.add()
+---@param values string|string[]: string(s) of extensions, filenames, or patterns
+---@param category string: the category that the values belong to
+---@return table: the generated filetype table
+local function gen_ft_table(values, category)
+    local ft_table = {}
+
+    if not values then
+        return ft_table
     end
 
-    if type(items) == 'string' then
-        map[items] = ft
-        return map
+    validate_type(category, values, { 'string', 'table' })
+
+    if type(values) == 'string' then
+        ft_table[values] = ft
+        return ft_table
     end
 
-    for _, v in ipairs(items) do
-        if vim.fn.has('nvim-0.11') ~= 1 then
-            vim.validate { [item_name] = { v, 'string' } }
-        else
-            vim.validate(item_name, v, 'string')
-        end
-
-        map[v] = ft
+    for _, val in ipairs(values) do
+        validate_type(category, val, 'string')
+        ft_table[val] = ft
     end
 
-    return map
+    return ft_table
 end
 
 ---Setup the log-highlight plugin
