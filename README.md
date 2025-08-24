@@ -2,7 +2,7 @@
 
 A simple and lightweight Neovim plugin that brings syntax highlighting to
 generic log files and provides straightforward configuration to manage filetype
-detection rules for your logs.
+detection rules and custom keyword highlighting for your logs.
 
 ![preview-1](./doc/images/messages.png)
 
@@ -42,25 +42,42 @@ This plugin uses Neovim's built-in
 By default, the `log` filetype is only applied to files with `.log` extension
 (e.g., `sys.log`) after setup.
 
-You can further customize your filetype detection patterns as needed:
+To further configure filetype detection rules and other options:
 
 ```lua
 require('log-highlight').setup {
-    ---@type string|string[]  File extensions. Default: 'log'
+    ---@type string|string[]: File extensions. Default: 'log'
     extension = 'log',
 
-    ---@type string|string[]  File names or full file paths. Default: {}
+    ---@type string|string[]: File names or full file paths. Default: {}
     filename = {
         'syslog',
     },
 
-    ---@type string|string[]  File name/path glob patterns. Default: {}
+    ---@type string|string[]: File name/path glob patterns. Default: {}
     pattern = {
         -- Use `%` to escape special characters and match them literally.
         '%/var%/log%/.*',
         'console%-ramoops.*',
         'log.*%.txt',
         'logcat.*',
+    },
+
+    ---@type table<string, string|string[]>: Custom keywords to highlight.
+    ---This allows you to define custom keywords to be highlighted based on
+    ---the group.
+    ---
+    ---The following highlight groups are supported:
+    ---    'error', 'warning', 'info', 'debug' and 'pass'.
+    ---
+    ---The value for each group can be a string or a list of strings.
+    ---All groups are empty by default. Keywords are case-sensitive.
+    keyword = {
+        error = 'ERROR_MSG',
+        warning = { 'WARN_X', 'WARN_Y' },
+        info = { 'INFORMATION' },
+        debug = {},
+        pass = {},
     },
 }
 ```
@@ -69,7 +86,7 @@ require('log-highlight').setup {
 
 By default, the `log` filetype is applied to files matching `*.log` or `*_log`.
 
-You can add custom patterns by adding autocommands to your `.vimrc` like this:
+You can customize filetype rules by adding autocommands to `.vimrc` like this:
 
 ```vim
 autocmd BufNewFile,BufRead /var/log/* set filetype=log
