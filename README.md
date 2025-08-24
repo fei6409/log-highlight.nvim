@@ -94,6 +94,7 @@ autocmd BufNewFile,BufRead /var/log/* set filetype=log
 
 ## Release Notes
 
+- v1.2.0: Allow keyword customization in selected range
 - v1.1.0: Add more pattern highlighting to log levels, date & time, hex numbers,
   MAC addresses, and Windows and POSIX paths
 - v1.0.1: Add support for [spdlog](https://github.com/gabime/spdlog)-style and
