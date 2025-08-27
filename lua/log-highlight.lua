@@ -66,7 +66,8 @@ local function gen_syntax_file(keyword_table)
     local content = {}
 
     if not file then
-        vim.notify('Failed to write to after/syntax/log.vim', vim.log.levels.ERROR)
+        vim.notify('Failed to open ' .. file_path, vim.log.levels.INFO)
+        vim.notify('Function info: ' .. vim.inspect(debug.getinfo(1)), vim.log.levels.DEBUG)
         return
     end
 
