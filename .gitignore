@@ -39,5 +39,3 @@ luac.out
 *.x86_64
 *.hex
 
-# Generated custom syntax definitions
-after/syntax/log.vim

@@ -60,16 +60,10 @@ end
 ---Generate after/syntax/log.vim to highlight custom keywords
 ---@param keyword_table table<string, string|string[]>: a table of custom keywords
 local function gen_syntax_file(keyword_table)
-    local plugin_dir = vim.fn.fnamemodify(debug.getinfo(1).source:sub(2), ':h:h')
-    local file_path = plugin_dir .. '/after/syntax/log.vim'
-    local file = io.open(file_path, 'w')
+    local after_dir = vim.fn.stdpath('data') .. '/log-highlight/after'
+    local syntax_dir = after_dir .. '/syntax'
+    local file_path = syntax_dir .. '/log.vim'
     local content = {}
-
-    if not file then
-        vim.notify('Failed to open ' .. file_path, vim.log.levels.INFO)
-        vim.notify('Function info: ' .. vim.inspect(debug.getinfo(1)), vim.log.levels.DEBUG)
-        return
-    end
 
     validate_type('keyword', keyword_table, 'table')
     for log_level, words in pairs(keyword_table) do
@@ -87,8 +81,30 @@ local function gen_syntax_file(keyword_table)
         end
     end
 
+    if vim.tbl_isempty(content) then
+        if vim.fn.filewritable(file_path) == 1 then
+            vim.fn.delete(file_path)
+        end
+        return
+    end
+
+    if vim.fn.mkdir(syntax_dir, 'p') == 0 then
+        vim.notify('Failed to mkdir ' .. syntax_dir, vim.log.levels.INFO)
+        return
+    end
+
+    local file = io.open(file_path, 'w')
+    if not file then
+        vim.notify('Failed to open ' .. file_path, vim.log.levels.INFO)
+        return
+    end
     file:write(table.concat(content))
     file:close()
+
+    if not M.rtp_added then
+        vim.opt.runtimepath:append(after_dir)
+        M.rtp_added = true
+    end
 end
 
 ---Setup the plugin
