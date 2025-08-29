@@ -104,21 +104,21 @@ syn match LogPath       display     '\(^\|\s\|=\)\zs\\\\[^ \t\n\r]\+\ze'
 " Log Levels
 " ------------------------------
 syn keyword LogLvFatal      FATAL Fatal fatal
-syn keyword LogLvEmergency  EMERGENCY EMERG Emergency emergency
+syn keyword LogLvEmergency  EMERG[ENCY] Emerg[ency] emerg[ency]
 syn keyword LogLvAlert      ALERT Alert alert
-syn keyword LogLvCritical   CRITICAL CRIT Critical critical
-syn keyword LogLvError      ERROR ERRORS ERR E Error Errors Err error errors err
-syn keyword LogLvFailure    FAILURE FAILED FAIL F Failure Failed Fail failure failed fail
+syn keyword LogLvCritical   CRIT[ICAL] Crit[ical] crit[ical]
+syn keyword LogLvError      E ERR[ORS] Err[ors] err[ors]
+syn keyword LogLvFail       F FAIL[ED] Fail[ed] fail[ed] FAILURE Failure failure
 syn keyword LogLvFault      FAULT Fault fault
-syn keyword LogLvNack       NACK NAK Nack Nak nack nak
-syn keyword LogLvWarning    WARNING WARN W Warning Warn warning warn
+syn keyword LogLvNack       NACK Nack nack NAK Nak nak
+syn keyword LogLvWarning    W WARN[ING] Warn[ing] warn[ing]
 syn keyword LogLvBad        BAD Bad bad
-syn keyword LogLvNotice     NOTICE
-syn keyword LogLvInfo       INFO I Info info
-syn keyword LogLvDebug      DEBUG DBG D Debug Dbg debug dbg
+syn keyword LogLvNotice     NOTICE Notice notice
+syn keyword LogLvInfo       I INFO Info info
+syn keyword LogLvDebug      D DEBUG Debug debug DBG Dbg dbg
 syn keyword LogLvTrace      TRACE Trace trace
-syn keyword LogLvPass       PASS PASSED Pass Passed pass passed
-syn keyword LogLvSuccess    SUCCESS SUCCEEDED Success Succeeded success succeeded
+syn keyword LogLvPass       PASS[ED] Pass[ed] pass[ed]
+syn keyword LogLvSuccess    SUCCEED[ED] Succeed[ed] succeed[ed] SUCCESS Success success
 
 " Composite log levels e.g. *_INFO
 syn match LogLvFatal        display '\<\u\+_FATAL\>'
@@ -126,14 +126,14 @@ syn match LogLvEmergency    display '\<\u\+_EMERG\(ENCY\)\?\>'
 syn match LogLvAlert        display '\<\u\+_ALERT\>'
 syn match LogLvCritical     display '\<\u\+_CRIT\(ICAL\)\?\>'
 syn match LogLvError        display '\<\u\+_ERR\(OR\)\?\>'
-syn match LogLvFailure      display '\<\u\+_FAIL\(URE\)\?\>'
+syn match LogLvFail         display '\<\u\+_FAIL\(URE\)\?\>'
 syn match LogLvWarning      display '\<\u\+_WARN\(ING\)\?\>'
 syn match LogLvNotice       display '\<\u\+_NOTICE\>'
 syn match LogLvInfo         display '\<\u\+_INFO\>'
 syn match LogLvDebug        display '\<\u\+_DEBUG\>'
 syn match LogLvTrace        display '\<\u\+_TRACE\>'
 
-syn cluster LogLvs contains=LogLvFatal,LogLvEmergency,LogLvAlert,LogLvCritical,LogLvError,LogLvFailure,LogLvFault,LogLvNack,LogLvWarning,LogLvBad,LogLvNotice,LogLvInfo,LogLvDebug,LogLvTrace
+syn cluster LogLvs contains=LogLvFatal,LogLvEmergency,LogLvAlert,LogLvCritical,LogLvError,LogLvFail,LogLvFault,LogLvNack,LogLvWarning,LogLvBad,LogLvNotice,LogLvInfo,LogLvDebug,LogLvTrace,LogLvPass,LogLvSuccess
 
 " Highlight Links
 " ------------------------------
@@ -174,7 +174,7 @@ hi def link LogLvEmergency      ErrorMsg
 hi def link LogLvAlert          ErrorMsg
 hi def link LogLvCritical       ErrorMsg
 hi def link LogLvError          ErrorMsg
-hi def link LogLvFailure        ErrorMsg
+hi def link LogLvFail           ErrorMsg
 hi def link LogLvFault          ErrorMsg
 hi def link LogLvNack           ErrorMsg
 hi def link LogLvWarning        WarningMsg
