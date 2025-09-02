@@ -117,6 +117,7 @@ syn keyword LogLvNotice     NOTICE Notice notice
 syn keyword LogLvInfo       I INFO Info info
 syn keyword LogLvDebug      D DEBUG Debug debug DBG Dbg dbg
 syn keyword LogLvTrace      TRACE Trace trace
+syn keyword LogLvVerbose    V VERBOSE Verbose verbose
 syn keyword LogLvPass       PASS[ED] Pass[ed] pass[ed]
 syn keyword LogLvSuccess    SUCCEED[ED] Succeed[ed] succeed[ed] SUCCESS Success success
 
@@ -133,7 +134,7 @@ syn match LogLvInfo         display '\<\u\+_INFO\>'
 syn match LogLvDebug        display '\<\u\+_DEBUG\>'
 syn match LogLvTrace        display '\<\u\+_TRACE\>'
 
-syn cluster LogLvs contains=LogLvFatal,LogLvEmergency,LogLvAlert,LogLvCritical,LogLvError,LogLvFail,LogLvFault,LogLvNack,LogLvWarning,LogLvBad,LogLvNotice,LogLvInfo,LogLvDebug,LogLvTrace,LogLvPass,LogLvSuccess
+syn cluster LogLvs contains=LogLvFatal,LogLvEmergency,LogLvAlert,LogLvCritical,LogLvError,LogLvFail,LogLvFault,LogLvNack,LogLvWarning,LogLvBad,LogLvNotice,LogLvInfo,LogLvDebug,LogLvTrace,LogLvVerbose,LogLvPass,LogLvSuccess
 
 " Highlight Links
 " ------------------------------
@@ -182,7 +183,8 @@ hi def link LogLvBad            WarningMsg
 hi def link LogLvNotice         Exception
 hi def link LogLvInfo           LogBlue
 hi def link LogLvDebug          Debug
-hi def link LogLvTrace          Debug
+hi def link LogLvTrace          Special
+hi def link LogLvVerbose        Special
 hi def link LogLvPass           LogGreen
 hi def link LogLvSuccess        LogGreen
 

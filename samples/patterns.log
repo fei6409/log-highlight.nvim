@@ -50,13 +50,13 @@ Apr 10 10:06:11AM hostname tag: log string
 
 --- Log levels
 FATAL   EMERG   ALERT   CRIT    ERROR   FAIL    FAULT   NACK
-WARNING BAD     NOTICE  INFO    DEBUG   TRACE   PASS    SUCCESS
+WARNING BAD     NOTICE  INFO    DEBUG   TRACE   VERBOSE PASS    SUCCESS
 
 A_FATAL     B_FAIL      C_ERROR
 D_WARN      E_NOTICE    TEST_INFO
 
 [fatal]     [error]     [warning]
-[info]      [debug]     [trace]
+[info]      [debug]     [trace]     [verbose]
 
 --- Objects
 https://github.com/fei6409/log-highlight.nvim#installation
