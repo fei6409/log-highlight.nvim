@@ -188,6 +188,12 @@ hi def link LogLvVerbose        Debug
 hi def link LogLvPass           LogGreen
 hi def link LogLvSuccess        LogGreen
 
+" Try treesitter highlight groups
+" ------------------------------
+if has('nvim-0.10')
+  hi link LogUrl                @markup.link.url
+endif
+
 " Custom highlight group
 " ------------------------------
 hi LogGreen     ctermfg=lightgreen guifg=#a4c672
