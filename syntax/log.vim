@@ -139,12 +139,12 @@ syn cluster LogLvs contains=LogLvFatal,LogLvEmergency,LogLvAlert,LogLvCritical,L
 " Highlight Links
 " ------------------------------
 hi def link LogNumber           Number
-hi def link LogNumberFloat      Float
 hi def link LogNumberBin        Number
 hi def link LogNumberOctal      Number
 hi def link LogNumberHex        Number
+hi def link LogNumberFloat      Float
 
-hi def link LogSymbol           Special
+hi def link LogSymbol           Delimiter
 hi def link LogSeparatorLine    Comment
 
 hi def link LogBool             Boolean
@@ -158,17 +158,17 @@ hi def link LogTimeAMPM         Operator
 hi def link LogTimeZone         Operator
 hi def link LogDuration         Operator
 
-hi def link LogSysColumn        Statement
-hi def link LogSysProcess       Function
+hi def link LogSysColumn        Function
+hi def link LogSysProcess       Keyword
 
 hi def link LogUrl              Underlined
-hi def link LogMacAddr          Underlined
-hi def link LogIPv4             Underlined
-hi def link LogIPv6             Underlined
+hi def link LogMacAddr          Special
+hi def link LogIPv4             Special
+hi def link LogIPv6             Special
 hi def link LogUUID             Label
 hi def link LogMD5              Label
 hi def link LogSHA              Label
-hi def link LogPath             Structure
+hi def link LogPath             Directory
 
 hi def link LogLvFatal          ErrorMsg
 hi def link LogLvEmergency      ErrorMsg
@@ -183,8 +183,8 @@ hi def link LogLvBad            WarningMsg
 hi def link LogLvNotice         Exception
 hi def link LogLvInfo           LogBlue
 hi def link LogLvDebug          Debug
-hi def link LogLvTrace          Special
-hi def link LogLvVerbose        Special
+hi def link LogLvTrace          Debug
+hi def link LogLvVerbose        Debug
 hi def link LogLvPass           LogGreen
 hi def link LogLvSuccess        LogGreen
 
