@@ -66,11 +66,11 @@ syn match LogDate       display     '\<\d\{1,2}[- ]\a\{3}[- ]\d\{4}\>'
 syn keyword LogWeekdayStr   Mon Tue Wed Thu Fri Sat Sun
 
 " 12:34:56, 12:34:56.700000
-syn match LogTime       display     '\d\{2}:\d\{2}:\d\{2}\(\.\d\{2,6}\)\?'  skipwhite  nextgroup=LogTimeZone,LogTimeAMPM,LogSysColumns
+syn match LogTime       display     '\d\{2}:\d\{2}:\d\{2}\(\.\d\{2,6}\)\?'  skipwhite  nextgroup=LogTimeZone,LogTimeAMPM,LogSysColumn
 " AM / PM
-syn match LogTimeAMPM   display     '\cAM\|\cPM\>'  contained  skipwhite  nextgroup=LogSysColumns
+syn match LogTimeAMPM   display     '\cAM\|\cPM\>'  contained  skipwhite  nextgroup=LogSysColumn
 " Time zone e.g. Z, +08:00, PST
-syn match LogTimeZone   display     'Z\|[+-]\d\{2}:\d\{2}\|\a\{3}\>'  contained  skipwhite  nextgroup=LogSysColumns
+syn match LogTimeZone   display     'Z\|[+-]\d\{2}:\d\{2}\|\a\{3}\>'  contained  skipwhite  nextgroup=LogSysColumn
 
 " Duration e.g. 10d20h30m40s, 123.456s, 123ms, 456us, 789ns
 syn match LogDuration   display     '\(\(\(\d\+d\)\?\d\+h\)\?\d\+m\)\?\d\+\(\.\d\+\)\?[mun]\?s\>'
@@ -79,7 +79,7 @@ syn match LogDuration   display     '\(\(\(\d\+d\)\?\d\+h\)\?\d\+m\)\?\d\+\(\.\d
 " ------------------------------
 " Match letters & digits, dots, underscores and hyphens in system columns.
 " Usually the first column is the host name or log level keywords.
-syn match LogSysColumns     display     '\<[[:alnum:]\._-]\+ [[:alnum:]\._-]\+\(\[[[:digit:]:]\+\]\)\?:'  contained  contains=@LogLvs,LogSysProcess
+syn match LogSysColumn      display     '\<[[:alnum:]\._-]\+ [[:alnum:]\._-]\+\(\[[[:digit:]:]\+\]\)\?:'  contained  contains=@LogLvs,LogSysProcess
 syn match LogSysProcess     display     '\<[[:alnum:]\._-]\+\(\[[[:digit:]:]\+\]\)\?:'  contained  contains=LogNumber
 
 " Objects
@@ -158,7 +158,7 @@ hi def link LogTimeAMPM         Operator
 hi def link LogTimeZone         Operator
 hi def link LogDuration         Operator
 
-hi def link LogSysColumns       Statement
+hi def link LogSysColumn        Statement
 hi def link LogSysProcess       Function
 
 hi def link LogUrl              Underlined
