@@ -20,10 +20,10 @@ syn match LogSeparatorLine  display     '-\{3,}\|=\{3,}\|#\{3,}\|\*\{3,}\|<\{3,}
 
 " Strings
 " ------------------------------
-syn region LogString      start=/"/  end=/"/  end=/$/  skip=/\\./
-syn region LogString      start=/`/  end=/`/  end=/$/  skip=/\\./
+syn region LogString        start=/"/  end=/"/  end=/$/  skip=/\\./
+syn region LogString        start=/`/  end=/`/  end=/$/  skip=/\\./
 " Quoted strings, but no match on quotes like `don't`, possessive `s'` and `'s`
-syn region LogString      start=/\(s\)\@<!'\(s \|t \)\@!/  end=/'/  end=/$/  skip=/\\./
+syn region LogString        start=/\(s\)\@<!'\(s \|t \)\@!/  end=/'/  end=/$/  skip=/\\./
 
 " Numbers
 " ------------------------------
