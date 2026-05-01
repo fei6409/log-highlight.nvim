@@ -58,6 +58,12 @@ D_WARN      E_NOTICE    TEST_INFO
 [fatal]     [error]     [warning]
 [info]      [debug]     [trace]     [verbose]
 
+--- Crash Markers
+------------[ cut here ]------------
+---[ end trace 0123456789abcdef ]---
+--------- beginning of crash
+*** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ***
+
 --- Objects
 https://github.com/fei6409/log-highlight.nvim#installation
 http://google.com

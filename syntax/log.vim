@@ -139,6 +139,15 @@ syn match LogLvTrace        display '\<\u\+_TRACE\>'
 
 syn cluster LogLvs contains=LogLvFatal,LogLvEmergency,LogLvAlert,LogLvCritical,LogLvError,LogLvFail,LogLvAbort,LogLvException,LogLvFault,LogLvNack,LogLvWarning,LogLvBad,LogLvNotice,LogLvInfo,LogLvDebug,LogLvTrace,LogLvBacktrace,LogLvVerbose,LogLvPass,LogLvSuccess
 
+" Crash Markers
+" ------------------------------
+" Linux Kernel
+syn match LogCrashMarker    display '\-\+\[ cut here \]\-\+'
+syn match LogCrashMarker    display '\-\+\[ end trace \x\+ \]\-\+'
+" Android
+syn match LogCrashMarker    display '\-\+ beginning of crash'
+syn match LogCrashMarker    display '\(\*\*\* \)\+\*\*\*'
+
 " Highlight Links
 " ------------------------------
 hi def link LogNumber           Number
@@ -193,6 +202,8 @@ hi def link LogLvBacktrace      Debug
 hi def link LogLvVerbose        Debug
 hi def link LogLvPass           LogGreen
 hi def link LogLvSuccess        LogGreen
+
+hi def link LogCrashMarker      WarningMsg
 
 " Try treesitter highlight groups
 " ------------------------------
