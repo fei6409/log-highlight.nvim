@@ -109,6 +109,8 @@ syn keyword LogLvAlert      ALERT Alert alert
 syn keyword LogLvCritical   CRIT[ICAL] Crit[ical] crit[ical]
 syn keyword LogLvError      E ERR[ORS] Err[ors] err[ors]
 syn keyword LogLvFail       F FAIL[ED] Fail[ed] fail[ed] FAILURE Failure failure
+syn keyword LogLvAbort      ABORT Abort abort
+syn keyword LogLvException  EXCEPTION Exception exception
 syn keyword LogLvFault      FAULT Fault fault
 syn keyword LogLvNack       NACK Nack nack NAK Nak nak
 syn keyword LogLvWarning    W WARN[ING] Warn[ing] warn[ing]
@@ -117,6 +119,7 @@ syn keyword LogLvNotice     NOTICE Notice notice
 syn keyword LogLvInfo       I INFO Info info
 syn keyword LogLvDebug      D DEBUG Debug debug DBG Dbg dbg
 syn keyword LogLvTrace      TRACE Trace trace
+syn keyword LogLvBacktrace  BACKTRACE Backtrace backtrace
 syn keyword LogLvVerbose    V VERBOSE Verbose verbose
 syn keyword LogLvPass       PASS[ED] Pass[ed] pass[ed]
 syn keyword LogLvSuccess    SUCCEED[ED] Succeed[ed] succeed[ed] SUCCESS Success success
@@ -134,7 +137,7 @@ syn match LogLvInfo         display '\<\u\+_INFO\>'
 syn match LogLvDebug        display '\<\u\+_DEBUG\>'
 syn match LogLvTrace        display '\<\u\+_TRACE\>'
 
-syn cluster LogLvs contains=LogLvFatal,LogLvEmergency,LogLvAlert,LogLvCritical,LogLvError,LogLvFail,LogLvFault,LogLvNack,LogLvWarning,LogLvBad,LogLvNotice,LogLvInfo,LogLvDebug,LogLvTrace,LogLvVerbose,LogLvPass,LogLvSuccess
+syn cluster LogLvs contains=LogLvFatal,LogLvEmergency,LogLvAlert,LogLvCritical,LogLvError,LogLvFail,LogLvAbort,LogLvException,LogLvFault,LogLvNack,LogLvWarning,LogLvBad,LogLvNotice,LogLvInfo,LogLvDebug,LogLvTrace,LogLvBacktrace,LogLvVerbose,LogLvPass,LogLvSuccess
 
 " Highlight Links
 " ------------------------------
@@ -176,6 +179,8 @@ hi def link LogLvAlert          ErrorMsg
 hi def link LogLvCritical       ErrorMsg
 hi def link LogLvError          ErrorMsg
 hi def link LogLvFail           ErrorMsg
+hi def link LogLvAbort          ErrorMsg
+hi def link LogLvException      ErrorMsg
 hi def link LogLvFault          ErrorMsg
 hi def link LogLvNack           ErrorMsg
 hi def link LogLvWarning        WarningMsg
@@ -184,6 +189,7 @@ hi def link LogLvNotice         Exception
 hi def link LogLvInfo           LogBlue
 hi def link LogLvDebug          Debug
 hi def link LogLvTrace          Debug
+hi def link LogLvBacktrace      Debug
 hi def link LogLvVerbose        Debug
 hi def link LogLvPass           LogGreen
 hi def link LogLvSuccess        LogGreen
