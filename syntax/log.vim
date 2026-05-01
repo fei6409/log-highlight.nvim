@@ -137,6 +137,18 @@ syn match LogLvInfo         display '\<\u\+_INFO\>'
 syn match LogLvDebug        display '\<\u\+_DEBUG\>'
 syn match LogLvTrace        display '\<\u\+_TRACE\>'
 
+" Linux Kernel Level Tags (include/linux/kern_levels.h)
+" Raw logs (ramoops, /dev/kmsg) use Priority = (Facility * 8) + Level.
+" Handle Facility 0-4 (kern, user, mail, daemon, auth).
+syn match LogLvEmergency    display '^<\(0\|8\|16\|24\|32\)>'
+syn match LogLvAlert        display '^<\(1\|9\|17\|25\|33\)>'
+syn match LogLvCritical     display '^<\(2\|10\|18\|26\|34\)>'
+syn match LogLvError        display '^<\(3\|11\|19\|27\|35\)>'
+syn match LogLvWarning      display '^<\(4\|12\|20\|28\|36\)>'
+syn match LogLvNotice       display '^<\(5\|13\|21\|29\|37\)>'
+syn match LogLvInfo         display '^<\(6\|14\|22\|30\|38\)>'
+syn match LogLvDebug        display '^<\(7\|15\|23\|31\|39\)>'
+
 syn cluster LogLvs contains=LogLvFatal,LogLvEmergency,LogLvAlert,LogLvCritical,LogLvError,LogLvFail,LogLvAbort,LogLvException,LogLvFault,LogLvNack,LogLvWarning,LogLvBad,LogLvNotice,LogLvInfo,LogLvDebug,LogLvTrace,LogLvBacktrace,LogLvVerbose,LogLvPass,LogLvSuccess
 
 " Crash Markers
