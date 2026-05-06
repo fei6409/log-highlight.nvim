@@ -124,6 +124,10 @@ syn keyword LogLvVerbose    V VERBOSE Verbose verbose
 syn keyword LogLvPass       PASS[ED] Pass[ed] pass[ed]
 syn keyword LogLvSuccess    SUCCEED[ED] Succeed[ed] succeed[ed] SUCCESS Success success
 
+" Camel-case errors and exceptions e.g. TypeError, RuntimeException
+syn match LogLvError        display '\<\a\+Error\>'
+syn match LogLvException    display '\<\a\+Exception\>'
+
 " Composite log levels e.g. *_INFO
 syn match LogLvFatal        display '\<\u\+_FATAL\>'
 syn match LogLvEmergency    display '\<\u\+_EMERG\(ENCY\)\?\>'

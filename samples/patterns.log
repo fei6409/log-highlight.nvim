@@ -52,6 +52,8 @@ Apr 10 10:06:11AM hostname tag: log string
 FATAL   EMERG   ALERT   CRIT    ERROR   FAIL    EXCEPTION   ABORT   FAULT   NACK
 WARNING BAD     NOTICE  INFO    DEBUG   TRACE   BACKTRACE   VERBOSE PASS    SUCCESS
 
+TypeError   RuntimeException
+
 A_FATAL     B_FAIL      C_ERROR
 D_WARN      E_NOTICE    TEST_INFO
 
